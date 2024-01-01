@@ -320,21 +320,6 @@ body {
       transform: translateX(0px);
   }
 }
-/* .carousel-caption {
-  text-align: left;
-  bottom: 30%;
-}
-
-.animated-text1 {
-  opacity: 0;
-  transform: translateX(-20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.carousel-item.active .carousel-caption .animated-text1 {
-  opacity: 1;
-  transform: translateX(0);
-} */
 
 /* ---------------------------------- 
     #Footer
