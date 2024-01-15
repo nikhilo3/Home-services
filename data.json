@@ -1,0 +1,153 @@
+[
+    {
+        "id": 1,
+        "heading": "Home cleaning",
+        "rating": "4.80 (5.2 M bookings)",
+        "herophoto": "./assest/images/home_cleaning_cover.jpeg",
+        "all_service": [
+            {
+                "name": "bathroom cleanning",
+                "sub_service": [
+                    {
+                        "id":1,
+                        "title": "Classic bathroom cleaning",
+                        "rating": "4.85 (11.6 k bookings)",
+                        "price": "₹299",
+                        "image": "./assest/images/bathroom_cleaning1.webp",
+                        "description1": "lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae incidunt",
+                        "description2": "lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae incidunt",
+                        "description3": "lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae incidunt"
+                    },
+                    {
+                        "id":2,
+                        "title": "Classic bathroom cleaning",
+                        "rating": "4.85 (11.6 k bookings)",
+                        "price": "₹399",
+                        "image": "./assest/images/bathroom_cleaning1.webp",
+                        "description1": "lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae incidunt",
+                        "description2": "lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae incidunt",
+                        "description3": "lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae incidunt"
+                    },
+                    {
+                        "id":3,
+                        "title": "Classic bathroom cleaning",
+                        "rating": "4.85 (11.6 k bookings)",
+                        "price": "₹599",
+                        "image": "./assest/images/bathroom_cleaning1.webp",
+                        "description1": "lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae incidunt",
+                        "description2": "lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae incidunt",
+                        "description3": "lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae incidunt"
+                    }
+                ]
+            },
+            {
+                "name": "kichen cleanning",
+                "sub_service": [
+                    {
+                        "id":1,
+                        "title": "Classic bathroom cleaning",
+                        "rating": "4.85 (11.6 k bookings)",
+                        "price": "₹399",
+                        "image": "./assest/images/kitchan_cleaning1.jpeg",
+                        "description1": "lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae incidunt",
+                        "description2": "lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae incidunt",
+                        "description3": "lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae incidunt"
+                    },
+                    {
+                        "id":2,
+                        "title": "Classic bathroom cleaning",
+                        "rating": "4.85 (11.6 k bookings)",
+                        "price": "₹399",
+                        "image": "./assest/images/kitchan_cleaning1.jpeg",
+                        "description1": "lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae incidunt",
+                        "description2": "lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae incidunt",
+                        "description3": "lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae incidunt"
+                    },
+                    {
+                        "id":3,
+                        "title": "Classic bathroom cleaning",
+                        "rating": "4.85 (11.6 k bookings)",
+                        "price": "₹399",
+                        "image": "./assest/images/kitchan_cleaning1.jpeg",
+                        "description1": "lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae incidunt",
+                        "description2": "lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae incidunt",
+                        "description3": "lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae incidunt"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "heading": "Electricians",
+        "rating": "4.84 (3.5 M bookings)",
+        "herophoto": "./assest/images/Electricians_cover.jpg",
+        "all_service": [
+            {
+                "name": "Switch & socket",
+                "sub_service": [
+                    {
+                        "title": "switchboard installation",
+                        "rating": "4.85 (11.6 k bookings)",
+                        "price": "₹399",
+                        "image": "./assest/images/switchbord.jpeg",
+                        "description1": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
+                        "description2": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
+                        "description3": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt"
+                    },
+                    {
+                        "title": "switch/soket repair",
+                        "rating": "4.90 (2.5 M bookings)",
+                        "price": "₹899",
+                        "image": "./assest/images/switchbord.jpeg",
+                        "description1": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
+                        "description2": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
+                        "description3": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt"
+                    },
+                    {
+                        "title": "smart appliance controller",
+                        "rating": "4.90 (2.5 M bookings)",
+                        "price": "₹999",
+                        "image": "./assest/images/switchbord.jpeg",
+                        "description1": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
+                        "description2": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
+                        "description3": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt"
+                    }
+                ]
+            },
+            {
+                "name": "Fan",
+                "sub_service": [
+                    {
+                        "title": "Fan installation",
+                        "rating": "4.80 (5.2 M bookings)",
+                        "price": "₹199",
+                        "image": "./assest/images/fan.jpeg",
+                        "description1": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
+                        "description2": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
+                        "description3": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt"
+                    },
+                    {
+                        "title": "fan repair",
+                        "rating": "4.90 (2.5 M bookings)",
+                        "price": "₹299",
+                        "image": "./assest/images/fan.jpeg",
+                        "description1": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
+                        "description2": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
+                        "description3": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt"
+                    },
+                    {
+                        "title": "fan replacement",
+                        "rating": "4.90 (2.5 M bookings)",
+                        "price": "₹1099",
+                        "image": "./assest/images/fan.jpeg",
+                        "description1": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
+                        "description2": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
+                        "description3": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt"
+                    }
+                ]
+            }
+        ]
+    }
+    
+]
