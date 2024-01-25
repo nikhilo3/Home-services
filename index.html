@@ -18,8 +18,9 @@
 
     <!-- icon font awesome -->
     <link rel="stylesheet" href="./assest/css/fontawesome/css/all.min.css">
-
-
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
     <!-- custom css -->
     <link rel="stylesheet" href="./assest/css/style.css">
@@ -28,48 +29,39 @@
 
 <body>
 
-    <header class="header">
-        <div class="containers">
-            <a href="" class="header-logo">
-                <img src="./assest/images/ns-logos/ns-logos_black.png" alt="main page" title="Home Page" width="190"
-                    height="190">
-            </a>
+    <header>
+        <nav class="nav">
+            <i class="uil uil-bars navOpenBtn"></i>
+            <a href="#" class="logo"><img src="./assest/images/ns-logos/ns-logos_white.png" alt="" height="150" width="150"></a>
 
-            <div class="navitem">
-                <div class="inneritem">
-                    <a href="#">Home</a>
-
-                    <a href="./service.html">Service</a>
-
-                    <a href="./price.html">Price</a>
-
-                    <a href="./contact.html">Contact</a>
-
-                    <a href="./about.html">About</a>
+            <ul class="nav-links">
+                <i class="uil uil-times navCloseBtn"></i>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/service.html">Services</a></li>
+                <li><a href="/about.html">About Us</a></li>
+                <li><a href="/contact.html">Contact Us</a></li>
+            </ul>
+            
+            
+            <div class="profile">
+                <div class="user">
+                    <h3>Katherine Cooper</h3>
+                    <p>@probablykat66</p>
+                </div>
+                <div class="img-box">
+                    <img src="https://i.postimg.cc/BvNYhMHS/user-img.jpg" alt="some user image">
                 </div>
             </div>
-
-            <div class="searchbar">
-                <input type="text" name="search" id="search" placeholder="Search Services" class="searchinput">
-                <img width="24" height="24" src="https://img.icons8.com/material-outlined/48/search--v1.png"
-                    alt="search--v1" class="searchicon" />
+            <div class="menu">
+                <ul>
+                    <li><a href="#"><i class="ph-bold ph-user"></i>&nbsp;Profile</a></li>
+                    <li><a href="#"><i class="ph-bold ph-envelope-simple"></i>&nbsp;Inbox</a></li>
+                    <li><a href="#"><i class="ph-bold ph-gear-six"></i>&nbsp;Settings</a></li>
+                    <li><a href="#"><i class="ph-bold ph-question"></i>&nbsp;Help</a></li>
+                    <li><a href="#"><i class="ph-bold ph-sign-out"></i>&nbsp;Sign Out</a></li>
+                </ul>
             </div>
-
-            <div class="navend">
-                <div class="innerend">
-                    <div class="contactnumber">
-                        <img src="./assest/images/icons8-call-48.png" alt="contactnumber">
-                        <span class="span">1800 458 56 97</span>
-                    </div>
-
-                    <div class="mystatus">
-                        <a href="./mycart.html" class="profilebtn">
-                            <span class="span">My Profile</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </nav>
     </header>
 
 
@@ -105,9 +97,6 @@
                 </div>
             </div>
         </div>
-
-
-
 
 
 
@@ -205,6 +194,7 @@
                 </div>
             </div>
         </section>
+
 
 
 
@@ -409,10 +399,6 @@
             </div>
         </section>
 
-
-
-
-
         <!-- contact us  -->
         <div class="contactcontain">
 
@@ -471,7 +457,6 @@
             </div>
         </div>
     </main>
-
 
     <footer class="footer-section">
         <div class="container">
@@ -534,7 +519,6 @@
         </div>
 
     </footer>
-
 
     <!-- custom js -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>

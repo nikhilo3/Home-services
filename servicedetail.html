@@ -27,55 +27,47 @@
 
 <body class="dpage">
 
-    <header class="header">
-        <div class="containers">
-            <a href="" class="header-logo">
-                <img src="./assest/images/ns-logos/ns-logos_black.png" alt="main page" title="Home Page" width="190"
-                    height="190">
-            </a>
+    <header>
+        <nav class="nav">
+            <i class="uil uil-bars navOpenBtn"></i>
+            <a href="#" class="logo"><img src="./assest/images/ns-logos/ns-logos_black.png" alt="main page"
+                    title="Home Page" width="190" height="190"></a>
 
-            <div class="navitem">
-                <div class="inneritem">
-                    <a href="#">Home</a>
+            <ul class="nav-links">
+                <i class="uil uil-times navCloseBtn"></i>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
 
-                    <a href="./service.html">Service</a>
+            <i class="uil uil-search search-icon" id="searchIcon"></i>
+            <div class="search-box">
+                <i class="uil uil-search search-icon"></i>
+                <input type="text" placeholder="Search here..." />
+            </div>
 
-                    <a href="./price.html">Price</a>
+            <div class="mystatus">
+                <a href="./mycart.html" class="profilebtn">
+                    <span class="span">Cart</span>
+                </a>
+            </div>
 
-                    <a href="./contact.html">Contact</a>
-
-                    <a href="./about.html">About</a>
+            <div class="profile">
+                <button>Login</button>
+                <div class="detail">
+                    <a href="./mybooking.html">My Booking</a>
+                    <span>Logout</span>
                 </div>
             </div>
-
-            <div class="searchbar">
-                <input type="text" name="search" id="search" placeholder="Search Services" class="searchinput">
-                <img width="24" height="24" src="https://img.icons8.com/material-outlined/48/search--v1.png"
-                    alt="search--v1" class="searchicon" />
-            </div>
-
-            <div class="navend">
-                <div class="innerend">
-                    <div class="contactnumber">
-                        <img src="./assest/images/icons8-call-48.png" alt="contactnumber">
-                        <span class="span">1800 458 56 97</span>
-                    </div>
-
-                    <div class="mystatus">
-                        <a href="./profile.html" class="profilebtn">
-                            <span class="span">My Profile</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </nav>
     </header>
 
     <div class="contain">
 
         <div class="herobanner">
             <div class="wrapper">
-                <div class="coverphoto" >
+                <div class="coverphoto">
                     <img src="" alt="Home Cleaning service" subservicemain>
                 </div>
 
@@ -123,13 +115,14 @@
             </div>
         </div>
 
+
         <div class="subcontain" subcontain>
             <!-- <div class="subserv"> -->
-                <!-- <h2 allservicename></h2>
+            <!-- <h2 allservicename></h2>
                 <div class="scroll-container">
                     <div class="subitem">
                         <div class="subwrapper"> -->
-                            <!-- <div class="subcard">
+            <!-- <div class="subcard">
                                 <div class="right">
                                     <h4>Classic bathroom cleaning</h4>
 
@@ -184,7 +177,7 @@
                                     <button type="button" class="btn btn-success btncart">Add</button>
                                 </div>
                             </div> -->
-                        <!-- </div>
+            <!-- </div>
                     </div>
                 </div> -->
             <!-- </div> -->

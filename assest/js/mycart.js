@@ -1,15 +1,30 @@
-
-const storedCartItems = localStorage.getItem('cartItems');
-const cartitems = storedCartItems ? JSON.parse(storedCartItems) : "[]"
 const btncheckout = document.querySelector('[btncheckout]');
 const msgdisplay = document.querySelector('[msgdisplay]');
 const total = document.querySelector('[total]');
 const subtotalElement = document.querySelector("[subtotal]");
 const tax_feesElement = document.querySelector('[tax_fees]');
 
-function rendercart() {
+const fetchAndRenderCartItems = async () => {
+  try {
+    const response = await fetch('http://localhost:3000/cart/getcartitems');
+    if (response.ok) {
+      const cartItems = await response.json();
+      rendercart(cartItems);
+    } else {
+      console.log('Failed to fetch cart items', response.statusText);
+    }
+  } catch (err) {
+    console.log('Error fetching cart items:', err);
+  }
+}
+
+
+
+function rendercart(cartItems) {
   const carttable = document.querySelector("[carttable]");
-  cartitems.forEach(item => {
+  carttable.innerHTML = '';
+
+  cartItems.forEach(item => {
     let newtable = document.createElement('tr');
     newtable.innerHTML =
       `
@@ -21,25 +36,50 @@ function rendercart() {
                             </th>
                             <td class="align-middle"><strong>${item.price}</strong></td>
 
-                            <td class="align-middle"><button href="#" class="deletecart text-dark"><i class="fa fa-trash"></i></button>
+                            <td class="align-middle"><button href="#" class="deletecart text-dark" data-itemid="${item._id}"><i class="fa fa-trash"></i></button>
                             </td>
     `
     carttable.appendChild(newtable);
 
     newtable.querySelector('.deletecart').addEventListener('click', () => {
-      removeFromCart(item.id);
-      newtable.remove();
-      updateSubtotal();
-      updatefinaltotal();
-      cartcount();
-      noitemmsg();
+      removeFromCart(item._id);
+      // newtable.remove();
+      // updateSubtotal();
+      // updatefinaltotal();
+      // cartcount();
+      // noitemmsg();
     });
   });
+  updateSubtotal(cartItems);
+  updatefinaltotal(cartItems);
+  cartcount(cartItems);
+  noitemmsg(cartItems);
 }
-rendercart();
 
-function noitemmsg() {
-  if (cartitems.length == 0) {
+
+const removeFromCart = (itemId) => {
+  fetch(`http://localhost:3000/cart/removefromcart/${itemId}`, {
+    method: 'DELETE'
+  }).then((response) => {
+    if (response.ok) {
+      console.log('Item removed from cart successfully');
+      fetchAndRenderCartItems();
+    } else {
+      console.log('Failed to remove item from cart', response.statusText);
+    }
+  }).catch((err) => {
+    console.log('Error removing item from cart:', err);
+  })
+  // const itemIndex = cartItems.findIndex(item => item.id === id);
+  // if (itemIndex !== -1) {
+  //   cartitems.splice('itemIndex', 1);
+  //   localStorage.setItem('cartItems', JSON.stringify(cartitems));
+  // }
+};
+
+
+function noitemmsg(cartItems) {
+  if (cartItems.length == 0) {
     btncheckout.disabled = true;
     msgdisplay.innerHTML = `<p>no service selected in cart</p>`;
     tax_feesElement.textContent = "₹0.00";
@@ -49,40 +89,29 @@ function noitemmsg() {
     btncheckout.disabled = false;
   }
 }
-noitemmsg();
 
 
-function cartcount() {
+
+function cartcount(cartItems) {
   const cartCountElement = document.querySelector('[countitem]');
   if (cartCountElement) {
-    cartCountElement.textContent = cartitems.length;
+    cartCountElement.textContent = cartItems.length;
   }
 }
-cartcount();
 
 
-const removeFromCart = (id) => {
-  const itemIndex = cartitems.findIndex(item => item.id === id);
-  if (itemIndex !== -1) {
-    cartitems.splice('itemIndex', 1);
-    localStorage.setItem('cartItems', JSON.stringify(cartitems));
-  }
-};
-
-
-function updateSubtotal() {
+function updateSubtotal(cartItems) {
   const subtotalElement = document.querySelector("[subtotal]");
 
-  const subtotal = cartitems.reduce((total, item) => {
+  const subtotal = cartItems.reduce((total, item) => {
     return total + parseFloat(item.price.replace(/[^0-9.]/g, ''));
   }, 0);
   subtotalElement.textContent = `₹${subtotal.toFixed(2)}`;
 }
-updateSubtotal();
 
 
 
-function updatefinaltotal() {
+function updatefinaltotal(cartItems) {
   let subtotals = parseFloat(subtotalElement.textContent.replace(/[^0-9.]/g, ''));
   let tax_feess = parseFloat(tax_feesElement.textContent.replace(/[^0-9.]/g, ''));
 
@@ -90,4 +119,17 @@ function updatefinaltotal() {
 
   total.textContent = `₹${totals.toFixed(2)}`;
 }
-updatefinaltotal();
+
+
+btncheckout.addEventListener('click', () => {
+
+  localStorage.setItem('paymentsubtotal', subtotalElement.textContent);
+  localStorage.setItem('taxandfess', tax_feesElement.textContent);
+  localStorage.setItem('paymenttotal', total.textContent);
+
+
+  window.location.href = "/checkout.html";
+});
+
+
+fetchAndRenderCartItems();

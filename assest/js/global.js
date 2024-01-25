@@ -1,7 +1,22 @@
-// //main slider
-// $('.carousel').carousel({
-//   interval: 5000 // Adjust the interval as needed (in milliseconds)
-// });
+//header
+const nav = document.querySelector(".nav"),
+  navOpenBtn = document.querySelector(".navOpenBtn"),
+  navCloseBtn = document.querySelector(".navCloseBtn");
+
+navOpenBtn.addEventListener("click", () => {
+  nav.classList.add("openNav");
+  searchIcon.classList.replace("uil-times", "uil-search");
+});
+navCloseBtn.addEventListener("click", () => {
+  nav.classList.remove("openNav");
+});
+
+let profile = document.querySelector('.profile');
+let menu = document.querySelector('.menu');
+
+profile.onclick = function () {
+    menu.classList.toggle('active');
+}
 
 
 
@@ -40,42 +55,3 @@ num.forEach((element) => {
 });
 
 
-import { fetchData } from "./fetchjson.js";
-
-let servicecontainer = document.querySelector('[servicepagecontainer]');
-
-
-(async () => {
-  try {
-    const data = await fetchData();
-
-    data.forEach((data) => {
-      let newservice = document.createElement('div');
-      newservice.className = "meal";
-      newservice.innerHTML = `
-      <img
-      src="${data.herophoto}"
-      class="meal-img"
-      alt="home cleaning"
-      />
-    <div class="meal-content">
-   <div class="meal-tags">
-   </div>
-   <p class="meal-title">${data.heading}</p>
-   
-   <div class="detail" style="color: black;">
-     <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui a provident alias perferendis accusantium nisi expedita recusandae maiores modi sapiente nulla porro, consequuntur culpa.</span>
-   </div>
-   <button>view detail</button>
- </div>
- <a href="/servicedetail.html?id=${data.id}" homeservicesclick></a>
-      `
-
-
-
-      servicecontainer.appendChild(newservice)
-    })
-  } catch (err) {
-    console.error("Error fetching data:", err);
-  }
-})();

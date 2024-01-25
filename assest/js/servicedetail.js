@@ -92,10 +92,10 @@ let subcontain = document.querySelector('[subcontain]');
                     `
                 newservices.querySelector('[subwrapper]').appendChild(newsubcard);
 
-                newsubcard.querySelector('.addcart').addEventListener('click', ()=>{
+                newsubcard.querySelector('.addcart').addEventListener('click', () => {
                     addtocart(id, title, price, image);
                 });
-                
+
             });
 
             subcontain.appendChild(newservices);
@@ -110,27 +110,50 @@ let subcontain = document.querySelector('[subcontain]');
 
 
 
-let cartItems = [];
+async function addtocart(id, title, price, image) {
+    console.log(id, title, price, image);
 
-function addtocart (id, title, price, image){
-    console.log(id,title,price,image);
-
-    const existingItem = cartItems.find((item)=>{
-        item.id === id;
-    });
-
-    if(existingItem){
-        existingItem.quantity += 1;
-    }
-    else{
-        cartItems.push({
-            id: id,
-            title: title,
-            price: price,
-            image: image,
-            quantity: 1
+    try {
+        const response = await fetch('http://localhost:3000/cart/addtocart', {
+            method: 'POST',
+            headers: {
+                'Content-type':'application/json'
+            },
+            body: JSON.stringify({
+                id: id,
+                title: title,
+                price: price,
+                image: image,
+                quantity: 1
+            })
         });
-    }
 
-    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        if(response.ok){
+            console.log('Item added to cart successfully');
+        }
+        else{
+            console.log('failed to add item to cart',response.statusText);
+        }
+        // const existingItem = cartItems.find((item) => {
+        //     item.id === id;
+        // });
+
+        // if (existingItem) {
+        //     existingItem.quantity += 1;
+        // }
+        // else {
+        //     cartItems.push({
+        //         id: id,
+        //         title: title,
+        //         price: price,
+        //         image: image,
+        //         quantity: 1
+        //     });
+        // }
+
+        // localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    }
+    catch (error) {
+        console.log('Error adding item to cart:', error);
+    }
 }
