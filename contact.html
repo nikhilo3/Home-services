@@ -25,51 +25,43 @@
 </head>
 
 <body class="contactus-page">
-    <header class="header ">
-        <div class="containers containers2">
-            <a href="" class="header-logo">
-                <img src="./assest/images/ns-logos/ns-logos_white.png" alt="main page" title="Home Page" width="190"
-                    height="190">
-            </a>
+    <header id="header">
+        <nav class="nav">
+            <i class="fa-solid fa-bars navOpenBtn" onclick="navresponsive()"></i>
+            <a href="#" class="logo"><img src="./assest/images/ns-logos/ns-logos_white.png" alt="" height="150"
+                    width="150"></a>
 
-            <div class="navitem">
-                <div class="inneritem">
-                    <a href="#">Home</a>
+            <ul class="nav-links">
+                <i class="fa-solid fa-xmark navCloseBtn"></i>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/service.html">Services</a></li>
+                <li><a href="/about.html">About Us</a></li>
+                <li><a href="/contact.html">Contact Us</a></li>
+            </ul>
 
-                    <a href="./service.html">Service</a>
+            <button class="log" id="loginbtn" onclick="openloginform()">Login</button>
 
-                    <a href="./price.html">Price</a>
-
-                    <a href="./contact.html">Contact</a>
-
-                    <a href="./about.html">About</a>
+            <div class="profilecontainers">
+                <div class="navigation">
+                    <div class="user-box">
+                        <div class="image-box">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <p class="username">Jenifer Lopez</p>
+                    </div>
+                    <div class="menu-toggle"></div>
+                    <ul class="menu">
+                        <li><a href="#"><ion-icon name="cart-outline"></ion-icon></ion-icon>Cart</a></li>
+                        <li><a href="#"><ion-icon name="checkmark-done-outline"></ion-icon></ion-icon>My Booking</a>
+                        </li>
+                        <li><a href="#"><ion-icon name="log-out-outline"></ion-icon>Logout</a></li>
+                    </ul>
                 </div>
             </div>
-
-            <div class="searchbar">
-                <input type="text" name="search" id="search" placeholder="Search Services" class="searchinput">
-                <img width="24" height="24" src="https://img.icons8.com/material-outlined/48/search--v1.png"
-                    alt="search--v1" class="searchicon" />
-            </div>
-
-            <div class="navend">
-                <div class="innerend">
-                    <div class="contactnumber">
-                        <img src="./assest/images/icons8-call-48.png" alt="contactnumber">
-                        <span class="span">1800 458 56 97</span>
-                    </div>
-
-                    <div class="mystatus">
-                        <a href="./profile.html" class="profilebtn">
-                            <span class="span">My Profile</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </nav>
     </header>
 
-    <main>
+    <main id="main">
         <div class="bannerpicture">
             <div class="inner">
                     <img src="./assest/images/contactusbanner.jpg" alt="banner2">

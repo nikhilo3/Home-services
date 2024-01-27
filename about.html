@@ -4,8 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NS - Outdoor & cleaning service</title>
+     <!-- favicon -->
+     <link rel="shortcut icon" href="./assest/images/Screenshot 2023-12-28 122313.png" type="image/x-icon">
+
+     <!-- bootstrap -->
+     <link rel="stylesheet" href="./assest/css/bootsrapfile/bootstrap.min.css">
+     <script src="./assest/css/bootsrapfile/jquery-3.7.1.min.js" defer></script>
+ 
+ 
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+ 
+     <!-- icon font awesome -->
+     <link rel="stylesheet" href="./assest/css/fontawesome/css/all.min.css">
+ 
+ 
+ 
+     <!-- custom css -->
+     <link rel="stylesheet" href="./assest/css/style.css">
 </head>
-<body>
-    
+<body class="about-page">
+    <header id="header">
+        <nav class="nav">
+            <i class="fa-solid fa-bars navOpenBtn" onclick="navresponsive()"></i>
+            <a href="#" class="logo"><img src="./assest/images/ns-logos/ns-logos_white.png" alt="" height="150"
+                    width="150"></a>
+
+            <ul class="nav-links">
+                <i class="fa-solid fa-xmark navCloseBtn"></i>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/service.html">Services</a></li>
+                <li><a href="/about.html">About Us</a></li>
+                <li><a href="/contact.html">Contact Us</a></li>
+            </ul>
+
+            <button class="log" id="loginbtn" onclick="openloginform()">Login</button>
+
+            <div class="profilecontainers">
+                <div class="navigation">
+                    <div class="user-box">
+                        <div class="image-box">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <p class="username">Jenifer Lopez</p>
+                    </div>
+                    <div class="menu-toggle"></div>
+                    <ul class="menu">
+                        <li><a href="#"><ion-icon name="cart-outline"></ion-icon></ion-icon>Cart</a></li>
+                        <li><a href="#"><ion-icon name="checkmark-done-outline"></ion-icon></ion-icon>My Booking</a>
+                        </li>
+                        <li><a href="#"><ion-icon name="log-out-outline"></ion-icon>Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main">
+        <div class="bannerpicture">
+            <div class="inner">
+                    <img src="./assest/images/contactusbanner.jpg" alt="banner2">
+                    <span>About us</span>
+            </div>
+        </div>
+    </main>
+
+
+
 </body>
 </html>

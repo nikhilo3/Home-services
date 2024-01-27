@@ -174,7 +174,8 @@ body {
 
 .popularorder .header-container h3,
 .contain .wrapper .form .form-headline,
-.contactus-page .bannerpicture span {
+.contactus-page .bannerpicture span,
+.about-page .bannerpicture span {
   font-family: sans-serif;
   font-size: 4rem;
   font-weight: 700;
@@ -190,192 +191,232 @@ body {
     #login,signup form
  ----------------------------------   */
 
+@import url("https://fonts.googleapis.com/css?family=Proxima Nova:400,800");
 
 
-.login-box {
+#loginbox{
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  /* overflow: hidden; */
+  width: 900px;
+  max-width: 100%;
+  min-height: 480px;
   position: fixed;
   top: 50%;
   left: 50%;
-  width: 400px;
-  padding: 40px;
   transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, .5);
-  box-sizing: border-box;
-  box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
-  border-radius: 10px;
+  font-family: "Montserrat", sans-serif;
+  height: 80vh;
+  color: black;
   display: none;
 }
 
-.loginboxshow {
-  display: block;
+/* .loginboxshow{
+  display: flex;
+  z-index: 1000;
   backdrop-filter: blur(2px);
-  z-index: 1;
+} */
+
+
+.login h1 {
+  font-weight: bold;
+  margin: 0;
 }
 
-#main.active{
-  filter: blur(20px);
-  overflow: hidden;
-}
-
-#header.active{
-  filter: blur(20px);
-}
-
-.login-box h2 {
-  margin: 0 0 30px;
-  padding: 0;
-  color: #fff;
+.login h2 {
   text-align: center;
 }
 
-.login-box .user-box {
-  position: relative;
-}
-
-.login-box .user-box input {
-  width: 100%;
-  padding: 10px 0;
+.login p {
   font-size: 16px;
-  color: #fff;
-  margin-bottom: 30px;
-  border: none;
-  border-bottom: 1px solid #fff;
-  outline: none;
-  background: transparent;
+  font-weight: 100;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  margin: 20px 0 30px;
 }
 
-.login-box .user-box label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 10px 0;
-  font-size: 16px;
-  color: #fff;
-  pointer-events: none;
-  transition: .5s;
-}
-
-.login-box .user-box input:focus~label,
-.login-box .user-box input:valid~label {
-  top: -20px;
-  left: 0;
-  color: #03e9f4;
+.login span {
   font-size: 12px;
 }
 
-.login-box form button {
-  position: relative;
-  display: inline-block;
-  padding: 10px 20px;
-  color: #03e9f4;
-  font-size: 16px;
+.login a {
+  color: #333;
+  font-size: 14px;
   text-decoration: none;
+  margin: 15px 0;
+}
+
+.login button {
+  border-radius: 20px;
+  border: 1px solid #ff4b2b;
+  background-color: #ff4b2b;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  overflow: hidden;
-  transition: .5s;
-  margin-top: 40px;
-  letter-spacing: 4px;
-  border: 1px solid;
+  transition: transform 80ms ease-in;
 }
 
-.login-box button:hover {
-  background: #03e9f4;
-  color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 5px #03e9f4,
-    0 0 25px #03e9f4,
-    0 0 50px #03e9f4,
-    0 0 100px #03e9f4;
+.login button:active {
+  transform: scale(0.95);
 }
 
-.login-box a span {
+.login button:focus {
+  outline: none;
+}
+
+.login button.ghost {
+  background-color: transparent;
+  border-color: #ffffff;
+}
+
+.login form {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 50px;
+  height: 100%;
+  text-align: center;
+}
+
+.login input {
+  background-color: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+}
+
+.login .form-container {
   position: absolute;
-  display: block;
-}
-
-.login-box a span:nth-child(1) {
   top: 0;
-  left: -100%;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #03e9f4);
-  animation: btn-anim1 1s linear infinite;
-}
-
-@keyframes btn-anim1 {
-  0% {
-    left: -100%;
-  }
-
-  50%,
-  100% {
-    left: 100%;
-  }
-}
-
-.login-box a span:nth-child(2) {
-  top: -100%;
-  right: 0;
-  width: 2px;
   height: 100%;
-  background: linear-gradient(180deg, transparent, #03e9f4);
-  animation: btn-anim2 1s linear infinite;
-  animation-delay: .25s
+  transition: all 0.6s ease-in-out;
 }
 
-@keyframes btn-anim2 {
-  0% {
-    top: -100%;
-  }
-
-  50%,
-  100% {
-    top: 100%;
-  }
-}
-
-.login-box a span:nth-child(3) {
-  bottom: 0;
-  right: -100%;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(270deg, transparent, #03e9f4);
-  animation: btn-anim3 1s linear infinite;
-  animation-delay: .5s
-}
-
-@keyframes btn-anim3 {
-  0% {
-    right: -100%;
-  }
-
-  50%,
-  100% {
-    right: 100%;
-  }
-}
-
-.login-box a span:nth-child(4) {
-  bottom: -100%;
+.login .sign-in-container {
   left: 0;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(360deg, transparent, #03e9f4);
-  animation: btn-anim4 1s linear infinite;
-  animation-delay: .75s
+  width: 50%;
+  z-index: 2;
 }
 
-@keyframes btn-anim4 {
-  0% {
-    bottom: -100%;
+.login.right-panel-active .sign-in-container {
+  transform: translateX(100%);
+}
+
+.login .sign-up-container {
+  left: 0;
+  width: 50%;
+  opacity: 0;
+  z-index: 1;
+}
+
+@keyframes show {
+  0%,
+  49.99% {
+    opacity: 0;
+    z-index: 1;
   }
 
   50%,
   100% {
-    bottom: 100%;
+    opacity: 1;
+    z-index: 5;
   }
 }
 
+.login.right-panel-active .sign-up-container {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+  animation: show 0.6s;
+}
+
+.login .overlay-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
+}
+
+.login.right-panel-active .overlay-container {
+  transform: translateX(-100%);
+}
+
+.login .overlay {
+  background: #ff416c;
+  background: -webkit-linear-gradient(to right, #ff4b2b, #ff416c);
+  background: linear-gradient(to right, #ff4b2b, #ff416c);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  color: #ffffff;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.login.right-panel-active .overlay {
+  transform: translateX(50%);
+}
+
+.login .overlay-panel {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.login .overlay-left {
+  transform: translateX(-20%);
+}
+
+.login.right-panel-active .overlay-left {
+  transform: translateX(0);
+}
+
+.login .overlay-right {
+  right: 0;
+  transform: translateX(0);
+}
+
+.login.right-panel-active .overlay-right {
+  transform: translateX(20%);
+}
+
+.login .social-container {
+  margin: 20px 0;
+}
+
+.login .social-container a {
+  border: 1px solid #dddddd;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  height: 40px;
+  width: 40px;
+}
 
 
 
@@ -385,7 +426,9 @@ body {
 /* Google Fonts - Poppins */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
-
+#main{
+  margin-top: 70px;
+}
 .nav {
   position: fixed;
   top: 0;
@@ -1583,6 +1626,28 @@ textarea {
 }
 
 
+/* ---------------------------------- 
+    #about page
+ ----------------------------------   */
+
+.about-page .bannerpicture .inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.about-page .bannerpicture img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.about-page .bannerpicture .inner span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
 
 
 
