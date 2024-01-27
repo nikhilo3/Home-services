@@ -22,9 +22,11 @@ app.use(bodyParser.json());
 // Routes
 const orderRouter = require('./controller/orderController');
 const cartRouter = require('./controller/cartController');
+const regiRouter = require('./controller/regiController');
 
 app.use('/order',orderRouter);
 app.use('/cart',cartRouter);
+app.use('/registration',regiRouter);
 
 // server
 app.listen(port, ()=>{
