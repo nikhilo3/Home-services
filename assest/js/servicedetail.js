@@ -59,24 +59,18 @@ let subcontain = document.querySelector('[subcontain]');
 
                     <div class="detail">
                         <div class="detail1">
-                            <img width="10" height="10"
-                                src="https://img.icons8.com/ios-glyphs/30/full-stop--v2.png"
-                                alt="full-stop--v2" />
-                            <span>${description1}</span>
+                            
+                            <li style="list-style: disc;">${description1}</li>
                         </div>
 
                         <div class="detail1">
-                            <img width="10" height="10"
-                                src="https://img.icons8.com/ios-glyphs/30/full-stop--v2.png"
-                                alt="full-stop--v2" />
-                                <span>${description2}</span>
+                            
+                                <li style="list-style: disc;">${description2}</li>
                         </div>
 
                         <div class="detail1">
-                            <img width="10" height="10"
-                                src="https://img.icons8.com/ios-glyphs/30/full-stop--v2.png"
-                                alt="full-stop--v2" />
-                                <span>${description3}</span>
+                           
+                                <li style="list-style: disc;">${description3}</li>
                         </div>
                     </div>
 
