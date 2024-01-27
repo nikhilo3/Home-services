@@ -18,9 +18,7 @@
 
     <!-- icon font awesome -->
     <link rel="stylesheet" href="./assest/css/fontawesome/css/all.min.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
 
     <!-- custom css -->
     <link rel="stylesheet" href="./assest/css/style.css">
@@ -28,44 +26,61 @@
 </head>
 
 <body>
+        <div class="login-box" id="loginbox">
+            <h2>Login</h2>
+            <form>
+                <div class="user-box">
+                    <input type="text" name="" required>
+                    <label>Username</label>
+                </div>
+                <div class="user-box">
+                    <input type="password" name="" required>
+                    <label>Password</label>
+                </div>
+                <button>
+                    Submit
+                </button>
+            </form>
+        </div>
 
-    <header>
+    <header id="header">
         <nav class="nav">
-            <i class="uil uil-bars navOpenBtn"></i>
-            <a href="#" class="logo"><img src="./assest/images/ns-logos/ns-logos_white.png" alt="" height="150" width="150"></a>
+            <i class="fa-solid fa-bars navOpenBtn" onclick="navresponsive()"></i>
+            <a href="#" class="logo"><img src="./assest/images/ns-logos/ns-logos_white.png" alt="" height="150"
+                    width="150"></a>
 
             <ul class="nav-links">
-                <i class="uil uil-times navCloseBtn"></i>
+                <i class="fa-solid fa-xmark navCloseBtn"></i>
                 <li><a href="/index.html">Home</a></li>
                 <li><a href="/service.html">Services</a></li>
                 <li><a href="/about.html">About Us</a></li>
                 <li><a href="/contact.html">Contact Us</a></li>
             </ul>
-            
-            
-            <div class="profile">
-                <div class="user">
-                    <h3>Katherine Cooper</h3>
-                    <p>@probablykat66</p>
+
+            <button class="log" id="loginbtn" onclick="openloginform()">Login</button>
+
+            <div class="profilecontainers">
+                <div class="navigation">
+                    <div class="user-box">
+                        <div class="image-box">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <p class="username">Jenifer Lopez</p>
+                    </div>
+                    <div class="menu-toggle"></div>
+                    <ul class="menu">
+                        <li><a href="#"><ion-icon name="cart-outline"></ion-icon></ion-icon>Cart</a></li>
+                        <li><a href="#"><ion-icon name="checkmark-done-outline"></ion-icon></ion-icon>My Booking</a>
+                        </li>
+                        <li><a href="#"><ion-icon name="log-out-outline"></ion-icon>Logout</a></li>
+                    </ul>
                 </div>
-                <div class="img-box">
-                    <img src="https://i.postimg.cc/BvNYhMHS/user-img.jpg" alt="some user image">
-                </div>
-            </div>
-            <div class="menu">
-                <ul>
-                    <li><a href="#"><i class="ph-bold ph-user"></i>&nbsp;Profile</a></li>
-                    <li><a href="#"><i class="ph-bold ph-envelope-simple"></i>&nbsp;Inbox</a></li>
-                    <li><a href="#"><i class="ph-bold ph-gear-six"></i>&nbsp;Settings</a></li>
-                    <li><a href="#"><i class="ph-bold ph-question"></i>&nbsp;Help</a></li>
-                    <li><a href="#"><i class="ph-bold ph-sign-out"></i>&nbsp;Sign Out</a></li>
-                </ul>
             </div>
         </nav>
     </header>
 
 
-    <main>
+    <main id="main">
         <div id="carouselExample" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -458,7 +473,7 @@
         </div>
     </main>
 
-    <footer class="footer-section">
+    <footer class="footer-section" id="footer">
         <div class="container">
             <div class="footer-content pt-5 pb-5">
                 <div class="row">
@@ -521,10 +536,209 @@
     </footer>
 
     <!-- custom js -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script type="module" src="./assest/js/global.js"></script>
+    <script>
+        const loginbox = document.getElementById("loginbox");
+        const loginbtn = document.getElementById("loginbtn");
+        const navbars = document.getElementById('header');
+        const mains = document.getElementById('main');
+        const footers =document.getElementById('footer');
+        const body = document.body;
+
+        function openloginform() {
+            loginbox.classList.add("loginboxshow");
+            mains.classList.add("active");
+            navbars.classList.add("active");
+            body.style.overflow = 'hidden';
+            footers.style.filter = 'blur(10px)';
+            // window.onscroll = function () { window.scrollTo(0, 0); };
+        }
+    </script>
 </body>
 
 </html>
+
+
+
+<!-- 
+<div class="login-box">
+    <h2>Login</h2>
+    <form>
+      <div class="user-box">
+        <input type="text" name="" required="">
+        <label>Username</label>
+      </div>
+      <div class="user-box">
+        <input type="password" name="" required="">
+        <label>Password</label>
+      </div>
+      <button href="#">
+        Submit
+      </button>
+    </form>
+  </div>
+
+  
+.login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+  }
+  
+  .login-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .login-box .user-box {
+    position: relative;
+  }
+  
+  .login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+  }
+  .login-box .user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+  }
+  
+  .login-box .user-box input:focus ~ label,
+  .login-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+  }
+  
+  .login-box form button {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #03e9f4;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px;
+      border:1px solid;
+  }
+  
+  .login-box button:hover {
+    background: #03e9f4;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 100px #03e9f4;
+  }
+  
+  .login-box a span {
+    position: absolute;
+    display: block;
+  }
+  
+  .login-box a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: btn-anim1 1s linear infinite;
+  }
+  
+  @keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+    50%,100% {
+      left: 100%;
+    }
+  }
+  
+  .login-box a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+  }
+  
+  @keyframes btn-anim2 {
+    0% {
+      top: -100%;
+    }
+    50%,100% {
+      top: 100%;
+    }
+  }
+  
+  .login-box a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+  }
+  
+  @keyframes btn-anim3 {
+    0% {
+      right: -100%;
+    }
+    50%,100% {
+      right: 100%;
+    }
+  }
+  
+  .login-box a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+  }
+  
+  @keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,100% {
+      bottom: 100%;
+    }
+  } -->

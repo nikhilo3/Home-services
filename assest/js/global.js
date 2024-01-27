@@ -11,12 +11,14 @@ navCloseBtn.addEventListener("click", () => {
   nav.classList.remove("openNav");
 });
 
-let profile = document.querySelector('.profile');
-let menu = document.querySelector('.menu');
+let menuToggle = document.querySelector('.menu-toggle');
+let navigation = document.querySelector('.navigation');
 
-profile.onclick = function () {
-    menu.classList.toggle('active');
+menuToggle.onclick = function () {
+  navigation.classList.toggle('active');
 }
+
+
 
 
 
