@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const cookieParser = require('cookie-parser');
 
 const app = express();
 const port = 3000;
@@ -13,10 +14,20 @@ mongoose.connect('mongodb://127.0.0.1:27017/Homeservices').then(()=>{
     console.log(err);
 });
 
+
+
 //middleware
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(cookieParser());
+
+const {authenticateToken,jwtSecret} = require('./auth');
+
+app.use((req,res,next)=>{
+    req.jwtSecret = jwtSecret;
+    next();
+})
 
 
 // Routes

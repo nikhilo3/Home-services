@@ -1,12 +1,16 @@
 const express = require('express');
 const router = express.Router();
 const Cart = require('../models/cartModel');
+const { authenticateToken } = require('../auth');
 
-router.post('/addtocart', async (req, res) => {
+router.post('/addtocart', authenticateToken, async (req, res) => {
     try {
         const { id, title, price, image, quantity } = req.body;
 
+        const userId = req.user.userId;
+
         const cartItem = new Cart({
+            user: userId,
             id: id,
             title: title,
             price: price,
@@ -22,7 +26,7 @@ router.post('/addtocart', async (req, res) => {
     }
 });
 
-router.get('/getcartitems', async (req, res) => {
+router.get('/getcartitems', authenticateToken, async (req, res) => {
     try {
         const cartItems = await Cart.find();
         res.status(200).send(cartItems);
@@ -32,14 +36,14 @@ router.get('/getcartitems', async (req, res) => {
     }
 });
 
-router.delete('/removefromcart/:id', async (req,res) => {
+router.delete('/removefromcart/:id', authenticateToken ,async (req, res) => {
     try {
         const itemId = req.params.id;
         await Cart.findByIdAndDelete(itemId);
-        res.status(200).send({message:'Item Remove From Cart Successfully'});
+        res.status(200).send({ message: 'Item Remove From Cart Successfully' });
     } catch (err) {
-        console.error('Error removing item from cart',err);
-        res.status(500).json({message:'Internal server error'});
+        console.error('Error removing item from cart', err);
+        res.status(500).json({ message: 'Internal server error' });
     }
 })
 
