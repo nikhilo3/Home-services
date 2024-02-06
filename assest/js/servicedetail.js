@@ -33,62 +33,38 @@ let subcontain = document.querySelector('[subcontain]');
                 <h2>${name}</h2>
                 <div class="scroll-container">
                     <div class="subitem">
-                        <div class="subwrapper" subwrapper>
-                            
-                        </div>    
+                    <div class="d-flex" style="gap:50px;" subwrapper></div>
                     </div>
                 </div>
                 `
 
             sub_service.forEach(({ id, title, rating, price, image, description1, description2, description3 }) => {
                 let newsubcard = document.createElement('div');
-                newsubcard.classList = "subcard";
-                // newsubcard.dataset.id = id;
+                newsubcard.classList.add("row", "p-lg-3", "col-lg-4", "pb-0", "pe-lg-0", "pt-lg-2", "align-items-center", "rounded-5", "shadow-lg", "justify-between")
+                newsubcard.style.borderRadius = '10px';
                 newsubcard.innerHTML = `
-                    <div class="right">
-                    <h4>${title}</h4>
-
-                    <div class="rating">
-                        <img width="24" height="24"
+                    
+        <div class="col-lg-8 p-lg-3">
+          <h2 class=" fw-bold lh-1" style="font-size: 24px;">${title}</h2>
+          <div class="d-flex " style="align-items:center;">
+          <img width="42" height="42"
                             src="https://img.icons8.com/sf-black-filled/64/000000/rating-circled.png"
                             alt="rating-circled" />
                         <span>${rating}</span>
-                    </div>
-
-                    <span class="price">${price}</span>
-
-                    <div class="detail">
-                        <div class="detail1">
-                            <img width="10" height="10"
-                                src="https://img.icons8.com/ios-glyphs/30/full-stop--v2.png"
-                                alt="full-stop--v2" />
-                            <span>${description1}</span>
-                        </div>
-
-                        <div class="detail1">
-                            <img width="10" height="10"
-                                src="https://img.icons8.com/ios-glyphs/30/full-stop--v2.png"
-                                alt="full-stop--v2" />
-                                <span>${description2}</span>
-                        </div>
-
-                        <div class="detail1">
-                            <img width="10" height="10"
-                                src="https://img.icons8.com/ios-glyphs/30/full-stop--v2.png"
-                                alt="full-stop--v2" />
-                                <span>${description3}</span>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="left">
-                    <div class="img">
-                        <img src="${image}" alt="bathroom cleaning">
-                    </div>
-
-                    <button type="button" class="btn btn-success btncart addcart">Add</button>
-                </div>
+            </div>
+          <ul style=" font-size:12px; padding-left: 20px; line-height: 20px; text-align: justify; ">
+            <li style="list-style:disc;">${description1}</li>
+            <li style="list-style:disc;">${description2}</li>
+            <li style="list-style:disc;">${description3}</li>
+          </ul>
+          <div style="padding-left: 20px;">
+          <span class="fw-bold" style="font-size:22px;">${price}</span>
+        </div>
+        </div>
+        <div class="col-lg-4 p-0 shadow-lg" style=" position: relative; text-align: center;">
+          <img class="rounded" src="${image}" alt="" width="164px" height="170px" style="object-fit: cover;">
+            <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold btncart addcart" style="position: absolute; bottom: -24px; right: 25px;">ADD</button>
+        </div>
                     `
                 newservices.querySelector('[subwrapper]').appendChild(newsubcard);
 
@@ -117,7 +93,7 @@ async function addtocart(id, title, price, image) {
         const response = await fetch('http://localhost:3000/cart/addtocart', {
             method: 'POST',
             headers: {
-                'Content-type':'application/json'
+                'Content-type': 'application/json'
             },
             body: JSON.stringify({
                 id: id,
@@ -128,11 +104,11 @@ async function addtocart(id, title, price, image) {
             })
         });
 
-        if(response.ok){
+        if (response.ok) {
             console.log('Item added to cart successfully');
         }
-        else{
-            console.log('failed to add item to cart',response.statusText);
+        else {
+            console.log('failed to add item to cart', response.statusText);
         }
         // const existingItem = cartItems.find((item) => {
         //     item.id === id;
