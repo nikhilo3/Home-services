@@ -34,10 +34,12 @@ app.use((req,res,next)=>{
 const orderRouter = require('./controller/orderController');
 const cartRouter = require('./controller/cartController');
 const regiRouter = require('./controller/regiController');
+const subRouter = require('./controller/subController');
 
 app.use('/order',orderRouter);
 app.use('/cart',cartRouter);
 app.use('/registration',regiRouter);
+app.use('/subscribemail',subRouter);
 
 // server
 app.listen(port, ()=>{
