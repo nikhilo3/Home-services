@@ -1825,109 +1825,100 @@ textarea {
   background-color: var(--background-second);
 }
 
-.dpage .subcontain .subserv {
-  width: 100%;
-}
-
-.dpage .subcontain .scroll-container {
-  overflow-x: overlay;
-  width: 100%;
-}
-
-.dpage .subcontain .subitem {
+.dpage .abc {
   display: flex;
-  padding: 20px 10px;
-  width: fit-content;
+  flex-wrap: wrap;
+  gap: 45px;
 }
 
-.dpage .subcontain .subwrapper {
-  width: 100%;
+.dpage .cards {
   display: flex;
-  gap: 10px;
+  border-radius: 10px;
+  width: 30%;
+  padding: 15px;
   align-items: center;
-
+  box-sizing: border-box;
+  margin-right: 10px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5);
 }
 
-.dpage .subcontain .subcard {
-  width: 600px;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  /* flex: 0 0 auto; */
-  margin-right: 20px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.dpage .carddetailes {
+  width: 70%;
 }
 
-.dpage .subcontain .rating {
-  display: flex;
-  align-items: center;
-  width: fit-content;
-  gap: 5px;
+.dpage .border-hero {
+  border-bottom: 2px solid black;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
 }
 
-.dpage .subcontain .price {
-  border-bottom: 1px dashed var(--text-light);
-  border-bottom-width: 2px;
-  padding-bottom: 10px;
+.dpage .title {
+  margin: 0;
 }
 
-.dpage .subcontain .detail {
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
+.dpage .description {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
-.dpage .subcontain .detail1 {
-  display: flex;
-  gap: 6px;
-  justify-content: center;
-  align-items: center;
+.dpage .price {
+  margin-left: 15px;
+  font-size: 24px;
+  font-weight: 800;
 }
 
-.dpage .subcontain .detail1 img {
-  height: 10px;
-  width: 10px;
-}
-
-.dpage .subcontain .detail1 span {
-  word-break: break-all;
-  font-size: 0.8rem;
-}
-
-.dpage .subcontain .left {
+.dpage .card-image {
+  width: 40%;
   position: relative;
-  padding: 40px;
 }
 
-.dpage .subcontain .left .img {
-  height: 130px;
-  width: 130px;
-  border-radius: 5px;
-
-}
-
-.dpage .subcontain .left .img img {
+.dpage .card-image img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 20px;
+  height: 150px;
 }
 
-.dpage .subcontain .left button {
+
+.dpage .add-button {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: -13px;
+  left: 15%;
+  font-size: 22px;
+  padding: 5px 25px;
+  font-weight: 700;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 
+@media (max-width: 1268px) {
+  .dpage .cards {
+      width: 40%;
+      margin-right: 0;
+  }
+}
 
+@media (max-width: 1068px) {
+  .dpage .cards {
+      width: 40%;
+      margin-right: 0;
+  }
+}
 
+@media (max-width: 968px) {
+  .dpage .cards {
+      width: 60%;
+      margin-right: 0;
+  }
+}
 
-
-
-
+@media (max-width: 768px) {
+  .dpage .cards {
+      width: 100%;
+      margin-right: 0;
+  }
+}
 
 
 
