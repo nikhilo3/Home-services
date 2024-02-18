@@ -42,6 +42,8 @@ let subcontain = document.querySelector('[subcontain]');
                 let newsubcard = document.createElement('div');
                 newsubcard.classList.add("row", "p-lg-3", "col-lg-4", "pb-0", "pe-lg-0", "pt-lg-2", "align-items-center", "rounded-5", "shadow-lg", "justify-between")
                 newsubcard.style.borderRadius = '10px';
+                newsubcard.style.width = '500px';
+                newsubcard.style.height = '300px';
                 newsubcard.innerHTML = `
                     
         <div class="col-lg-8 p-lg-3">
