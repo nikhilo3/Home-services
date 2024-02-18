@@ -51,7 +51,6 @@ let subcontain = document.querySelector('[subcontain]');
                             src="https://img.icons8.com/sf-black-filled/64/000000/rating-circled.png"
                             alt="rating-circled" />
                         <span>${rating}</span>
-
                     </div>
                 </div>
                 <div class="description">
@@ -83,7 +82,6 @@ let subcontain = document.querySelector('[subcontain]');
     } catch (err) {
         console.log("error is occured", err)
     }
-
 })();
 
 
