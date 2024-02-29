@@ -20,8 +20,6 @@ menuToggle.onclick = function () {
 
 
 
-
-
 //customerdetail section
 let customerquetion = document.querySelectorAll("[customerquetion]");
 
@@ -55,5 +53,3 @@ num.forEach((element) => {
     }
   }, 2000 / endvalue)
 });
-
-

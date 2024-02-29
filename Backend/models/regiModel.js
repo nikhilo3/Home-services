@@ -13,6 +13,14 @@ const regiSchema = new mongoose.Schema({
     password:{
         type:String,
         required:true
+    },
+    role:{
+        type:String,
+        default:"user"
+    },
+    cart:{
+        type:Array,
+        default:[]
     }
 },{collection:'registration'});
 
