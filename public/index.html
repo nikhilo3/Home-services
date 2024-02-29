@@ -7,21 +7,21 @@
     <title>NS - Outdoor & cleaning service</title>
 
     <!-- favicon -->
-    <link rel="shortcut icon" href="./assest/images/Screenshot 2023-12-28 122313.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/assest/images/Screenshot 2023-12-28 122313.png" type="image/x-icon">
 
     <!-- bootstrap -->
-    <link rel="stylesheet" href="./assest/css/bootsrapfile/bootstrap.min.css">
-    <script src="./assest/css/bootsrapfile/jquery-3.7.1.min.js" defer></script>
+    <link rel="stylesheet" href="/assest/css/bootsrapfile/bootstrap.min.css">
+    <script src="/assest/css/bootsrapfile/jquery-3.7.1.min.js" defer></script>
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
     <!-- icon font awesome -->
-    <link rel="stylesheet" href="./assest/css/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="/assest/css/fontawesome/css/all.min.css">
 
 
     <!-- custom css -->
-    <link rel="stylesheet" href="./assest/css/style.css">
+    <link rel="stylesheet" href="/assest/css/style.css">
 
 </head>
 
@@ -30,21 +30,21 @@
         <div class="form-container sign-up-container">
             <form action="http://localhost:3000/registration" method="post">
                 <h1>Create Account</h1>
-
-
-                <input type="text" name="username" placeholder="Username" required/>
-                <input type="email" name="email" placeholder="Email" required/>
-                <input type="password" name="password" placeholder="Password" required/>
-                <button type="submit">Sign Up</button>
+                <input type="text" name="username" placeholder="Username" required />
+                <input type="email" name="email" placeholder="Email" required autocomplete="email" />
+                <input type="password" name="password" placeholder="Password" required
+                    autocomplete="current-password" />
+                <button type="submit" id="originalsignup">Sign Up</button>
             </form>
         </div>
         <div class="form-container sign-in-container">
             <form action="http://localhost:3000/login" method="post">
                 <h1>Sign in</h1>
-                <input type="email" name="email" placeholder="Email" required/>
-                <input type="password" name="password" placeholder="Password" required/>
+                <input type="email" name="email" placeholder="Email" required autocomplete="email" id="emailInput"/>
+                <input type="password" name="password" placeholder="Password" required
+                    autocomplete="current-password" id="passwordInput"/>
                 <a href="#">Forgot your password?</a>
-                <button type="submit">Sign In</button>
+                <button type="submit" id="originalsignin">Sign In</button>
             </form>
         </div>
         <div class="overlay-container">
@@ -68,15 +68,15 @@
     <header id="header">
         <nav class="nav">
             <i class="fa-solid fa-bars navOpenBtn" onclick="navresponsive()"></i>
-            <a href="#" class="logo"><img src="./assest/images/ns-logos/ns-logos_white.png" alt="" height="150"
+            <a href="#" class="logo"><img src="/assest/images/ns-logos/ns-logos_white.png" alt="" height="150"
                     width="150"></a>
 
             <ul class="nav-links">
                 <i class="fa-solid fa-xmark navCloseBtn"></i>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/service.html">Services</a></li>
-                <li><a href="/about.html">About Us</a></li>
-                <li><a href="/contact.html">Contact Us</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/service">Services</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact Us</a></li>
             </ul>
 
             <button class="log" id="loginbtn" onclick="openloginform()">Login</button>
@@ -91,7 +91,8 @@
                     </div>
                     <div class="menu-toggle"></div>
                     <ul class="menu">
-                        <li><a href="#"><ion-icon name="cart-outline"></ion-icon></ion-icon>Cart</a></li>
+                        <li><a href="/mycart"><ion-icon name="cart-outline"></ion-icon><span style="color: black;"
+                                    id="cart-item-count" class="badge">0</span></ion-icon>Cart</a></li>
                         <li><a href="#"><ion-icon name="checkmark-done-outline"></ion-icon></ion-icon>My Booking</a>
                         </li>
                         <li><a href="#"><ion-icon name="log-out-outline"></ion-icon>Logout</a></li>
@@ -494,7 +495,7 @@
             </div>
         </div>
     </main>
-    
+
     <footer class="footer-section" id="footer">
         <div class="container">
             <div class="footer-content pt-5 pb-5">
@@ -502,7 +503,7 @@
                     <div class="col-xl-4 col-lg-4 mb-50">
                         <div class="footer-widget">
                             <div class="footer-logo">
-                                <a href="index.html"><img src="./assest/images/ns-logos/ns-logos_white.png"
+                                <a href="index.html"><img src="/assest/images/ns-logos/ns-logos_white.png"
                                         class="img-fluid" alt="logo" width="200" height="200"></a>
                             </div>
                             <div class="footer-text">
@@ -555,6 +556,10 @@
             </div>
         </div>
 
+        <div id="loginSuccessMessage" style="display: none;">
+            <p>Login successful!</p>
+        </div>
+
     </footer>
 
     <!-- custom js -->
@@ -563,7 +568,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script type="module" src="./assest/js/global.js"></script>
+    <script type="module" src="/assest/js/global.js"></script>
     <script>
 
         const signUpButton = document.getElementById("signUp");
@@ -576,16 +581,76 @@
         const footers = document.getElementById('footer');
         const body = document.body;
 
+        function getUserFromLocalStorage() {
+            const user = localStorage.getItem('user');
+            if (user === null) { return null };
+            return JSON.parse(user);
+        }
+
+        function addUserHeaders(req) {
+            const user = getUserFromLocalStorage();
+            if (user) {
+                req.headers.Authorization = `Bearer ${user.token}`;
+            }
+        }
+
+        async function handleLogin(email, password) {
+            try {
+                const response = await fetch('http://localhost:3000/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email, password })
+                });
+                console.log(response);
+
+                if (response.ok) {
+                    const data = await response.json();
+                    console.log(data);
+                    localStorage.setItem('user', JSON.stringify(data.user));
+                    localStorage.setItem('token', data.token);
+                    console.log('Redirecting to homepage');
+                    // Redirect the user to the homepage
+                    window.location.href = "/"
+                } else {
+                    throw new Error('Login failed');
+                }
+            } catch (error) {
+                console.error('Error during login:', error);
+                // Handle login failure
+            }
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            const originalsigninbtn = document.getElementById("originalsignin");
+
+            originalsigninbtn.addEventListener("click", () => {
+                console.log("originalsign in button clicked");
+                const email = document.getElementById("emailInput").value;
+                const password = document.getElementById("passwordInput").value;
+                handleLogin(email, password);
+            });
+        });
+
+        // document.getElementById("originalsignup").addEventListener("click",()=>{
+        //     window.location.href = "/";
+        // })
+
+
+
         function openloginform() {
+            // Display login box and blur main content
             loginbox.style.cssText = `
-                display:block;
-                z-index:999;
-            `
+            display:block;
+            z-index:999;
+        `;
             mains.style.filter = 'blur(10px)';
             navbars.style.display = 'none';
             body.style.overflow = 'hidden';
             footers.style.filter = 'blur(10px)';
         }
+
+
 
         signUpButton.addEventListener("click", () => {
             console.log("Sign Up button clicked");
@@ -596,7 +661,32 @@
             console.log("Sign In button clicked");
             loginbox.classList.remove("right-panel-active");
         });
+
+
+        // function isLoggedIn() {
+        //     const user = localStorage.getItem('user');
+        //     return user !== null;
+        // }
+
+        // if (isLoggedIn()) {
+        //     document.getElementById("loginbtn").style.display = "none";
+        // }
+
+        // if (isLoggedIn()) {
+        //     const token = localStorage.getItem('token');
+
+        //     fetch('/cart/getcartitems', {
+        //         headers: {
+        //             'Authorization': `Bearer ${token}`
+        //         }
+        //     })
+        //         .then(response => response.json())
+        //         .then(cartItems => {
+        //             document.getElementById('cart-item-count').innerText = cartItems.length;
+        //         });
+        // }
     </script>
+
 </body>
 
 </html>

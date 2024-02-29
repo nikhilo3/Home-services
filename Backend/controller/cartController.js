@@ -1,42 +1,77 @@
 const express = require('express');
-const router = express.Router();
 const Cart = require('../models/cartModel');
-const { authenticateToken } = require('../auth');
+const User = require('../models/regiModel');
+const verifyToken = require('../middleware/verifyToken');
 
-router.post('/addtocart', authenticateToken, async (req, res) => {
+
+const router = express.Router();
+
+router.post('/addtocart', verifyToken, async (req, res) => {
     try {
+
         const { id, title, price, image, quantity } = req.body;
 
-        const userId = req.user.userId;
+        const { _id } = req.user;
 
-        const cartItem = new Cart({
-            user: userId,
-            id: id,
-            title: title,
-            price: price,
-            image: image,
-            quantity: quantity
-        });
+        try {
+            const user = await User.findById(_id);
+            console.log(user)
+            const cartItem = new Cart({
+                user: user._id,
+                id: id,
+                title: title,
+                price: price,
+                image: image,
+                quantity: quantity
+            });
 
-        await cartItem.save();
-        res.status(200).send({ message: 'Item added to cart successfully' });
+            await cartItem.save();
+            res.json(cartItem);
+
+        } catch (error) {
+            throw new Error('error')
+        }
+
+
+
+
+        //     const cartItem = new Cart({
+        //         user: userId,
+        //         id: id,
+        //         title: title,
+        //         price: price,
+        //         image: image,
+        //         quantity: quantity
+        //     });
+
+        //     await cartItem.save();
+        //     res.status(200).send({ message: 'Item added to cart successfully' });
     } catch (err) {
-        console.error('Error adding item to cart:', err);
-        res.status(500).json({ message: 'Internal server error' });
+        console.error('Error verifying token:', err);
+        res.status(401).json({ message: 'Unauthorized' });
+
+        // console.error('Error adding item to cart:', err);
+        // res.status(500).json({ message: 'Internal server error' });
     }
 });
 
-router.get('/getcartitems', authenticateToken, async (req, res) => {
+router.get('/getcartitems', verifyToken, async (req, res) => {
     try {
-        const cartItems = await Cart.find();
-        res.status(200).send(cartItems);
+        // const token = req.headers.authorization;
+        const { _id } = req.user;
+        try {
+            const cartItems = await Cart.find({ user: _id });
+            res.json(cartItems);
+        } catch (error) {
+            throw new Error('error');
+        }
     } catch (err) {
         console.error('Error fetching cart items', err);
         res.status(500).json({ message: 'internal server error' });
     }
 });
 
-router.delete('/removefromcart/:id', authenticateToken ,async (req, res) => {
+router.delete('/removefromcart/:id', async (req, res) => {
     try {
         const itemId = req.params.id;
         await Cart.findByIdAndDelete(itemId);

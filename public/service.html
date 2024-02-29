@@ -8,7 +8,7 @@
 
 
   <!-- custom css -->
-  <link rel="stylesheet" href="./assest/css/style.css">
+  <link rel="stylesheet" href="/assest/css/style.css">
 </head>
 
 <body class="servicepage">
@@ -44,7 +44,7 @@
 
 
   <script type="module">
-    import { fetchData } from "./assest/js/fetchjson.js";
+    import { fetchData } from "/assest/js/fetchjson.js";
 
     let servicecontainer = document.querySelector('[servicepagecontainer]');
 
@@ -72,7 +72,7 @@
    </div>
    <button>view detail</button>
  </div>
- <a href="/servicedetail.html?id=${data.id}" homeservicesclick></a>
+ <a href="/servicedetail?id=${data.id}" homeservicesclick></a>
       `
 
 
