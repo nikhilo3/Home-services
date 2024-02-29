@@ -6,7 +6,10 @@ router.post('/addtocart', async (req, res) => {
     try {
         const { id, title, price, image, quantity } = req.body;
 
+        const userId = req.user.userId;
+
         const cartItem = new Cart({
+            user: userId,
             id: id,
             title: title,
             price: price,
@@ -32,14 +35,14 @@ router.get('/getcartitems', async (req, res) => {
     }
 });
 
-router.delete('/removefromcart/:id', async (req,res) => {
+router.delete('/removefromcart/:id', async (req, res) => {
     try {
         const itemId = req.params.id;
         await Cart.findByIdAndDelete(itemId);
-        res.status(200).send({message:'Item Remove From Cart Successfully'});
+        res.status(200).send({ message: 'Item Remove From Cart Successfully' });
     } catch (err) {
-        console.error('Error removing item from cart',err);
-        res.status(500).json({message:'Internal server error'});
+        console.error('Error removing item from cart', err);
+        res.status(500).json({ message: 'Internal server error' });
     }
 })
 

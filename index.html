@@ -39,12 +39,12 @@
             </form>
         </div>
         <div class="form-container sign-in-container">
-            <form action="#">
+            <form action="http://localhost:3000/login" method="post">
                 <h1>Sign in</h1>
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Password" />
+                <input type="email" name="email" placeholder="Email" required/>
+                <input type="password" name="password" placeholder="Password" required/>
                 <a href="#">Forgot your password?</a>
-                <button>Sign In</button>
+                <button type="submit">Sign In</button>
             </form>
         </div>
         <div class="overlay-container">
@@ -544,9 +544,9 @@
                                 <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
                             </div>
                             <div class="subscribe-form">
-                                <form action="#">
-                                    <input type="text" class="full-width" placeholder="Email Address">
-                                    <button><i class="fab fa-telegram-plane"></i></button>
+                                <form action="http://localhost:3000/subscribemail" method="post" name="subform">
+                                    <input type="text" class="full-width" name="submail" placeholder="Email Address">
+                                    <button type="submit"><i class="fab fa-telegram-plane"></i></button>
                                 </form>
                             </div>
                         </div>
@@ -585,7 +585,6 @@
             navbars.style.display = 'none';
             body.style.overflow = 'hidden';
             footers.style.filter = 'blur(10px)';
-            // window.onscroll = function () { window.scrollTo(0, 0); };
         }
 
         signUpButton.addEventListener("click", () => {
