@@ -30,7 +30,7 @@ let subcontain = document.querySelector('[subcontain]');
             let newservices = document.createElement('div');
             newservices.classList = "subserv";
             newservices.innerHTML = `
-                <h2>${name}</h2>
+                <h2 class="heding">${name}</h2>
                 <div class="scroll-container">
                     <div class="subitem">
                     <div class="abc" subwrapper></div>
@@ -51,7 +51,6 @@ let subcontain = document.querySelector('[subcontain]');
                             src="https://img.icons8.com/sf-black-filled/64/000000/rating-circled.png"
                             alt="rating-circled" />
                         <span>${rating}</span>
-
                     </div>
                 </div>
                 <div class="description">
@@ -83,7 +82,6 @@ let subcontain = document.querySelector('[subcontain]');
     } catch (err) {
         console.log("error is occured", err)
     }
-
 })();
 
 
@@ -94,10 +92,13 @@ async function addtocart(id, title, price, image) {
     console.log(id, title, price, image);
 
     try {
+        const token = localStorage.getItem('token');
+
         const response = await fetch('http://localhost:3000/cart/addtocart', {
             method: 'POST',
             headers: {
-                'Content-type': 'application/json'
+                'Content-type': 'application/json',
+                'Authorization': `Bearer ${token}` // replace token with your actual token
             },
             body: JSON.stringify({
                 id: id,

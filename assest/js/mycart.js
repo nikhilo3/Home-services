@@ -6,7 +6,15 @@ const tax_feesElement = document.querySelector('[tax_fees]');
 
 const fetchAndRenderCartItems = async () => {
   try {
-    const response = await fetch('http://localhost:3000/cart/getcartitems');
+    const token = localStorage.getItem('token');
+
+    const response = await fetch('http://localhost:3000/cart/getcartitems', {
+      method: 'GET',
+      headers: {
+        'Content-type': 'application/json',
+        'Authorization': `Bearer ${token}` // replace token with your actual token
+      }
+    });
     if (response.ok) {
       const cartItems = await response.json();
       rendercart(cartItems);
@@ -128,7 +136,7 @@ btncheckout.addEventListener('click', () => {
   localStorage.setItem('paymenttotal', total.textContent);
 
 
-  window.location.href = "/checkout.html";
+  window.location.href = "/checkout";
 });
 
 

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>service detail-NS - Outdoor & cleaning service</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../assest/images/Screenshot 2023-12-28 122313.png" type="image/x-icon">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../assest/css/bootsrapfile/bootstrap.min.css">
+    <script src="../assest/css/bootsrapfile/jquery-3.7.1.min.js" defer></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <!-- icon font awesome -->
+    <link rel="stylesheet" href="../assest/css/fontawesome/css/all.min.css">
+
+
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="../assest/css/style.css">
+</head>
+
+<body class="dpage">
+
+    <header id="header">
+        <nav class="nav">
+            <i class="fa-solid fa-bars navOpenBtn" onclick="navresponsive()"></i>
+            <a href="#" class="logo"><img src="../assest/images/ns-logos/ns-logos_white.png" alt="" height="150"
+                    width="150"></a>
+
+            <ul class="nav-links">
+                <i class="fa-solid fa-xmark navCloseBtn"></i>
+                <li><a href="/">Home</a></li>
+                <li><a href="/service">Services</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li><a href="/mycart">my Cart</a></li>
+            </ul>
+
+            <button class="log" id="loginbtn" onclick="openloginform()">Login</button>
+
+            <div class="profilecontainers">
+                <div class="navigation">
+                    <div class="user-box">
+                        <div class="image-box">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <p class="username">Jenifer Lopez</p>
+                    </div>
+                    <div class="menu-toggle"></div>
+                    <ul class="menu">
+                        <li><a href="#"><ion-icon name="cart-outline"></ion-icon></ion-icon>Cart</a></li>
+                        <li><a href="#"><ion-icon name="checkmark-done-outline"></ion-icon></ion-icon>My Booking</a>
+                        </li>
+                        <li><a href="#"><ion-icon name="log-out-outline"></ion-icon>Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="contain">
+
+        <div class="herobanner" style="margin-top: 80px;">
+            <div class="wrapper">
+                <div class="coverphoto">
+                    <img src="" alt="Home Cleaning service" subservicemain>
+                </div>
+
+                <div class="detail">
+                    <h1 id="headingmain"></h1>
+                    <div class="rating" ratingmain>
+                        <!-- <img width="42" height="42"
+                            src="https://img.icons8.com/sf-black-filled/64/000000/rating-circled.png"
+                            alt="rating-circled" />
+                        <span>${thisservice.rating}</span> -->
+                    </div>
+
+                    <div class="extra">
+                            
+                        <div class="proimage">
+                            <img src="../assest/images/hygenic.webp" alt="logo image" width="92" height="92">
+                        </div>
+                        <div class="extra1">
+                            <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/checkmark--v1.png"
+                                alt="checkmark--v1" />
+                            <span>Inhouse Verified and Trained Professionals</span>
+                        </div>
+
+                        <div class="extra1">
+                            <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/checkmark--v1.png"
+                                alt="checkmark--v1" />
+                            <span>Insurance Upto Rs 5000 against damages</span>
+                        </div>
+
+                        <div class="extra1">
+                            <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/checkmark--v1.png"
+                                alt="checkmark--v1" />
+                            <span>Pay after your service online or cash </span>
+                        </div>
+
+                        <div class="extra1">
+                            <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/checkmark--v1.png"
+                                alt="checkmark--v1" />
+                            <span> use Safe Chemicals </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="subcontain" subcontain>
+            <!-- <div class="subserv"> -->
+            <!-- <h2 allservicename></h2>
+                <div class="scroll-container">
+                    <div class="subitem">
+                        <div class="subwrapper"> -->
+                       <!-- <div class="subcard">
+                                <div class="right">
+                                    <h4>Classic bathroom cleaning</h4>
+
+                                    <div class="rating">
+                                        <img width="24" height="24"
+                                            src="https://img.icons8.com/sf-black-filled/64/000000/rating-circled.png"
+                                            alt="rating-circled" />
+                                        <span>4.80 (5.2 M bookings)</span>
+                                    </div>
+
+                                    <span class="price">&#8377;399</span>
+
+                                    <div class="detail">
+                                        <div class="detail1">
+                                            
+                                            Lorem ipsum dolor sit amet consectetur adipisicing <br> elit. Ipsa
+                                                repudiandae
+                                                incidunt
+                                            
+                                        </div>
+
+                                        <div class="detail1">
+                                            <img width="10" height="10"
+                                                src="https://img.icons8.com/ios-glyphs/30/full-stop--v2.png"
+                                                alt="full-stop--v2" />
+                                            <span>Lorem ipsum dolor sit amet consectetur adipisicing<br> elit. Ipsa
+                                                repudiandae
+                                                incidunt
+                                            </span>
+                                        </div>
+
+                                        <div class="detail1">
+                                            <img width="10" height="10"
+                                                src="https://img.icons8.com/ios-glyphs/30/full-stop--v2.png"
+                                                alt="full-stop--v2" />
+                                            <span>Lorem ipsum dolor sit amet consectetur adipisicing<br> elit. Ipsa
+                                                repudiandae
+                                                incidunt
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="left">
+                                    <div class="img">
+                                        <img src="../assest/images/bathroom_cleaning1.webp" alt="bathroom cleaning">
+                                    </div>
+
+                                    <button type="button" class="btn btn-success btncart addcart">Add</button>
+                                </div>
+                            </div> -->
+            <!-- </div>
+                    </div>
+                </div> -->
+            <!-- </div> -->
+
+        </div>
+    </div>
+
+    
+
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-content pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <a href="index.html"><img src="../assest/images/ns-logos/ns-logos_white.png"
+                                        class="img-fluid" alt="logo" width="200" height="200"></a>
+                            </div>
+                            <div class="footer-text">
+                                <p>Elevate your living spaces with our expert house cleaning services. Committed to excellence, we use top-quality equipment and safe chemicals. Contact us for a pristine home environment that reflects our dedication to superior cleanliness.</p>
+                            </div>
+                            <div class="footer-social-icon">
+                                <span>Follow us</span>
+                                <div class="iconinner">
+                                    <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                                    <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                                    <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Useful Links</h3>
+                            </div>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#">My Status</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Subscribe</h3>
+                            </div>
+                            <div class="footer-text mb-25">
+                                <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                            </div>
+                            <div class="subscribe-form">
+                                <form action="#">
+                                    <input type="text" class="full-width" placeholder="Email Address">
+                                    <button><i class="fab fa-telegram-plane"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <script type="module" src="../assest/js/servicedetail.js"></script>
+</body>
+
+</html>

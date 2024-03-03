@@ -1,0 +1,160 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>check-out</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../assest/images/Screenshot 2023-12-28 122313.png" type="image/png">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../assest/css/bootsrapfile/bootstrap.min.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <!-- icon font awesome -->
+    <link rel="stylesheet" href="../assest/css/fontawesome/css/all.min.css">
+
+
+    <link
+        href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css"
+        rel="stylesheet" type="text/css" />
+
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="../assest/css/style.css">
+</head>
+
+<body class="check_out">
+    <div class="inner-layer">
+        <div class="container">
+            <div class="row no-margin">
+
+                <div class="col-sm-5">
+                    <div class="form-data">
+                        <div class="form-head">
+                            <h2>Schedule your Service
+                            </h2>
+                        </div>
+                        <div class="form-body">
+                            <form id="orderForm" action="http://localhost:3000/order" method="post">
+                                <div class="row form-row">
+                                    <input name="fullName" type="text" placeholder="Enter Full name"
+                                        class="form-control" required>
+                                </div>
+                                <div class="row form-row">
+                                    <input name="mobileNumber" type="number" placeholder="Enter Mobile Number"
+                                        class="form-control" required>
+                                </div>
+                                <div class="row form-row">
+                                    <input name="emailAddress" type="email" placeholder="Enter Email Adreess"
+                                        class="form-control" required>
+                                </div>
+                                <div class="row form-row ui calendar ui input left icon" id="dat">
+                                    <input name="appointmentDate" type="text" placeholder="Appointment Date"
+                                        class="form-control" required>
+                                </div>
+
+                                <br>
+                                <div class="row form-row ui calendar ui input left icon" id="tim">
+                                    <input name="appointmentTime" type="text" placeholder="Appointment time"
+                                        class="form-control" required>
+                                </div>
+
+                                <h6>Address Details</h6>
+
+                                <div class="row form-row">
+                                    <textarea name="address" type="text"
+                                        placeholder="enter full address with bulding or home number and name"
+                                        class="form-control" rows="4" required></textarea>
+                                </div>
+
+                                <div class="row form-row">
+
+                                    <div class="col-sm-6">
+                                        <input name="city" type="text" placeholder="Enter City" class="form-control"
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="row form-row">
+                                    <div class="col-sm-6">
+                                        <input name="state" type="text" placeholder="Enter State" class="form-control"
+                                            required>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input name="postalCode" type="number" placeholder="Postal Code"
+                                            class="form-control" required>
+                                    </div>
+
+                                </div>
+                                <input type="hidden" name="paytotal" id="paytotal" value="">
+                                <div class="row form-row">
+                                    <button type="submit" class="btn btn-success btn-appointment">
+                                        process
+                                    </button>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-7">
+                    <div class="col-lg-6 bg-white" ordersummary>
+                        <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Order summary
+                        </div>
+                        <div class="p-4">
+                            <ul class="list-unstyled mb-4">
+                                <li class="d-flex justify-content-between py-3 border-bottom"><strong
+                                        class="text-muted">Payment Subtotal </strong><strong paysubtotal>
+
+                                    </strong></li>
+
+                                <li class="d-flex justify-content-between py-3 border-bottom"><strong
+                                        class="text-muted">Taxes and Fee
+                                    </strong><strong paytax_fees>₹0.00</strong></li>
+                                <li class="d-flex justify-content-between py-3 border-bottom"><strong
+                                        class="text-muted">Amount Payable</strong>
+                                    <h5 class="font-weight-bold" paytotal></h5>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../assest/js/jslibrary/jquery-3.7.1.min.js"></script>
+    <script src="../assest/js/jslibrary/popper.min.js"></script>
+    <script src="../assest/js/jslibrary/bootstrap.min.js"></script>
+    <script
+        src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
+
+    <script>
+        $("#dat").calendar({ type: 'date' });
+
+        $('#tim').calendar({ type: 'time' });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            let paymentSubtotal = localStorage.getItem('paymentsubtotal');
+            let taxAndFees = localStorage.getItem('taxandfess');
+            let total = localStorage.getItem('paymenttotal');
+
+
+            const paytotal = document.querySelector('[paytotal]');
+            const paysubtotalElement = document.querySelector("[paysubtotal]");
+            const paytax_feesElement = document.querySelector('[paytax_fees]');
+
+
+            paysubtotalElement.textContent = paymentSubtotal;
+            paytax_feesElement.textContent = taxAndFees;
+            paytotal.textContent = total;
+
+            const paytotalValue = paytotal.textContent
+            document.getElementById('paytotal').value = paytotalValue;
+        });
+    </script>
+
+</body>
+
+</html>
