@@ -11,7 +11,7 @@
                     {
                         "id":1,
                         "title": "Essential bathroom cleaning",
-                        "rating": "4.85 (11.6 k bookings)",
+                        "rating": "5 (1k Ratings)",
                         "price": "₹499",
                         "image": "./assest/images/bathroom_cleaning1.webp",
                         "description1": "Complete cleaning of toilet pot, exhaust, walls, tiles etc",
@@ -21,12 +21,12 @@
                     {
                         "id":2,
                         "title": "Premium bathroom cleaning",
-                        "rating": "4.85 (11.6 k bookings)",
+                        "rating": "4.2 (2 k Ratings)",
                         "price": "₹999",
                         "image": "./assest/images/bathroom_cleaning1.webp",
-                        "description1": "+Machine scrubbing of the walls and floor",
-                        "description2": "+Removal of hard water stains and dirt in tile grouting",
-                        "description3": "+Removal of hard water stains and dirt in tile grouting"
+                        "description1": "Machine scrubbing of the walls and floor",
+                        "description2": "Removal of hard water stains and dirt in tile grouting",
+                        "description3": "Removal of hard water stains and dirt in tile grouting"
                     }
                     
                 ]
@@ -37,7 +37,7 @@
                     {
                         "id":1,
                         "title": "Essential Sofa Cleaning (5 seater)",
-                        "rating": "4.85 (11.6 k bookings)",
+                        "rating": "4.8 (1.6 k Ratings)",
                         "price": "₹499",
                         "image": "./assest/images/kitchan_cleaning1.jpeg",
                         "description1": "Shampooing and freshen the sofa's plush seats",
@@ -47,7 +47,7 @@
                     {
                         "id":2,
                         "title": "Premium Sofa Cleaning (7 seater)",
-                        "rating": "4.85 (11.6 k bookings)",
+                        "rating": "4.8 (1 k Ratings)",
                         "price": "₹999",
                         "image": "./assest/images/kitchan_cleaning1.jpeg",
                         "description1": "Shampooing and freshen the sofa's plush seats",
@@ -55,9 +55,9 @@
                         "description3": "Same number of cushions are included as per seats of sofa selected"
                     },
                     {
-                        "id":2,
+                        "id":3,
                         "title": "Premium Sofa Cleaning (7 seater)",
-                        "rating": "4.85 (11.6 k bookings)",
+                        "rating": "4.7 (2 k Ratings)",
                         "price": "₹999",
                         "image": "./assest/images/kitchan_cleaning1.jpeg",
                         "description1": "Shampooing and freshen the sofa's plush seats",
@@ -72,7 +72,7 @@
                     {
                         "id":1,
                         "title": "Essential Kitchen with Chimney",
-                        "rating": "4.85 (11.6 k bookings)",
+                        "rating": "4.8 (2 k Ratings)",
                         "price": "₹1499",
                         "image": "./assest/images/kitchan_cleaning1.jpeg",
                         "description1": "Stain removal from Gas stove, tiles, sink, exhaust fan",
@@ -82,7 +82,7 @@
                     {
                         "id":2,
                         "title": "Premium Kitchen with Chimney",
-                        "rating": "4.85 (11.6 k bookings)",
+                        "rating": "4.4 (1 k Ratings)",
                         "price": "₹1999",
                         "image": "./assest/images/kitchan_cleaning1.jpeg",
                         "description1": "Includes all items of Move-in kitchen cleaning",
@@ -97,7 +97,7 @@
                     {
                         "id":1,
                         "title": "Essential bathroom cleaning",
-                        "rating": "4.85 (11.6 k bookings)",
+                        "rating": "4.5 (1 k Ratings)",
                         "price": "₹499",
                         "image": "./assest/images/bathroom_cleaning1.webp",
                         "description1": "Complete cleaning of toilet pot, exhaust, walls, tiles etc",
@@ -107,7 +107,7 @@
                     {
                         "id":2,
                         "title": "Premium bathroom cleaning",
-                        "rating": "4.85 (11.6 k bookings)",
+                        "rating": "4.2 (1 k Ratings)",
                         "price": "₹999",
                         "image": "./assest/images/bathroom_cleaning1.webp",
                         "description1": "+Machine scrubbing of the walls and floor",
@@ -122,7 +122,7 @@
                     {
                         "id":1,
                         "title": "Essential bathroom cleaning",
-                        "rating": "4.85 (11.6 k bookings)",
+                        "rating": "4.1 (1 k Ratings)",
                         "price": "₹499",
                         "image": "./assest/images/bathroom_cleaning1.webp",
                         "description1": "Complete cleaning of toilet pot, exhaust, walls, tiles etc",
@@ -143,8 +143,9 @@
                 "name": "Appliance",
                 "sub_service": [
                     {
+                        "id":1,
                         "title": "TV installation",
-                        "rating": "4.85 (11.6 k bookings)",
+                        "rating": "4.5 (1 k Ratings)",
                         "price": "₹399",
                         "image": "./assest/images/switchbord.jpeg",
                         "description1": "Expert TV installation for seamless home entertainment setups",
@@ -152,8 +153,9 @@
                         "description3": "Precision and care in every TV installation for a perfect viewing experience"
                     },
                     {
+                        "id":2,
                         "title": "WiFi CCTV installation",
-                        "rating": "4.90 (2.5 M bookings)",
+                        "rating": "4.9 (2 k Ratings)",
                         "price": "₹899",
                         "image": "./assest/images/switchbord.jpeg",
                         "description1": "Secure your space with seamless WiFi CCTV installation for 24/7 monitoring",
@@ -161,22 +163,14 @@
                         "description3": "Reliable and efficient WiFi CCTV setups for peace of mind and remote surveillance"
                     },
                     {
+                        "id":3,
                         "title": "AC installation",
-                        "rating": "4.90 (2.5 M bookings)",
+                        "rating": "4.9 (2 k Ratings)",
                         "price": "₹999",
                         "image": "./assest/images/switchbord.jpeg",
                         "description1": "Expert AC installation for optimal cooling efficiency in any space",
                         "description2": "Seamless and reliable air conditioner installations by skilled technicians",
                         "description3": "Precision and care in every AC installation for year-round comfort"
-                    },
-                    {
-                        "title": "EV charger installation (2 wheeler)",
-                        "rating": "4.90 (2.5 M bookings)",
-                        "price": "₹999",
-                        "image": "./assest/images/switchbord.jpeg",
-                        "description1": "Expert AC installations for efficient cooling in any space",
-                        "description2": "Professional and reliable service by skilled technicians",
-                        "description3": "Precision and care to ensure optimal performance and comfort"
                     }
                 ]
             },
@@ -184,8 +178,9 @@
                 "name": "Switch & socket",
                 "sub_service": [
                     {
+                        "id":1,
                         "title": "Switchbox installation",
-                        "rating": "4.90 (2.5 M bookings)",
+                        "rating": "4.9 (2 k Ratings)",
                         "price": "₹299",
                         "image": "./assest/images/fan.jpeg",
                         "description1": "Seamless switch and socket installations for modern and functional spaces",
@@ -193,8 +188,9 @@
                         "description3": "Precision and safety in every installation for a seamless power experience"
                     }, 
                     {
+                        "id":2,
                         "title": "AC switchbox installation",
-                        "rating": "4.90 (2.5 M bookings)",
+                        "rating": "4.9 (2 k Ratings)",
                         "price": "₹299",
                         "image": "./assest/images/fan.jpeg",
                         "description1": "Specialized AC switchbox installations for streamlined climate contro",
@@ -202,8 +198,9 @@
                         "description3": "Precision and expertise in every AC switchbox installation for enhanced convenience"
                     },
                     {
+                        "id":3,
                         "title": "Switch/socket replacement",
-                        "rating": "4.90 (2.5 M bookings)",
+                        "rating": "4.9 (3 k Ratings)",
                         "price": "₹1099",
                         "image": "./assest/images/fan.jpeg",
                         "description1": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
@@ -216,8 +213,9 @@
                 "name": "Wiring",
                 "sub_service": [
                     {       
+                        "id":1,    
                         "title": "New wiring with casing (per 5m)",
-                        "rating": "4.80 (5.2 M bookings)",
+                        "rating": "4.8 (2 k Ratings)",
                         "price": "₹199",
                         "image": "./assest/images/fan.jpeg",
                         "description1": "Expert new wiring with casing service for safe and organized electrical setups",
@@ -225,8 +223,9 @@
                         "description3": "Precision and efficiency in every 5m wiring upgrade for enhanced functionality"
                     },
                     {
+                        "id":2,
                         "title": "New wiring without casing (per 5m)",
-                        "rating": "4.90 (2.5 M bookings)",
+                        "rating": "4.9 (2 k Ratings)",
                         "price": "₹299",
                         "image": "./assest/images/fan.jpeg",
                         "description1": "Unobtrusive new wiring without casing, providing a clean and discreet look",
@@ -234,8 +233,9 @@
                         "description3": "Streamlined service ensuring safety and reliability in every installation"
                     },
                     {
+                        "id":3,
                         "title": "New internal wiring (per 5m)",
-                        "rating": "4.90 (2.5 M bookings)",
+                        "rating": "4.9 (2 k Ratings)",
                         "price": "₹1099",
                         "image": "./assest/images/fan.jpeg",
                         "description1": "Upgrade your space with new internal wiring for enhanced connectivity",
@@ -248,8 +248,9 @@
                 "name": "Inverter & Stabilizer",
                 "sub_service": [
                     {
+                        "id":1,
                         "title": "Inverter installation",
-                        "rating": "4.90 (2.5 M bookings)",
+                        "rating": "4.9 (2 k Ratings)",
                         "price": "₹299",
                         "image": "./assest/images/fan.jpeg",
                         "description1": "Expert inverter installations for uninterrupted power supply",
@@ -257,8 +258,9 @@
                         "description3": "Precision and reliability for optimal performance in every installation"
                     },
                     {
+                        "id":2,
                         "title": "Inverter repair",
-                        "rating": "4.80 (5.2 M bookings)",
+                        "rating": "4.8 (2 k Ratings)",
                         "price": "₹199",
                         "image": "./assest/images/fan.jpeg",
                         "description1": "Swift and reliable inverter repair service to restore power without delay",
@@ -266,27 +268,14 @@
                         "description3": "Precision in every repair to extend the life of your inverter system"
                     },
                     {
+                        "id":3,
                         "title": "Inverter Servicing",
-                        "rating": "4.90 (2.5 M bookings)",
+                        "rating": "4.90 (3 k Ratings)",
                         "price": "₹1099",
                         "image": "./assest/images/fan.jpeg",
                         "description1": "Reliable inverter servicing for uninterrupted power backup",
                         "description2": "Professional technicians ensuring optimal inverter performance",
                         "description3": "Precision and expertise in every service to keep your power supply seamless"
-                    }
-                ]
-            },
-            {
-                "name": "Looking for something else",
-                "sub_service": [
-                    {
-                        "title": "Fan installation",
-                        "rating": "4.80 (5.2 M bookings)",
-                        "price": "₹199",
-                        "image": "./assest/images/fan.jpeg",
-                        "description1": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description2": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description3": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt"
                     }
                 ]
             }
@@ -302,31 +291,34 @@
                 "name": "Furniture Making",
                 "sub_service": [
                     {
-                        "title": "switchboard installation",
-                        "rating": "4.85 (11.6 k bookings)",
+                        "id":1,
+                        "title": "Bed Design",
+                        "rating": "4.8 (1 k Ratings)",
                         "price": "₹399",
                         "image": "./assest/images/switchbord.jpeg",
-                        "description1": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description2": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description3": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt"
+                        "description1": "Bed designs blend style, comfort, and functionality for optimal relaxation.",
+                        "description2": "Artful concepts bring sophistication to bedrooms, enhancing sleep environments.",
+                        "description3": "Customized designs cater to preferences, shaping unique and cozy sleeping spaces."
                     },
                     {
-                        "title": "switch/soket repair",
-                        "rating": "4.90 (2.5 M bookings)",
+                        "id":2,
+                        "title": "Ceiling Design",
+                        "rating": "4.9 (2 k Ratings)",
                         "price": "₹899",
                         "image": "./assest/images/switchbord.jpeg",
-                        "description1": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description2": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description3": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt"
+                        "description1": "Ceiling designs merge classic and modern aesthetics for enduring sophistication.",
+                        "description2": "Artful designs elevate spaces, adding character and visual interest to ceilings.",
+                        "description3": "Creative concepts enhance rooms, integrating lighting and structure seamlessly into ceilings."
                     },
                     {
-                        "title": "smart appliance controller",
-                        "rating": "4.90 (2.5 M bookings)",
+                        "id":3,
+                        "title": "Kitchen Design",
+                        "rating": "4.9 (2 k Ratings)",
                         "price": "₹999",
                         "image": "./assest/images/switchbord.jpeg",
-                        "description1": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description2": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description3": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt"
+                        "description1": "Kitchen designs blend sophistication with contemporary functionality for stylish efficiency.",
+                        "description2": "Expert layouts optimize kitchens, merging practicality with aesthetic appeal seamlessly.",
+                        "description3": "Custom designs cater to individual preferences, creating personalized and efficient kitchens."
                     }
                 ]
             },
@@ -334,63 +326,34 @@
                 "name": "Furniture Repair",
                 "sub_service": [
                     {
-                        "title": "Fan installation",
-                        "rating": "4.80 (5.2 M bookings)",
-                        "price": "₹199",
+                        "id":1,
+                        "title": "Ceiling Repair",
+                        "rating": "4.8 (5 k Ratings)",
+                        "price": "₹4999",
                         "image": "./assest/images/fan.jpeg",
-                        "description1": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description2": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description3": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt"
+                        "description1": "Professional repairs for a flawless and structurally sound ceiling.",
+                        "description2": "Expert services to repair and prevent water-damaged ceiling issues.",
+                        "description3": "Skilled craftsmanship restores ceilings, enhancing visual appeal and durability."
                     },
                     {
-                        "title": "fan repair",
-                        "rating": "4.90 (2.5 M bookings)",
-                        "price": "₹299",
+                        "id":2,
+                        "title": "Kitchen Repair",
+                        "rating": "4.1 (2 k Ratings)",
+                        "price": "₹3999",
                         "image": "./assest/images/fan.jpeg",
-                        "description1": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description2": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description3": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt"
+                        "description1": "Expert repairs optimize kitchen appliances for peak performance and durability.",
+                        "description2": "Skilled service enhances functionality, ensuring a well-maintained and efficient kitchen.",
+                        "description3": "Craftsmanship restores kitchen cabinets, blending form with function for longevity."
                     },
                     {
-                        "title": "fan replacement",
-                        "rating": "4.90 (2.5 M bookings)",
+                        "id":3,
+                        "title": "Bed Repair",
+                        "rating": "4.9 (2 k Ratings)",
                         "price": "₹1099",
                         "image": "./assest/images/fan.jpeg",
-                        "description1": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description2": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description3": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt"
-                    }
-                ]
-            },
-            {
-                "name": "Looking for something else",
-                "sub_service": [
-                    {
-                        "title": "Fan installation",
-                        "rating": "4.80 (5.2 M bookings)",
-                        "price": "₹199",
-                        "image": "./assest/images/fan.jpeg",
-                        "description1": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description2": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description3": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt"
-                    },
-                    {
-                        "title": "fan repair",
-                        "rating": "4.90 (2.5 M bookings)",
-                        "price": "₹299",
-                        "image": "./assest/images/fan.jpeg",
-                        "description1": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description2": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description3": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt"
-                    },
-                    {
-                        "title": "fan replacement",
-                        "rating": "4.90 (2.5 M bookings)",
-                        "price": "₹1099",
-                        "image": "./assest/images/fan.jpeg",
-                        "description1": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description2": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description3": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt"
+                        "description1": "Professional repairs ensure a stable and durable bed foundation.",
+                        "description2": "Tailored fixes for improved comfort and overall sleep quality.",
+                        "description3": "Skilled repairs revive beds with a refreshed and appealing appearance."
                     }
                 ]
             }
@@ -406,31 +369,24 @@
                 "name": "Grass Cutting",
                 "sub_service": [
                     {
+                        "id":1,
                         "title": "Backyard Grass Cutting",
-                        "rating": "4.85 (11.6 k bookings)",
+                        "rating": "4.8 (1 k Ratings)",
                         "price": "₹399",
                         "image": "./assest/images/switchbord.jpeg",
-                        "description1": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description2": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description3": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt"
+                        "description1": "Precision grass cutting for a manicured, vibrant outdoor landscape.",
+                        "description2": "Expert care ensuring an even, well-maintained and healthy green carpet.",
+                        "description3": "Tailored cutting services to suit weather changes for optimal lawn health."
                     },
                     {
+                        "id":2,
                         "title": "Frontyard Grass Cutting",
-                        "rating": "4.90 (2.5 M bookings)",
+                        "rating": "4.9 (2 k Ratings)",
                         "price": "₹899",
                         "image": "./assest/images/switchbord.jpeg",
-                        "description1": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description2": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description3": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt"
-                    },
-                    {
-                        "title": "Garden Cleaning",
-                        "rating": "4.90 (2.5 M bookings)",
-                        "price": "₹999",
-                        "image": "./assest/images/switchbord.jpeg",
-                        "description1": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description2": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description3": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt"
+                        "description1": "Precision grass cutting for a manicured, vibrant outdoor landscape.",
+                        "description2": "Expert care ensuring an even, well-maintained and healthy green carpet",
+                        "description3": "Tailored cutting services to suit weather changes for optimal lawn health."
                     }
                 ]
             }
@@ -446,31 +402,34 @@
                 "name": "House Painting",
                 "sub_service": [
                     {
+                        "id":1,
                         "title": "2 Bhk House Painting",
-                        "rating": "4.85 (11.6 k bookings)",
+                        "rating": "4.8 (1 k Ratings)",
                         "price": "₹399",
                         "image": "./assest/images/switchbord.jpeg",
-                        "description1": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description2": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description3": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt"
+                        "description1": "Professional painting services bring lively colors to your living spaces.",
+                        "description2": "Exterior house painting shields against elements, ensuring long-lasting beauty.",
+                        "description3": "Skilled painters elevate indoor aesthetics with precision and style."
                     },
                     {
+                        "id":2,
                         "title": "3 Bhk House Painting",
-                        "rating": "4.90 (2.5 M bookings)",
+                        "rating": "4.9 (2 k Ratings)",
                         "price": "₹899",
                         "image": "./assest/images/switchbord.jpeg",
-                        "description1": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description2": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description3": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt"
+                        "description1": "Professional painting services bring lively colors to your living spaces.",
+                        "description2": "Exterior house painting shields against elements, ensuring long-lasting beauty.",
+                        "description3": "Skilled painters elevate indoor aesthetics with precision and style."
                     },
                     {
+                        "id":3,
                         "title": "4 Bhk House Painting",
-                        "rating": "4.90 (2.5 M bookings)",
+                        "rating": "4.9 (2 k Ratings)",
                         "price": "₹999",
                         "image": "./assest/images/switchbord.jpeg",
-                        "description1": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description2": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description3": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt"
+                        "description1": "Professional painting services bring lively colors to your living spaces.",
+                        "description2": "Exterior house painting shields against elements, ensuring long-lasting beauty.",
+                        "description3": "Skilled painters elevate indoor aesthetics with precision and style."
                     }
                 ]
             },
@@ -478,31 +437,34 @@
                 "name": "Waterproofing",
                 "sub_service": [
                     {
+                        "id":1,
                         "title": "2 Bhk House Waterproofing",
-                        "rating": "4.85 (11.6 k bookings)",
+                        "rating": "4.8 (1 k Ratings)",
                         "price": "₹399",
                         "image": "./assest/images/switchbord.jpeg",
-                        "description1": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description2": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description3": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt"
+                        "description1": "waterproofing shields homes with durable, water-resistant solutions.",
+                        "description2": "Cutting-edge technology safeguards 2 BHK houses from water damage.",
+                        "description3": "Moisture-resistant treatments ensure long-lasting waterproofing for 2 BHK residences."
                     },
                     {
+                        "id":2,
                         "title": "3 Bhk House Waterproofing",
-                        "rating": "4.90 (2.5 M bookings)",
+                        "rating": "4.9 (5 k Ratings)",
                         "price": "₹899",
                         "image": "./assest/images/switchbord.jpeg",
-                        "description1": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description2": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description3": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt"
+                        "description1": "waterproofing shields homes with durable, water-resistant solutions.",
+                        "description2": "Cutting-edge technology safeguards 3 BHK houses from water damage.",
+                        "description3": "Moisture-resistant treatments ensure long-lasting waterproofing for 3 BHK residences."
                     },
                     {
+                        "id":3,
                         "title": "4 Bhk House Waterproofing",
-                        "rating": "4.90 (2.5 M bookings)",
+                        "rating": "4.9 (2 k Ratings)",
                         "price": "₹999",
                         "image": "./assest/images/switchbord.jpeg",
-                        "description1": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description2": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description3": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt"
+                        "description1": "waterproofing shields homes with durable, water-resistant solutions.",
+                        "description2": "Cutting-edge technology safeguards 4 BHK houses from water damage.",
+                        "description3": "Moisture-resistant treatments ensure long-lasting waterproofing for 4 BHK residences."
                     }
                 ]
             }
@@ -518,31 +480,24 @@
                 "name": "Toilet Repair",
                 "sub_service": [
                     {
-                        "title": "switchboard installation",
-                        "rating": "4.85 (11.6 k bookings)",
+                        "id":1,
+                        "title": "Toilet Seat Feet/Repair",
+                        "rating": "4.8 (1 k Ratings)",
                         "price": "₹399",
                         "image": "./assest/images/switchbord.jpeg",
-                        "description1": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description2": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description3": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt"
+                        "description1": "Toilet seat feet ensure a secure and balanced seating foundation.",
+                        "description2": "Anti-skid features on seat feet prevent movement for enhanced safety.",
+                        "description3": "Quick-fit feet offer reliable support, enhancing toilet seat durability."
                     },
                     {
-                        "title": "switch/soket repair",
-                        "rating": "4.90 (2.5 M bookings)",
+                        "id":2,
+                        "title": "General Feeting",
+                        "rating": "4.9 (2 k Ratings)",
                         "price": "₹899",
                         "image": "./assest/images/switchbord.jpeg",
-                        "description1": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description2": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description3": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt"
-                    },
-                    {
-                        "title": "smart appliance controller",
-                        "rating": "4.90 (2.5 M bookings)",
-                        "price": "₹999",
-                        "image": "./assest/images/switchbord.jpeg",
-                        "description1": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description2": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description3": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt"
+                        "description1": "Adaptive fittings for diverse applications, ensuring robust and reliable support.",
+                        "description2": "Sturdy attachments for stability, enhancing the strength of various structures.",
+                        "description3": "Flexible fittings designed to seamlessly integrate, providing adaptable solutions universally."
                     }
                 ]
             },
@@ -550,63 +505,24 @@
                 "name": "Bathroom Repair",
                 "sub_service": [
                     {
-                        "title": "Fan installation",
-                        "rating": "4.80 (5.2 M bookings)",
+                        "id":1,
+                        "title": "Shower Feeting",
+                        "rating": "4.8 (2 k Ratings)",
                         "price": "₹199",
                         "image": "./assest/images/fan.jpeg",
-                        "description1": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description2": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description3": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt"
+                        "description1": "Customizable feet for showers, ensuring balance and secure positioning.",
+                        "description2": "Feet designed to resist slipping, enhancing shower stability and safety.",
+                        "description3": "Easy-fit feet for rapid and secure installation, optimizing shower performance."
                     },
                     {
-                        "title": "fan repair",
-                        "rating": "4.90 (2.5 M bookings)",
+                        "id":2,
+                        "title": "General Feeting",
+                        "rating": "4.9 (5 k Ratings)",
                         "price": "₹299",
                         "image": "./assest/images/fan.jpeg",
-                        "description1": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description2": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description3": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt"
-                    },
-                    {
-                        "title": "fan replacement",
-                        "rating": "4.90 (2.5 M bookings)",
-                        "price": "₹1099",
-                        "image": "./assest/images/fan.jpeg",
-                        "description1": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description2": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description3": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt"
-                    }
-                ]
-            },
-            {
-                "name": "Looking for something else",
-                "sub_service": [
-                    {
-                        "title": "Fan installation",
-                        "rating": "4.80 (5.2 M bookings)",
-                        "price": "₹199",
-                        "image": "./assest/images/fan.jpeg",
-                        "description1": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description2": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description3": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt"
-                    },
-                    {
-                        "title": "fan repair",
-                        "rating": "4.90 (2.5 M bookings)",
-                        "price": "₹299",
-                        "image": "./assest/images/fan.jpeg",
-                        "description1": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description2": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description3": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt"
-                    },
-                    {
-                        "title": "fan replacement",
-                        "rating": "4.90 (2.5 M bookings)",
-                        "price": "₹1099",
-                        "image": "./assest/images/fan.jpeg",
-                        "description1": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description2": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description3": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt"
+                        "description1": "Adaptive fittings for diverse applications, ensuring robust and reliable support.",
+                        "description2": "Sturdy attachments for stability, enhancing the strength of various structures.",
+                        "description3": "Flexible fittings designed to seamlessly integrate, providing adaptable solutions universally."
                     }
                 ]
             }
@@ -615,70 +531,41 @@
     {
         "id": 7,
         "heading": "Pest Controller",
-        "rating": "4.84 (3.5 M bookings)",
+        "rating": "4.84 (5 k Ratimgs)",
         "herophoto": "./assest/images/Electricians_cover.jpg",
         "all_service": [
             {
                 "name": "Full House Pest Controller",
                 "sub_service": [
                     {
-                        "title": "switchboard installation",
-                        "rating": "4.85 (11.6 k bookings)",
-                        "price": "₹399",
+                        "id":1,
+                        "title": "Mosquito Solution",
+                        "rating": "4.5 (1 k Ratings)",
+                        "price": "₹599",
                         "image": "./assest/images/switchbord.jpeg",
-                        "description1": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description2": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description3": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt"
+                        "description1": "Advanced formulas deter mosquitoes, providing effective and long-lasting protection.",
+                        "description2": "Fine-mesh barriers for beds and windows, blocking mosquitoes while ensuring airflow.",
+                        "description3": "Eco-friendly methods disrupt mosquito breeding cycles, reducing populations naturally."
                     },
                     {
-                        "title": "switch/soket repair",
-                        "rating": "4.90 (2.5 M bookings)",
+                        "id":2,
+                        "title": "Cockroach Solution",
+                        "rating": "4.9 (2 k Ratings)",
                         "price": "₹899",
                         "image": "./assest/images/switchbord.jpeg",
-                        "description1": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description2": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description3": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt"
+                        "description1": "Irresistible bait stations lure and eliminate cockroaches without toxic fumes.",
+                        "description2": "Protective sealants block entry points, preventing cockroach infestations at the source.",
+                        "description3": "High-frequency waves deter cockroaches, offering a non-intrusive, sound-based pest control."
                     },
                     {
-                        "title": "smart appliance controller",
-                        "rating": "4.90 (2.5 M bookings)",
+                        "id":3,
+                        "title": "General Solution",
+                        "rating": "4.9 (2 k Ratings)",
                         "price": "₹999",
                         "image": "./assest/images/switchbord.jpeg",
-                        "description1": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description2": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description3": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt"
-                    }
-                ]
-            },
-            {
-                "name": "Looking for something else",
-                "sub_service": [
-                    {
-                        "title": "Fan installation",
-                        "rating": "4.80 (5.2 M bookings)",
-                        "price": "₹199",
-                        "image": "./assest/images/fan.jpeg",
-                        "description1": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description2": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description3": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt"
-                    },
-                    {
-                        "title": "fan repair",
-                        "rating": "4.90 (2.5 M bookings)",
-                        "price": "₹299",
-                        "image": "./assest/images/fan.jpeg",
-                        "description1": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description2": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description3": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt"
-                    },
-                    {
-                        "title": "fan replacement",
-                        "rating": "4.90 (2.5 M bookings)",
-                        "price": "₹1099",
-                        "image": "./assest/images/fan.jpeg",
-                        "description1": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description2": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
-                        "description3": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt"
+                        "description1": "Versatile solution deters pests like ants, lizards, and spiders effectively.",
+                        "description2": "Eco-friendly repellents for a broad range of common household pests.",
+                        "description3": "Holistic approach targets various pests, ensuring a comprehensive and lasting solution."
                     }
                 ]
             }
