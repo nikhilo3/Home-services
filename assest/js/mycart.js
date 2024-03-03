@@ -35,7 +35,7 @@ function rendercart(cartItems) {
   cartItems.forEach(item => {
     let newtable = document.createElement('tr');
     newtable.innerHTML =
-      `
+    `
                             
                             <td class="align-middle"><img src="${item.image}" alt="" width="70" class="img-fluid rounded shadow-sm"></td>
                                 

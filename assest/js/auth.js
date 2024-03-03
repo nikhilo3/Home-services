@@ -7,6 +7,7 @@ const loginbtn = document.getElementById("loginbtn");
 const navbars = document.getElementById('header');
 const mains = document.getElementById('main');
 const footers = document.getElementById('footer');
+const logoutbtn = document.getElementById('logoutbtn');
 const body = document.body;
 
 
@@ -76,6 +77,7 @@ function openloginform() {
     body.style.overflow = 'hidden';
     footers.style.filter = 'blur(10px)';
 }
+loginbtn.addEventListener("click",openloginform);
 
 const duser = localStorage.getItem('user');
 document.querySelector('[displayusername]').textContent = duser;
@@ -93,6 +95,7 @@ signInButton.addEventListener("click", () => {
 function logout(){
     localStorage.removeItem("user");
 }
+logoutbtn.addEventListener("click",logout);
 
 function isLoggedIn() {
     const user = localStorage.getItem('user');

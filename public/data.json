@@ -28,6 +28,7 @@
                         "description2": "+Removal of hard water stains and dirt in tile grouting",
                         "description3": "+Removal of hard water stains and dirt in tile grouting"
                     }
+                    
                 ]
             },
             {
@@ -42,6 +43,16 @@
                         "description1": "Shampooing and freshen the sofa's plush seats",
                         "description2": "Thorough dry and wet vacuuming for deep cleaning",
                         "description3": "Not inclusive of cushion shampooing and vacuuming"
+                    },
+                    {
+                        "id":2,
+                        "title": "Premium Sofa Cleaning (7 seater)",
+                        "rating": "4.85 (11.6 k bookings)",
+                        "price": "₹999",
+                        "image": "./assest/images/kitchan_cleaning1.jpeg",
+                        "description1": "Shampooing and freshen the sofa's plush seats",
+                        "description2": "Thorough dry and wet vacuuming for deep cleaning",
+                        "description3": "Same number of cushions are included as per seats of sofa selected"
                     },
                     {
                         "id":2,

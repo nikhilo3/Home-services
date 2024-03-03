@@ -22,6 +22,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cookieParser());
 
+
 app.use(express.static(path.join(__dirname, '../public')));
 app.use('/assest', express.static(path.join(__dirname, '../assest')));
 
@@ -64,15 +65,13 @@ app.get('/servicedetail', function (req, res) {
 });
 
 
-
-
-
 // Routes
 const orderRouter = require('./controller/orderController');
 const cartRouter = require('./controller/cartController');
 const regiRouter = require('./controller/regiController');
 const subRouter = require('./controller/subController');
 const loginRouter = require('./controller/loginControll');
+// const adminorder = require('./controller/adminController');
 const { notFound, errorHandler } = require('./middleware/errorHandling');
 
 app.use('/order', orderRouter);
@@ -80,6 +79,7 @@ app.use('/cart', cartRouter);
 app.use('/registration', regiRouter);
 app.use('/login', loginRouter);
 app.use('/subscribemail', subRouter);
+// app.use('/adminorder',adminorder);
 
 
 app.use(notFound);
