@@ -22,8 +22,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cookieParser());
 
-<<<<<<< HEAD
-=======
+
 app.use(express.static(path.join(__dirname, '../public')));
 app.use('/assest', express.static(path.join(__dirname, '../assest')));
 
@@ -60,10 +59,6 @@ app.get('/service', function (req, res) {
 app.get('/servicedetail', function (req, res) {
     res.sendFile(path.join(__dirname, '../public/servicedetail.html'));
 });
-
-
-
->>>>>>> 6df9e7d683bd0ddfbaa99de90a58ee9886c04d63
 
 
 // Routes

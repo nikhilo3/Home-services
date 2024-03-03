@@ -1,9 +1,5 @@
 const express = require('express');
 const Cart = require('../models/cartModel');
-<<<<<<< HEAD
-
-router.post('/addtocart', async (req, res) => {
-=======
 const User = require('../models/regiModel');
 const verifyToken = require('../middleware/verifyToken');
 
@@ -11,7 +7,6 @@ const verifyToken = require('../middleware/verifyToken');
 const router = express.Router();
 
 router.post('/addtocart', verifyToken, async (req, res) => {
->>>>>>> 6df9e7d683bd0ddfbaa99de90a58ee9886c04d63
     try {
 
         const { id, title, price, image, quantity } = req.body;
@@ -60,11 +55,7 @@ router.post('/addtocart', verifyToken, async (req, res) => {
     }
 });
 
-<<<<<<< HEAD
-router.get('/getcartitems', async (req, res) => {
-=======
 router.get('/getcartitems', verifyToken, async (req, res) => {
->>>>>>> 6df9e7d683bd0ddfbaa99de90a58ee9886c04d63
     try {
         // const token = req.headers.authorization;
         const { _id } = req.user;
