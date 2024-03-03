@@ -46,6 +46,7 @@ let subcontain = document.querySelector('[subcontain]');
                 <div class="carddetailes">
                 <div class="border-hero">
                     <h2 class="title">${title}</h2>
+                    
                     <div class="reting" style="display:flex; align-items: center;">
                         <img width="32" height="32" 
                             src="https://img.icons8.com/sf-black-filled/64/000000/rating-circled.png"

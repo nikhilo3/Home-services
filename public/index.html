@@ -40,9 +40,9 @@
         <div class="form-container sign-in-container">
             <form action="http://localhost:3000/login" method="post">
                 <h1>Sign in</h1>
-                <input type="email" name="email" placeholder="Email" required autocomplete="email" id="emailInput"/>
-                <input type="password" name="password" placeholder="Password" required
-                    autocomplete="current-password" id="passwordInput"/>
+                <input type="email" name="email" placeholder="Email" required autocomplete="email" id="emailInput" />
+                <input type="password" name="password" placeholder="Password" required autocomplete="current-password"
+                    id="passwordInput" />
                 <a href="#">Forgot your password?</a>
                 <button type="submit" id="originalsignin">Sign In</button>
             </form>
@@ -141,14 +141,27 @@
 
         <!-- Keeping Houses Fresh and Clean -->
         <section class="customerdetail">
-            <div class="leftinfo">
-                <div class="infoinner">
-                    <div class="heading">
-                        Home services at<br> your doorstep
-                    </div>
+            <div class="row">
+                <div class="leftinfo col-xl-6">
+                    <div class="infoinner">
+                        <div class="heading">
+                            Home services at<br> your doorstep
+                        </div>
 
-                    <div class="questionsection">
+                        <div class="questionsection">
 
+                            <div class="question">
+                                <div class="que">
+                                    <img width="16" height="16" src="https://img.icons8.com/android/24/000000/plus.png"
+                                        alt="plus" class="plusicon" />
+                                    <span>Is there an office in my area?</span>
+                                </div>
+                                <div class="detail" customerquetion>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus
+                                        nec
+                                        ullamcorper mattis, pulvinar dapibus leo.</p>
+                                </div>
+                            </div>
                         <div class="question">
                             <div class="que">
                                 <img width="16" height="16" src="https://img.icons8.com/android/24/000000/plus.png"
@@ -160,6 +173,18 @@
                             </div>
                         </div>
 
+                            <div class="question">
+                                <div class="que">
+                                    <img width="16" height="16" src="https://img.icons8.com/android/24/000000/plus.png"
+                                        alt="plus" class="plusicon" />
+                                    <span>Is there an office in my area?</span>
+                                </div>
+                                <div class="detail" customerquetion>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus
+                                        nec
+                                        ullamcorper mattis, pulvinar dapibus leo.</p>
+                                </div>
+                            </div>
                         <div class="question">
                             <div class="que">
                                 <img width="16" height="16" src="https://img.icons8.com/android/24/000000/plus.png"
@@ -171,6 +196,18 @@
                             </div>
                         </div>
 
+                            <div class="question">
+                                <div class="que">
+                                    <img width="16" height="16" src="https://img.icons8.com/android/24/000000/plus.png"
+                                        alt="plus" class="plusicon" />
+                                    <span>Is there an office in my area?</span>
+                                </div>
+                                <div class="detail" customerquetion>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus
+                                        nec
+                                        ullamcorper mattis, pulvinar dapibus leo.</p>
+                                </div>
+                            </div>
                         <div class="question">
                             <div class="que">
                                 <img width="16" height="16" src="https://img.icons8.com/android/24/000000/plus.png"
@@ -182,44 +219,68 @@
                             </div>
                         </div>
 
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="rightinfo">
-                <div class="infoinner">
-                    <section class="picture">
-                        <div class="blank"></div>
+                <div class="rightinfo col-xl-6">
+                    <div class="infoinner">
+                        <section class="picture">
+                            <div class="blank"></div>
 
-                        <div class="image">
-                            <img src="https://towny.axiomthemes.com/wp-content/uploads/elementor/thumbs/image-copyright82-po17gf171eg345sjs65iez8ayvbmwty1n9umb80zty.jpg"
-                                alt="customer">
-                        </div>
+                            <div class="image">
+                                <img src="https://towny.axiomthemes.com/wp-content/uploads/elementor/thumbs/image-copyright82-po17gf171eg345sjs65iez8ayvbmwty1n9umb80zty.jpg"
+                                    alt="customer">
+                            </div>
 
+                            <section class="numberinfo">
+                                <div class="numberinfoinner">
+                                    <div class="people">
+                                        <div class="peopleinner">
+                                            <span class="span">People</span>
                         <section class="numberinfo">
                             <div class="numberinfoinner">
                                 <div class="people">
                                     <div class="peopleinner">
                                         <span class="span">Customer</span>
 
+                                            <div class="number">
+                                                <span class="num" get-value="100">0</span>
+                                                <span class="plus">+</span>
+                                            </div>
                                         <div class="number">
                                             <span class="num" get-value="200">0</span>
                                             <span class="plus">+</span>
                                         </div>
 
+                                            <p class="detail">Adipiscing elit, do eiusm.</p>
+                                        </div>
+                                    </div>
                                         <p class="detail">Satisfied Customers</p>
                                     </div>
                                 </div>
 
+                                    <div class="office">
+                                        <div class="officeinner">
+                                            <span class="span">Local Offices</span>
                                 <div class="office">
                                     <div class="officeinner">
                                         <span class="span">Services</span>
 
+                                            <div class="number">
+                                                <span class="num" get-value="73">0</span>
+                                            </div>
                                         <div class="number">
                                             <span class="num" get-value="30">0</span>
                                             <span class="plus">+</span>
                                         </div>
 
+                                            <p class="detail">Sed do eiusmod tempor.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </section>
                                         <p class="detail">Different Home Services</p>
                                     </div>
                                 </div>
@@ -227,6 +288,7 @@
                         </section>
                     </section>
 
+                    </div>
                 </div>
             </div>
         </section>
