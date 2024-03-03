@@ -31,6 +31,10 @@ app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, '../public/index.html'));
 });
 
+app.get('/admin', function (req, res) {
+    res.sendFile(path.join(__dirname, '../public/adminpanel.html'));
+});
+
 app.get('/checkout', function (req, res) {
     res.sendFile(path.join(__dirname, '../public/checkout.html'));
 });

@@ -19,7 +19,6 @@ menuToggle.onclick = function () {
 }
 
 
-
 //customerdetail section
 let customerquetion = document.querySelectorAll("[customerquetion]");
 
