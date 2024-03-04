@@ -32,6 +32,10 @@ app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, '../public/index.html'));
 });
 
+app.get('/admin', function (req, res) {
+    res.sendFile(path.join(__dirname, '../public/adminpanel.html'));
+});
+
 app.get('/checkout', function (req, res) {
     res.sendFile(path.join(__dirname, '../public/checkout.html'));
 });
@@ -70,6 +74,7 @@ const cartRouter = require('./controller/cartController');
 const regiRouter = require('./controller/regiController');
 const subRouter = require('./controller/subController');
 const loginRouter = require('./controller/loginControll');
+// const adminorder = require('./controller/adminController');
 const { notFound, errorHandler } = require('./middleware/errorHandling');
 
 app.use('/order', orderRouter);
@@ -77,6 +82,7 @@ app.use('/cart', cartRouter);
 app.use('/registration', regiRouter);
 app.use('/login', loginRouter);
 app.use('/subscribemail', subRouter);
+// app.use('/adminorder',adminorder);
 
 
 app.use(notFound);

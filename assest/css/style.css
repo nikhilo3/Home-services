@@ -692,11 +692,12 @@ a {
   align-items: center;
   justify-content: center;
   z-index: 10;
-  position: absolute;
+  /* position: absolute; */
   right: 10px;
 }
 
 .nav .log {
+  color: black;
   color: rgb(104, 85, 224);
   background-color: rgba(255, 255, 255, 1);
   border: 1px solid rgba(104, 85, 224, 1);

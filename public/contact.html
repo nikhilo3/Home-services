@@ -25,6 +25,45 @@
 </head>
 
 <body class="contactus-page">
+    <div class="container login" id="loginbox">
+        <div class="form-container sign-up-container">
+            <form action="http://localhost:3000/registration" method="post">
+                <h1>Create Account</h1>
+                <input type="text" name="username" placeholder="Username" required />
+                <input type="email" name="email" placeholder="Email" required autocomplete="email" />
+                <input type="password" name="password" placeholder="Password" required
+                    autocomplete="current-password" />
+                <button type="submit" id="originalsignup">Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="http://localhost:3000/login" method="post">
+                <h1>Sign in</h1>
+                <input type="email" name="email" placeholder="Email" required autocomplete="email" id="emailInput" />
+                <input type="password" name="password" placeholder="Password" required autocomplete="current-password"
+                    id="passwordInput" />
+                <a href="#">Forgot your password?</a>
+                <button type="submit" id="originalsignin">Sign In</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Explorer!</h1>
+
+                    <button class="ghost" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
     <header id="header">
         <nav class="nav">
             <i class="fa-solid fa-bars navOpenBtn" onclick="navresponsive()"></i>
@@ -33,28 +72,29 @@
 
             <ul class="nav-links">
                 <i class="fa-solid fa-xmark navCloseBtn"></i>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/service.html">Services</a></li>
-                <li><a href="/about.html">About Us</a></li>
-                <li><a href="/contact.html">Contact Us</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/service">Services</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact Us</a></li>
             </ul>
 
-            <button class="log" id="loginbtn" onclick="openloginform()">Login</button>
+            <button class="log" id="loginbtn" onclick="openloginform()" style="text-align: center;">Login</button>
 
-            <div class="profilecontainers">
+            <div class="profilecontainers" profile>
                 <div class="navigation">
                     <div class="user-box">
                         <div class="image-box">
                             <i class="fa-solid fa-user"></i>
                         </div>
-                        <p class="username">Jenifer Lopez</p>
+                        <p class="username" displayusername>Jenifer Lopez</p>
                     </div>
                     <div class="menu-toggle"></div>
                     <ul class="menu">
-                        <li><a href="#"><ion-icon name="cart-outline"></ion-icon></ion-icon>Cart</a></li>
+                        <li><a href="/mycart"><ion-icon name="cart-outline"></ion-icon><span style="color: black;"
+                                    id="cart-item-count" class="badge">0</span></ion-icon>Cart</a></li>
                         <li><a href="#"><ion-icon name="checkmark-done-outline"></ion-icon></ion-icon>My Booking</a>
                         </li>
-                        <li><a href="#"><ion-icon name="log-out-outline"></ion-icon>Logout</a></li>
+                        <li><a href="/" onclick="logout();"><ion-icon name="log-out-outline"></ion-icon>Logout</a></li>
                     </ul>
                 </div>
             </div>
@@ -159,7 +199,7 @@
             </div>
         </div>
     </main>
-    <footer class="footer-section">
+    <footer class="footer-section" id="footer">
         <div class="container">
             <div class="footer-content pt-5 pb-5">
                 <div class="row">
@@ -205,9 +245,9 @@
                                 <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
                             </div>
                             <div class="subscribe-form">
-                                <form action="#">
-                                    <input type="text" class="full-width" placeholder="Email Address">
-                                    <button><i class="fab fa-telegram-plane"></i></button>
+                                <form action="http://localhost:3000/subscribemail" method="post" name="subform">
+                                    <input type="text" class="full-width" name="submail" placeholder="Email Address">
+                                    <button type="submit"><i class="fab fa-telegram-plane"></i></button>
                                 </form>
                             </div>
                         </div>
@@ -217,6 +257,7 @@
         </div>
 
     </footer>
+    <script type="module" src="/assest/js/auth.js"></script>
 </body>
 
 </html>

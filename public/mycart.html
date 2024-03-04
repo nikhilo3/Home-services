@@ -28,6 +28,82 @@
         </head>
 
         <body class="mycart">
+            <div class="container login" id="loginbox">
+                <div class="form-container sign-up-container">
+                    <form action="http://localhost:3000/registration" method="post">
+                        <h1>Create Account</h1>
+                        <input type="text" name="username" placeholder="Username" required />
+                        <input type="email" name="email" placeholder="Email" required autocomplete="email" />
+                        <input type="password" name="password" placeholder="Password" required
+                            autocomplete="current-password" />
+                        <button type="submit" id="originalsignup">Sign Up</button>
+                    </form>
+                </div>
+                <div class="form-container sign-in-container">
+                    <form action="http://localhost:3000/login" method="post">
+                        <h1>Sign in</h1>
+                        <input type="email" name="email" placeholder="Email" required autocomplete="email" id="emailInput" />
+                        <input type="password" name="password" placeholder="Password" required autocomplete="current-password"
+                            id="passwordInput" />
+                        <a href="#">Forgot your password?</a>
+                        <button type="submit" id="originalsignin">Sign In</button>
+                    </form>
+                </div>
+                <div class="overlay-container">
+                    <div class="overlay">
+                        <div class="overlay-panel overlay-left">
+                            <h1>Welcome Back!</h1>
+        
+                            <button class="ghost" id="signIn">Sign In</button>
+                        </div>
+                        <div class="overlay-panel overlay-right">
+                            <h1>Hello, Explorer!</h1>
+        
+                            <button class="ghost" id="signUp">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        
+        
+            <header id="header">
+                <nav class="nav">
+                    <i class="fa-solid fa-bars navOpenBtn" onclick="navresponsive()"></i>
+                    <a href="#" class="logo"><img src="/assest/images/ns-logos/ns-logos_white.png" alt="" height="150"
+                            width="150"></a>
+        
+                    <ul class="nav-links">
+                        <i class="fa-solid fa-xmark navCloseBtn"></i>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/service">Services</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
+                    </ul>
+        
+                    <button class="log" id="loginbtn" onclick="openloginform()" style="text-align: center;">Login</button>
+        
+                    <div class="profilecontainers" profile>
+                        <div class="navigation">
+                            <div class="user-box">
+                                <div class="image-box">
+                                    <i class="fa-solid fa-user"></i>
+                                </div>
+                                <p class="username" displayusername>Jenifer Lopez</p>
+                            </div>
+                            <div class="menu-toggle"></div>
+                            <ul class="menu">
+                                <li><a href="/mycart"><ion-icon name="cart-outline"></ion-icon><span style="color: black;"
+                                            id="cart-item-count" class="badge">0</span></ion-icon>Cart</a></li>
+                                <li><a href="#"><ion-icon name="checkmark-done-outline"></ion-icon></ion-icon>My Booking</a>
+                                </li>
+                                <li><a href="/" onclick="logout();"><ion-icon name="log-out-outline"></ion-icon>Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            
             <div class="px-4 px-lg-0">
 
 
@@ -130,12 +206,75 @@
                 </div>
             </div>
 
+            <footer class="footer-section" id="footer">
+                <div class="container">
+                    <div class="footer-content pt-5 pb-5">
+                        <div class="row">
+                            <div class="col-xl-4 col-lg-4 mb-50">
+                                <div class="footer-widget">
+                                    <div class="footer-logo">
+                                        <a href="index.html"><img src="/assest/images/ns-logos/ns-logos_white.png"
+                                                class="img-fluid" alt="logo" width="200" height="200"></a>
+                                    </div>
+                                    <div class="footer-text">
+                                        <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor
+                                            incididuntut consec tetur adipisicing
+                                            elit,Lorem ipsum dolor sit amet.</p>
+                                    </div>
+                                    <div class="footer-social-icon">
+                                        <span>Follow us</span>
+                                        <div class="iconinner">
+                                            <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                                            <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                                            <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                                <div class="footer-widget">
+                                    <div class="footer-widget-heading">
+                                        <h3>Useful Links</h3>
+                                    </div>
+                                    <ul>
+                                        <li><a href="#">About Us</a></li>
+                                        <li><a href="#">Contact Us</a></li>
+                                        <li><a href="#">Home</a></li>
+                                        <li><a href="#">Services</a></li>
+                                        <li><a href="#">Price</a></li>
+                                        <li><a href="#">My Status</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                                <div class="footer-widget">
+                                    <div class="footer-widget-heading">
+                                        <h3>Subscribe</h3>
+                                    </div>
+                                    <div class="footer-text mb-25">
+                                        <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                                    </div>
+                                    <div class="subscribe-form">
+                                        <form action="http://localhost:3000/subscribemail" method="post" name="subform">
+                                            <input type="text" class="full-width" name="submail" placeholder="Email Address">
+                                            <button type="submit"><i class="fab fa-telegram-plane"></i></button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+            </footer>
+
 
             <!-- custom js -->
             <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
             <script type="module" src="/assest/js/mycart.js"></script>
+            <script type="module" src="/assest/js/auth.js"></script>
         </body>
 
         </html>
