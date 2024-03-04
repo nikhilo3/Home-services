@@ -6,32 +6,6 @@
         "herophoto": "./assest/images/home_cleaning_cover.jpeg",
         "all_service": [
             {
-                "name": "Full House Cleaning",
-                "sub_service": [
-                    {
-                        "id":1,
-                        "title": "Essential bathroom cleaning",
-                        "rating": "5 (1k Ratings)",
-                        "price": "₹499",
-                        "image": "./assest/images/bathroom_cleaning1.webp",
-                        "description1": "Complete cleaning of toilet pot, exhaust, walls, tiles etc",
-                        "description2": "Manual scrubbing of floor and tiles of the wall",
-                        "description3": "Black spots & stain removal of the complete bathroom"
-                    },
-                    {
-                        "id":2,
-                        "title": "Premium bathroom cleaning",
-                        "rating": "4.2 (2 k Ratings)",
-                        "price": "₹999",
-                        "image": "./assest/images/bathroom_cleaning1.webp",
-                        "description1": "Machine scrubbing of the walls and floor",
-                        "description2": "Removal of hard water stains and dirt in tile grouting",
-                        "description3": "Removal of hard water stains and dirt in tile grouting"
-                    }
-                    
-                ]
-            },
-            {
                 "name": "Living room Cleanning",
                 "sub_service": [
                     {
@@ -39,7 +13,7 @@
                         "title": "Essential Sofa Cleaning (5 seater)",
                         "rating": "4.8 (1.6 k Ratings)",
                         "price": "₹499",
-                        "image": "./assest/images/kitchan_cleaning1.jpeg",
+                        "image": "./assest/images/HomeServices/Sofa.jpg",
                         "description1": "Shampooing and freshen the sofa's plush seats",
                         "description2": "Thorough dry and wet vacuuming for deep cleaning",
                         "description3": "Not inclusive of cushion shampooing and vacuuming"
@@ -49,7 +23,7 @@
                         "title": "Premium Sofa Cleaning (7 seater)",
                         "rating": "4.8 (1 k Ratings)",
                         "price": "₹999",
-                        "image": "./assest/images/kitchan_cleaning1.jpeg",
+                        "image": "./assest/images/HomeServices/Sofa.jpg",
                         "description1": "Shampooing and freshen the sofa's plush seats",
                         "description2": "Thorough dry and wet vacuuming for deep cleaning",
                         "description3": "Same number of cushions are included as per seats of sofa selected"
@@ -59,7 +33,7 @@
                         "title": "Premium Sofa Cleaning (7 seater)",
                         "rating": "4.7 (2 k Ratings)",
                         "price": "₹999",
-                        "image": "./assest/images/kitchan_cleaning1.jpeg",
+                        "image": "./assest/images/HomeServices/Sofa.jpg",
                         "description1": "Shampooing and freshen the sofa's plush seats",
                         "description2": "Thorough dry and wet vacuuming for deep cleaning",
                         "description3": "Same number of cushions are included as per seats of sofa selected"
@@ -74,7 +48,7 @@
                         "title": "Essential Kitchen with Chimney",
                         "rating": "4.8 (2 k Ratings)",
                         "price": "₹1499",
-                        "image": "./assest/images/kitchan_cleaning1.jpeg",
+                        "image": "./assest/images/HomeServices/Kitchen.jpg",
                         "description1": "Stain removal from Gas stove, tiles, sink, exhaust fan",
                         "description2": "Cleaning of walls, floor, windows and ceiling",
                         "description3": "External cleaning of appliances, chimney & cabinet"
@@ -84,7 +58,7 @@
                         "title": "Premium Kitchen with Chimney",
                         "rating": "4.4 (1 k Ratings)",
                         "price": "₹1999",
-                        "image": "./assest/images/kitchan_cleaning1.jpeg",
+                        "image": "./assest/images/HomeServices/Kitchen.jpg",
                         "description1": "Includes all items of Move-in kitchen cleaning",
                         "description2": "Utensil removal and replacement is included",
                         "description3": "Inclusive of Deep cleaning of cabinets & trolleys"
@@ -99,7 +73,7 @@
                         "title": "Essential bathroom cleaning",
                         "rating": "4.5 (1 k Ratings)",
                         "price": "₹499",
-                        "image": "./assest/images/bathroom_cleaning1.webp",
+                        "image": "./assest/images/HomeServices/Bathroom.jpg",
                         "description1": "Complete cleaning of toilet pot, exhaust, walls, tiles etc",
                         "description2": "Manual scrubbing of floor and tiles of the wall",
                         "description3": "Black spots & stain removal of the complete bathroom"
@@ -109,25 +83,10 @@
                         "title": "Premium bathroom cleaning",
                         "rating": "4.2 (1 k Ratings)",
                         "price": "₹999",
-                        "image": "./assest/images/bathroom_cleaning1.webp",
+                        "image": "./assest/images/HomeServices/Bathroom.jpg",
                         "description1": "+Machine scrubbing of the walls and floor",
                         "description2": "+Removal of hard water stains and dirt in tile grouting",
                         "description3": "+Removal of hard water stains and dirt in tile grouting"
-                    }
-                ]
-            },
-            {
-                "name": "Looking for Something else?",
-                "sub_service": [
-                    {
-                        "id":1,
-                        "title": "Essential bathroom cleaning",
-                        "rating": "4.1 (1 k Ratings)",
-                        "price": "₹499",
-                        "image": "./assest/images/bathroom_cleaning1.webp",
-                        "description1": "Complete cleaning of toilet pot, exhaust, walls, tiles etc",
-                        "description2": "Manual scrubbing of floor and tiles of the wall",
-                        "description3": "Black spots & stain removal of the complete bathroom"
                     }
                 ]
             }
@@ -147,7 +106,7 @@
                         "title": "TV installation",
                         "rating": "4.5 (1 k Ratings)",
                         "price": "₹399",
-                        "image": "./assest/images/switchbord.jpeg",
+                        "image": "./assest/images/Electricians/TvInstallation.jpg",
                         "description1": "Expert TV installation for seamless home entertainment setups",
                         "description2": "Hassle-free TV mounting by skilled professionals",
                         "description3": "Precision and care in every TV installation for a perfect viewing experience"
@@ -157,7 +116,7 @@
                         "title": "WiFi CCTV installation",
                         "rating": "4.9 (2 k Ratings)",
                         "price": "₹899",
-                        "image": "./assest/images/switchbord.jpeg",
+                        "image": "./assest/images/Electricians/WifiInstallation.jpg",
                         "description1": "Secure your space with seamless WiFi CCTV installation for 24/7 monitoring",
                         "description2": "Professional installation of WiFi-enabled CCTV cameras for enhanced security",
                         "description3": "Reliable and efficient WiFi CCTV setups for peace of mind and remote surveillance"
@@ -167,7 +126,7 @@
                         "title": "AC installation",
                         "rating": "4.9 (2 k Ratings)",
                         "price": "₹999",
-                        "image": "./assest/images/switchbord.jpeg",
+                        "image": "./assest/images/Electricians/ACInstallation.jpg",
                         "description1": "Expert AC installation for optimal cooling efficiency in any space",
                         "description2": "Seamless and reliable air conditioner installations by skilled technicians",
                         "description3": "Precision and care in every AC installation for year-round comfort"
@@ -182,7 +141,7 @@
                         "title": "Switchbox installation",
                         "rating": "4.9 (2 k Ratings)",
                         "price": "₹299",
-                        "image": "./assest/images/fan.jpeg",
+                        "image": "./assest/images/Electricians/Switch&socket.jpeg",
                         "description1": "Seamless switch and socket installations for modern and functional spaces",
                         "description2": "Professional service by skilled technicians for reliable electrical solutions",
                         "description3": "Precision and safety in every installation for a seamless power experience"
@@ -192,7 +151,7 @@
                         "title": "AC switchbox installation",
                         "rating": "4.9 (2 k Ratings)",
                         "price": "₹299",
-                        "image": "./assest/images/fan.jpeg",
+                        "image": "./assest/images/Electricians/Switch&socket.jpeg",
                         "description1": "Specialized AC switchbox installations for streamlined climate contro",
                         "description2": "Professional service ensuring optimal performance and safety",
                         "description3": "Precision and expertise in every AC switchbox installation for enhanced convenience"
@@ -202,7 +161,7 @@
                         "title": "Switch/socket replacement",
                         "rating": "4.9 (3 k Ratings)",
                         "price": "₹1099",
-                        "image": "./assest/images/fan.jpeg",
+                        "image": "./assest/images/Electricians/Switch&socket.jpeg",
                         "description1": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
                         "description2": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt",
                         "description3": "lorem ipsum dolor sit amet nsectetur adipisicing elit. Ipsa repudiandae incidunt"
@@ -217,7 +176,7 @@
                         "title": "New wiring with casing (per 5m)",
                         "rating": "4.8 (2 k Ratings)",
                         "price": "₹199",
-                        "image": "./assest/images/fan.jpeg",
+                        "image": "./assest/images/Electricians/Wiring.jpeg",
                         "description1": "Expert new wiring with casing service for safe and organized electrical setups",
                         "description2": "Professional installation by skilled technicians, ensuring reliability",
                         "description3": "Precision and efficiency in every 5m wiring upgrade for enhanced functionality"
@@ -227,7 +186,7 @@
                         "title": "New wiring without casing (per 5m)",
                         "rating": "4.9 (2 k Ratings)",
                         "price": "₹299",
-                        "image": "./assest/images/fan.jpeg",
+                        "image": "./assest/images/Electricians/Wiring.jpeg",
                         "description1": "Unobtrusive new wiring without casing, providing a clean and discreet look",
                         "description2": "Professional installation per 5 meters for a tailored and efficient electrical setup",
                         "description3": "Streamlined service ensuring safety and reliability in every installation"
@@ -237,7 +196,7 @@
                         "title": "New internal wiring (per 5m)",
                         "rating": "4.9 (2 k Ratings)",
                         "price": "₹1099",
-                        "image": "./assest/images/fan.jpeg",
+                        "image": "./assest/images/Electricians/Wiring.jpeg",
                         "description1": "Upgrade your space with new internal wiring for enhanced connectivity",
                         "description2": "Professional service ensuring reliable and efficient electrical systems",
                         "description3": "Precision and expertise in every installation to meet your specific needs"
@@ -252,7 +211,7 @@
                         "title": "Inverter installation",
                         "rating": "4.9 (2 k Ratings)",
                         "price": "₹299",
-                        "image": "./assest/images/fan.jpeg",
+                        "image": "./assest/images/Electricians/Inverter&Stabilizer.jpeg",
                         "description1": "Expert inverter installations for uninterrupted power supply",
                         "description2": "Professional service ensuring seamless integration into your electrical system",
                         "description3": "Precision and reliability for optimal performance in every installation"
@@ -262,7 +221,7 @@
                         "title": "Inverter repair",
                         "rating": "4.8 (2 k Ratings)",
                         "price": "₹199",
-                        "image": "./assest/images/fan.jpeg",
+                        "image": "./assest/images/Electricians/Inverter&Stabilizer.jpeg",
                         "description1": "Swift and reliable inverter repair service to restore power without delay",
                         "description2": "Skilled technicians ensuring efficient troubleshooting and resolution",
                         "description3": "Precision in every repair to extend the life of your inverter system"
@@ -272,7 +231,7 @@
                         "title": "Inverter Servicing",
                         "rating": "4.90 (3 k Ratings)",
                         "price": "₹1099",
-                        "image": "./assest/images/fan.jpeg",
+                        "image": "./assest/images/Electricians/Inverter&Stabilizer.jpeg",
                         "description1": "Reliable inverter servicing for uninterrupted power backup",
                         "description2": "Professional technicians ensuring optimal inverter performance",
                         "description3": "Precision and expertise in every service to keep your power supply seamless"
@@ -285,7 +244,7 @@
         "id": 3,
         "heading": "Carpenter",
         "rating": "4.84 (3.5 M bookings)",
-        "herophoto": "./assest/images/Electricians_cover.jpg",
+        "herophoto": "./assest/images/HeroImages/HeroCarpenter.webp",
         "all_service": [
             {
                 "name": "Furniture Making",
@@ -295,7 +254,7 @@
                         "title": "Bed Design",
                         "rating": "4.8 (1 k Ratings)",
                         "price": "₹399",
-                        "image": "./assest/images/switchbord.jpeg",
+                        "image": "./assest/images/Carpenter/FurnitureMaking.jpeg",
                         "description1": "Bed designs blend style, comfort, and functionality for optimal relaxation.",
                         "description2": "Artful concepts bring sophistication to bedrooms, enhancing sleep environments.",
                         "description3": "Customized designs cater to preferences, shaping unique and cozy sleeping spaces."
@@ -305,7 +264,7 @@
                         "title": "Ceiling Design",
                         "rating": "4.9 (2 k Ratings)",
                         "price": "₹899",
-                        "image": "./assest/images/switchbord.jpeg",
+                        "image": "./assest/images/Carpenter/FurnitureMaking.jpeg",
                         "description1": "Ceiling designs merge classic and modern aesthetics for enduring sophistication.",
                         "description2": "Artful designs elevate spaces, adding character and visual interest to ceilings.",
                         "description3": "Creative concepts enhance rooms, integrating lighting and structure seamlessly into ceilings."
@@ -315,7 +274,7 @@
                         "title": "Kitchen Design",
                         "rating": "4.9 (2 k Ratings)",
                         "price": "₹999",
-                        "image": "./assest/images/switchbord.jpeg",
+                        "image": "./assest/images/Carpenter/FurnitureMaking.jpeg",
                         "description1": "Kitchen designs blend sophistication with contemporary functionality for stylish efficiency.",
                         "description2": "Expert layouts optimize kitchens, merging practicality with aesthetic appeal seamlessly.",
                         "description3": "Custom designs cater to individual preferences, creating personalized and efficient kitchens."
@@ -330,7 +289,7 @@
                         "title": "Ceiling Repair",
                         "rating": "4.8 (5 k Ratings)",
                         "price": "₹4999",
-                        "image": "./assest/images/fan.jpeg",
+                        "image": "./assest/images/Carpenter/FurnitureRepair.jpeg",
                         "description1": "Professional repairs for a flawless and structurally sound ceiling.",
                         "description2": "Expert services to repair and prevent water-damaged ceiling issues.",
                         "description3": "Skilled craftsmanship restores ceilings, enhancing visual appeal and durability."
@@ -340,7 +299,7 @@
                         "title": "Kitchen Repair",
                         "rating": "4.1 (2 k Ratings)",
                         "price": "₹3999",
-                        "image": "./assest/images/fan.jpeg",
+                        "image": "./assest/images/Carpenter/FurnitureRepair.jpeg",
                         "description1": "Expert repairs optimize kitchen appliances for peak performance and durability.",
                         "description2": "Skilled service enhances functionality, ensuring a well-maintained and efficient kitchen.",
                         "description3": "Craftsmanship restores kitchen cabinets, blending form with function for longevity."
@@ -350,7 +309,7 @@
                         "title": "Bed Repair",
                         "rating": "4.9 (2 k Ratings)",
                         "price": "₹1099",
-                        "image": "./assest/images/fan.jpeg",
+                        "image": "./assest/images/Carpenter/FurnitureRepair.jpeg",
                         "description1": "Professional repairs ensure a stable and durable bed foundation.",
                         "description2": "Tailored fixes for improved comfort and overall sleep quality.",
                         "description3": "Skilled repairs revive beds with a refreshed and appealing appearance."
@@ -363,7 +322,7 @@
         "id": 4,
         "heading": "Gardening",
         "rating": "4.84 (3.5 M bookings)",
-        "herophoto": "./assest/images/Electricians_cover.jpg",
+        "herophoto": "./assest/images/HeroImages/Herogardening.jpg",
         "all_service": [
             {
                 "name": "Grass Cutting",
@@ -373,7 +332,7 @@
                         "title": "Backyard Grass Cutting",
                         "rating": "4.8 (1 k Ratings)",
                         "price": "₹399",
-                        "image": "./assest/images/switchbord.jpeg",
+                        "image": "./assest/images/Gardening/GrassCuting.jpeg",
                         "description1": "Precision grass cutting for a manicured, vibrant outdoor landscape.",
                         "description2": "Expert care ensuring an even, well-maintained and healthy green carpet.",
                         "description3": "Tailored cutting services to suit weather changes for optimal lawn health."
@@ -383,7 +342,7 @@
                         "title": "Frontyard Grass Cutting",
                         "rating": "4.9 (2 k Ratings)",
                         "price": "₹899",
-                        "image": "./assest/images/switchbord.jpeg",
+                        "image": "./assest/images/Gardening/GrassCuting.jpeg",
                         "description1": "Precision grass cutting for a manicured, vibrant outdoor landscape.",
                         "description2": "Expert care ensuring an even, well-maintained and healthy green carpet",
                         "description3": "Tailored cutting services to suit weather changes for optimal lawn health."
@@ -396,7 +355,7 @@
         "id": 5,
         "heading": "Painter",
         "rating": "4.84 (3.5 M bookings)",
-        "herophoto": "./assest/images/Electricians_cover.jpg",
+        "herophoto": "./assest/images/HeroImages/HeroPainting.webp",
         "all_service": [
             {
                 "name": "House Painting",
@@ -406,7 +365,7 @@
                         "title": "2 Bhk House Painting",
                         "rating": "4.8 (1 k Ratings)",
                         "price": "₹399",
-                        "image": "./assest/images/switchbord.jpeg",
+                        "image": "./assest/images/Painter/Painting.jpg",
                         "description1": "Professional painting services bring lively colors to your living spaces.",
                         "description2": "Exterior house painting shields against elements, ensuring long-lasting beauty.",
                         "description3": "Skilled painters elevate indoor aesthetics with precision and style."
@@ -416,7 +375,7 @@
                         "title": "3 Bhk House Painting",
                         "rating": "4.9 (2 k Ratings)",
                         "price": "₹899",
-                        "image": "./assest/images/switchbord.jpeg",
+                        "image": "./assest/images/Painter/Painting.jpg",
                         "description1": "Professional painting services bring lively colors to your living spaces.",
                         "description2": "Exterior house painting shields against elements, ensuring long-lasting beauty.",
                         "description3": "Skilled painters elevate indoor aesthetics with precision and style."
@@ -426,7 +385,7 @@
                         "title": "4 Bhk House Painting",
                         "rating": "4.9 (2 k Ratings)",
                         "price": "₹999",
-                        "image": "./assest/images/switchbord.jpeg",
+                        "image": "./assest/images/Painter/Painting.jpg",
                         "description1": "Professional painting services bring lively colors to your living spaces.",
                         "description2": "Exterior house painting shields against elements, ensuring long-lasting beauty.",
                         "description3": "Skilled painters elevate indoor aesthetics with precision and style."
@@ -441,7 +400,7 @@
                         "title": "2 Bhk House Waterproofing",
                         "rating": "4.8 (1 k Ratings)",
                         "price": "₹399",
-                        "image": "./assest/images/switchbord.jpeg",
+                        "image": "./assest/images/Painter/Waterproofing.jpeg",
                         "description1": "waterproofing shields homes with durable, water-resistant solutions.",
                         "description2": "Cutting-edge technology safeguards 2 BHK houses from water damage.",
                         "description3": "Moisture-resistant treatments ensure long-lasting waterproofing for 2 BHK residences."
@@ -451,7 +410,7 @@
                         "title": "3 Bhk House Waterproofing",
                         "rating": "4.9 (5 k Ratings)",
                         "price": "₹899",
-                        "image": "./assest/images/switchbord.jpeg",
+                        "image": "./assest/images/Painter/Waterproofing.jpeg",
                         "description1": "waterproofing shields homes with durable, water-resistant solutions.",
                         "description2": "Cutting-edge technology safeguards 3 BHK houses from water damage.",
                         "description3": "Moisture-resistant treatments ensure long-lasting waterproofing for 3 BHK residences."
@@ -461,7 +420,7 @@
                         "title": "4 Bhk House Waterproofing",
                         "rating": "4.9 (2 k Ratings)",
                         "price": "₹999",
-                        "image": "./assest/images/switchbord.jpeg",
+                        "image": "./assest/images/Painter/Waterproofing.jpeg",
                         "description1": "waterproofing shields homes with durable, water-resistant solutions.",
                         "description2": "Cutting-edge technology safeguards 4 BHK houses from water damage.",
                         "description3": "Moisture-resistant treatments ensure long-lasting waterproofing for 4 BHK residences."
@@ -474,7 +433,7 @@
         "id": 6,
         "heading": "Plumber",
         "rating": "4.84 (3.5 M bookings)",
-        "herophoto": "./assest/images/Electricians_cover.jpg",
+        "herophoto": "./assest/images/HeroImages/HeroPlumber.jpg",
         "all_service": [
             {
                 "name": "Toilet Repair",
@@ -484,7 +443,7 @@
                         "title": "Toilet Seat Feet/Repair",
                         "rating": "4.8 (1 k Ratings)",
                         "price": "₹399",
-                        "image": "./assest/images/switchbord.jpeg",
+                        "image": "./assest/images/Plumber/Toilet.jpeg",
                         "description1": "Toilet seat feet ensure a secure and balanced seating foundation.",
                         "description2": "Anti-skid features on seat feet prevent movement for enhanced safety.",
                         "description3": "Quick-fit feet offer reliable support, enhancing toilet seat durability."
@@ -494,7 +453,7 @@
                         "title": "General Feeting",
                         "rating": "4.9 (2 k Ratings)",
                         "price": "₹899",
-                        "image": "./assest/images/switchbord.jpeg",
+                        "image": "./assest/images/Plumber/Toilet.jpeg",
                         "description1": "Adaptive fittings for diverse applications, ensuring robust and reliable support.",
                         "description2": "Sturdy attachments for stability, enhancing the strength of various structures.",
                         "description3": "Flexible fittings designed to seamlessly integrate, providing adaptable solutions universally."
@@ -509,7 +468,7 @@
                         "title": "Shower Feeting",
                         "rating": "4.8 (2 k Ratings)",
                         "price": "₹199",
-                        "image": "./assest/images/fan.jpeg",
+                        "image": "./assest/images/Plumber/Bathroom.jpeg",
                         "description1": "Customizable feet for showers, ensuring balance and secure positioning.",
                         "description2": "Feet designed to resist slipping, enhancing shower stability and safety.",
                         "description3": "Easy-fit feet for rapid and secure installation, optimizing shower performance."
@@ -519,7 +478,7 @@
                         "title": "General Feeting",
                         "rating": "4.9 (5 k Ratings)",
                         "price": "₹299",
-                        "image": "./assest/images/fan.jpeg",
+                        "image": "./assest/images/Plumber/Bathroom.jpeg",
                         "description1": "Adaptive fittings for diverse applications, ensuring robust and reliable support.",
                         "description2": "Sturdy attachments for stability, enhancing the strength of various structures.",
                         "description3": "Flexible fittings designed to seamlessly integrate, providing adaptable solutions universally."
@@ -532,7 +491,7 @@
         "id": 7,
         "heading": "Pest Controller",
         "rating": "4.84 (5 k Ratimgs)",
-        "herophoto": "./assest/images/Electricians_cover.jpg",
+        "herophoto": "./assest/images/HeroImages/HeroPestControl.webp",
         "all_service": [
             {
                 "name": "Full House Pest Controller",
@@ -542,7 +501,7 @@
                         "title": "Mosquito Solution",
                         "rating": "4.5 (1 k Ratings)",
                         "price": "₹599",
-                        "image": "./assest/images/switchbord.jpeg",
+                        "image": "./assest/images/PestControl/PestControl.jpeg",
                         "description1": "Advanced formulas deter mosquitoes, providing effective and long-lasting protection.",
                         "description2": "Fine-mesh barriers for beds and windows, blocking mosquitoes while ensuring airflow.",
                         "description3": "Eco-friendly methods disrupt mosquito breeding cycles, reducing populations naturally."
@@ -552,7 +511,7 @@
                         "title": "Cockroach Solution",
                         "rating": "4.9 (2 k Ratings)",
                         "price": "₹899",
-                        "image": "./assest/images/switchbord.jpeg",
+                        "image": "./assest/images/PestControl/PestControl.jpeg",
                         "description1": "Irresistible bait stations lure and eliminate cockroaches without toxic fumes.",
                         "description2": "Protective sealants block entry points, preventing cockroach infestations at the source.",
                         "description3": "High-frequency waves deter cockroaches, offering a non-intrusive, sound-based pest control."
@@ -562,7 +521,7 @@
                         "title": "General Solution",
                         "rating": "4.9 (2 k Ratings)",
                         "price": "₹999",
-                        "image": "./assest/images/switchbord.jpeg",
+                        "image": "./assest/images/PestControl/PestControl.jpeg",
                         "description1": "Versatile solution deters pests like ants, lizards, and spiders effectively.",
                         "description2": "Eco-friendly repellents for a broad range of common household pests.",
                         "description3": "Holistic approach targets various pests, ensuring a comprehensive and lasting solution."
