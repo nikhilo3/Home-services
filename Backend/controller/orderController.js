@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Order = require('../models/orderModel');
+// const moment = require('moment');
 
 router.post('/', async (req, res) => {
     try {
@@ -18,6 +19,11 @@ router.post('/', async (req, res) => {
             postalCode: req.body.postalCode,
             paytotal: req.body.paytotal
         });
+
+        // Format the appointment date using moment.js
+        // let formattedAppointmentDate = moment(order.appointmentDate).format('YYYY-MM-DD');
+        // console.log(formattedAppointmentDate); // Output: 2024-01-25
+
 
         await order.save();
         res.status(200).send(order);

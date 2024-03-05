@@ -4,7 +4,6 @@ const subschema = new mongoose.Schema({
     submail:{
         type:String,
         required:true,
-        unique:true
     }
 },{collection:'subscribemail'});
 

@@ -64,6 +64,13 @@ app.get('/servicedetail', function (req, res) {
     res.sendFile(path.join(__dirname, '../public/servicedetail.html'));
 });
 
+app.get('/admin/order', function (req, res) {
+    res.sendFile(path.join(__dirname, '../public/adminorder.html'));
+});
+
+app.get('/admin/sub', function (req, res) {
+    res.sendFile(path.join(__dirname, '../public/adminsub.html'));
+});
 
 
 
@@ -74,7 +81,7 @@ const cartRouter = require('./controller/cartController');
 const regiRouter = require('./controller/regiController');
 const subRouter = require('./controller/subController');
 const loginRouter = require('./controller/loginControll');
-// const adminorder = require('./controller/adminController');
+const adminorder = require('./controller/adminController');
 const { notFound, errorHandler } = require('./middleware/errorHandling');
 
 app.use('/order', orderRouter);
@@ -82,7 +89,7 @@ app.use('/cart', cartRouter);
 app.use('/registration', regiRouter);
 app.use('/login', loginRouter);
 app.use('/subscribemail', subRouter);
-// app.use('/adminorder',adminorder);
+app.use('/adminorder',adminorder);
 
 
 app.use(notFound);
