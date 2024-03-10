@@ -80,7 +80,7 @@
                 <li><a href="/contact">Contact Us</a></li>
             </ul>
 
-            <button class="log" id="loginbtn" onclick="openloginform()" style="text-align: center;">Login</button>
+            <button class="log" id="loginbtn" style="text-align: center;">Login</button>
 
             <div class="profilecontainers" profile>
                 <div class="navigation">
@@ -96,7 +96,7 @@
                                     id="cart-item-count" class="badge">0</span></ion-icon>Cart</a></li>
                         <li><a href="#"><ion-icon name="checkmark-done-outline"></ion-icon></ion-icon>My Booking</a>
                         </li>
-                        <li><a href="/" onclick="logout();"><ion-icon name="log-out-outline"></ion-icon>Logout</a></li>
+                        <li><a href="/" id="logoutbtn"><ion-icon name="log-out-outline"></ion-icon>Logout</a></li>
                     </ul>
                 </div>
             </div>
@@ -105,7 +105,7 @@
 
     <div class="contain">
 
-        <div class="herobanner" style="margin-top: 80px;">
+        <div class="herobanner">
             <div class="wrapper">
                 <div class="coverphoto">
                     <img src="" alt="Home Cleaning service" subservicemain>
@@ -127,7 +127,6 @@
                             <h4>UC Promise</h4>
                             <img src="./assest/images/hygenic.webp" alt="logo image" width="92" height="92">
 
-                            <img src="../assest/images/hygenic.webp" alt="logo image" width="92" height="92">
                         </div>
                         <div class="extra1">
                             <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/checkmark--v1.png"
@@ -287,9 +286,14 @@
 
     </footer>
 
-
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script type="module" src="/assest/js/servicedetail.js"></script>
     <script type="module" src="/assest/js/auth.js"></script>
+    <script type="module" src="/assest/js/global.js"></script>
 </body>
 
 </html>

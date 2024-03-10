@@ -11,10 +11,10 @@ const fetchSub = async () => {
             const Submail = await response.json();
             rendersub(Submail);
         } else {
-            console.log('Failed to fetch order', response.statusText);
+            console.log('Failed to fetch subscribe mail', response.statusText);
         }
     } catch (err) {
-        console.log('Error fetching order:', err);
+        console.log('Error fetching subscribe mail:', err);
     }
 }
 

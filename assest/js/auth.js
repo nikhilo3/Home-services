@@ -10,7 +10,15 @@ const footers = document.getElementById('footer');
 const logoutbtn = document.getElementById('logoutbtn');
 const body = document.body;
 
-
+function displayFlashMessage(message) {
+    const element = document.createElement('div');
+    element.classList.add('flash-message');
+    element.textContent = message;
+    document.body.appendChild(element);
+    setTimeout(() => {
+        element.remove();
+    }, 3000);
+}
 
 function getUserFromLocalStorage() {
     const user = localStorage.getItem('user');
@@ -20,7 +28,7 @@ function getUserFromLocalStorage() {
 
 function addUserHeaders(req) {
     const user = getUserFromLocalStorage();
-    if (user) {
+    if (user && isLoggedIn()) {
         req.headers.Authorization = `Bearer ${user.token}`;
     }
 }
@@ -44,7 +52,8 @@ async function handleLogin(email, password) {
             localStorage.setItem('token', data.token);
             console.log('Redirecting to homepage');
             // Redirect the user to the homepage
-            window.location.href = "/"
+            window.location.href = "/";
+            displayFlashMessage('login successfull');
         } else {
             throw new Error('Login failed');
         }
@@ -77,7 +86,7 @@ function openloginform() {
     body.style.overflow = 'hidden';
     footers.style.filter = 'blur(10px)';
 }
-loginbtn.addEventListener("click",openloginform);
+loginbtn.addEventListener("click", openloginform);
 
 const duser = localStorage.getItem('user');
 document.querySelector('[displayusername]').textContent = duser;
@@ -92,10 +101,12 @@ signInButton.addEventListener("click", () => {
     loginbox.classList.remove("right-panel-active");
 });
 
-function logout(){
+function logout() {
     localStorage.removeItem("user");
+    localStorage.removeItem("token");
+    displayFlashMessage('logout successfull');
 }
-logoutbtn.addEventListener("click",logout);
+logoutbtn.addEventListener("click", logout);
 
 function isLoggedIn() {
     const user = localStorage.getItem('user');
@@ -104,7 +115,7 @@ function isLoggedIn() {
 
 if (isLoggedIn()) {
     document.getElementById("loginbtn").style.display = "none";
-}else{
+} else {
     document.querySelector('[profile]').style.display = "none";
     document.getElementById("loginbtn").style.display = "block";
 }

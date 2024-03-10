@@ -27,81 +27,81 @@
 </head>
 
 <body>
-  <div class="container login" id="loginbox">
-    <div class="form-container sign-up-container">
-        <form action="http://localhost:3000/registration" method="post">
-            <h1>Create Account</h1>
-            <input type="text" name="username" placeholder="Username" required />
-            <input type="email" name="email" placeholder="Email" required autocomplete="email" />
-            <input type="password" name="password" placeholder="Password" required
-                autocomplete="current-password" />
-            <button type="submit" id="originalsignup">Sign Up</button>
-        </form>
-    </div>
-    <div class="form-container sign-in-container">
-        <form action="http://localhost:3000/login" method="post">
-            <h1>Sign in</h1>
-            <input type="email" name="email" placeholder="Email" required autocomplete="email" id="emailInput" />
-            <input type="password" name="password" placeholder="Password" required autocomplete="current-password"
-                id="passwordInput" />
-            <a href="#">Forgot your password?</a>
-            <button type="submit" id="originalsignin">Sign In</button>
-        </form>
-    </div>
-    <div class="overlay-container">
-        <div class="overlay">
-            <div class="overlay-panel overlay-left">
-                <h1>Welcome Back!</h1>
-
-                <button class="ghost" id="signIn">Sign In</button>
-            </div>
-            <div class="overlay-panel overlay-right">
-                <h1>Hello, Explorer!</h1>
-
-                <button class="ghost" id="signUp">Sign Up</button>
-            </div>
+    <div class="container login" id="loginbox">
+        <div class="form-container sign-up-container">
+            <form action="http://localhost:3000/registration" method="post">
+                <h1>Create Account</h1>
+                <input type="text" name="username" placeholder="Username" required />
+                <input type="email" name="email" placeholder="Email" required autocomplete="email" />
+                <input type="password" name="password" placeholder="Password" required
+                    autocomplete="current-password" />
+                <button type="submit" id="originalsignup">Sign Up</button>
+            </form>
         </div>
-    </div>
-</div>
+        <div class="form-container sign-in-container">
+            <form action="http://localhost:3000/login" method="post">
+                <h1>Sign in</h1>
+                <input type="email" name="email" placeholder="Email" required autocomplete="email" id="emailInput" />
+                <input type="password" name="password" placeholder="Password" required autocomplete="current-password"
+                    id="passwordInput" />
+                <a href="#">Forgot your password?</a>
+                <button type="submit" id="originalsignin">Sign In</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
 
-
-
-<header id="header">
-    <nav class="nav">
-        <i class="fa-solid fa-bars navOpenBtn" onclick="navresponsive()"></i>
-        <a href="#" class="logo"><img src="/assest/images/ns-logos/ns-logos_white.png" alt="" height="150"
-                width="150"></a>
-
-        <ul class="nav-links">
-            <i class="fa-solid fa-xmark navCloseBtn"></i>
-            <li><a href="/">Home</a></li>
-            <li><a href="/service">Services</a></li>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/contact">Contact Us</a></li>
-        </ul>
-
-        <button class="log" id="loginbtn" onclick="openloginform()">Login</button>
-
-        <div class="profilecontainers">
-            <div class="navigation">
-                <div class="user-box">
-                    <div class="image-box">
-                        <i class="fa-solid fa-user"></i>
-                    </div>
-                    <p class="username">Jenifer Lopez</p>
+                    <button class="ghost" id="signIn">Sign In</button>
                 </div>
-                <div class="menu-toggle"></div>
-                <ul class="menu">
-                    <li><a href="/mycart"><ion-icon name="cart-outline"></ion-icon><span style="color: black;"
-                                id="cart-item-count" class="badge">0</span></ion-icon>Cart</a></li>
-                    <li><a href="#"><ion-icon name="checkmark-done-outline"></ion-icon></ion-icon>My Booking</a>
-                    </li>
-                    <li><a href="#"><ion-icon name="log-out-outline"></ion-icon>Logout</a></li>
-                </ul>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Explorer!</h1>
+
+                    <button class="ghost" id="signUp">Sign Up</button>
+                </div>
             </div>
         </div>
-    </nav>
-</header>
+    </div>
+
+
+
+    <header id="header">
+        <nav class="nav">
+            <i class="fa-solid fa-bars navOpenBtn" onclick="navresponsive()"></i>
+            <a href="#" class="logo"><img src="/assest/images/ns-logos/ns-logos_white.png" alt="" height="150"
+                    width="150"></a>
+
+            <ul class="nav-links">
+                <i class="fa-solid fa-xmark navCloseBtn"></i>
+                <li><a href="/">Home</a></li>
+                <li><a href="/service">Services</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+
+            <button class="log" id="loginbtn" style="text-align: center;">Login</button>
+
+            <div class="profilecontainers" profile>
+                <div class="navigation">
+                    <div class="user-box">
+                        <div class="image-box">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <p class="username" displayusername>Jenifer Lopez</p>
+                    </div>
+                    <div class="menu-toggle"></div>
+                    <ul class="menu">
+                        <li><a href="/mycart"><ion-icon name="cart-outline"></ion-icon><span style="color: black;"
+                                    id="cart-item-count" class="badge">0</span></ion-icon>Cart</a></li>
+                        <li><a href="#"><ion-icon name="checkmark-done-outline"></ion-icon></ion-icon>My Booking</a>
+                        </li>
+                        <li><a href="/" id="logoutbtn"><ion-icon name="log-out-outline"></ion-icon>Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
 
 <main class="servicepage" id="main">
@@ -237,7 +237,13 @@
       }
     })();
   </script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script type="module" src="/assest/js/auth.js"></script>
+  <script type="module" src="/assest/js/global.js"></script>
 </body>
 
 </html>

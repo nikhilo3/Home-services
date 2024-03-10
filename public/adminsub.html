@@ -1,84 +1,91 @@
 <!DOCTYPE html>
 <!-- Coding By CodingNepal - codingnepalweb.com -->
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!----======== CSS ======== -->
-    <link rel="stylesheet" href="../assest/css/adminstyle.css">
-     
-    <!----===== Iconscout CSS ===== -->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Admin Dashboard Panel</title>
+  <!----======== CSS ======== -->
+  <link rel="stylesheet" href="../assest/css/adminstyle.css">
+
+  <!----===== Iconscout CSS ===== -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+  <title>Admin Dashboard Panel</title>
 </head>
+
 <body>
-    <nav>
-        <div class="logo-name">
-            <div class="logo-image">
-               <img src="images/logo.png" alt="">
-            </div>
+  <nav>
+    <div class="logo-name">
+      <div class="logo-image">
+        <img src="images/logo.png" alt="">
+      </div>
 
-            <span class="logo_name">TOWNY</span>
-        </div>
+      <span class="logo_name">TOWNY</span>
+    </div>
 
-        <div class="menu-items">
-            <ul class="nav-links">
-                <li><a href="/admin">
-                    <i class="uil uil-estate"></i>
-                    <span class="/admin">Dahsboard</span>
-                </a></li>
-                <li><a href="/admin/order">
-                    <i class="uil uil-shopping-bag"></i>
-                    <span class="/order">Order</span>
-                </a></li>
-                <li><a href="/admin/sub">
-                    <i class="uil uil-bell"></i>
-                    <span class="link-name">Subscriber</span>
-                </a></li>
-            </ul>
-            
-        </div>
-    </nav>
+    <div class="menu-items">
+      <ul class="nav-links">
+        <li><a href="/admin">
+            <i class="uil uil-estate"></i>
+            <span class="/admin">Dahsboard</span>
+          </a></li>
+        <li><a href="/admin/order">
+            <i class="uil uil-shopping-bag"></i>
+            <span class="/order">Order</span>
+          </a></li>
+        <li><a href="/admin/sub">
+            <i class="uil uil-bell"></i>
+            <span class="link-name">Subscriber</span>
+          </a></li>
+        <li><a href="/admin/user">
+            <i class="uil uil-bell"></i>
+            <span class="link-name">Users</span>
+          </a></li>
+      </ul>
 
-    <section class="dashboard">
-        <div class="top">
-            <i class="uil uil-bars sidebar-toggle"></i>
+    </div>
+  </nav>
 
-            <div class="search-box">
-                <i class="uil uil-search"></i>
-                <input type="text" placeholder="Search here...">
-            </div>
-            
-        </div>
+  <section class="dashboard">
+    <div class="top">
+      <i class="uil uil-bars sidebar-toggle"></i>
 
-        <section class="adminordershow">
-            <!--for demo wrap-->
-            <div class="tbl-header">
-              <table cellpadding="0" cellspacing="0" border="0">
-                <thead>
-                  <tr>
-                    <th>MailId</th>
-                  </tr>
-                </thead>
-              </table>
-            </div>
-            <div class="tbl-content">
-              <table cellpadding="0" cellspacing="0" border="0">
-                <tbody class="adminsubshow">
-                 
-                  <tr>
-                    <td>nikhilladani@gmail.com</td>
-                  </tr>
-                  
-                </tbody>
-              </table>
-            </div>
-          </section>
+      <div class="search-box">
+        <i class="uil uil-search"></i>
+        <input type="text" placeholder="Search here...">
+      </div>
+
+    </div>
+
+    <section class="adminordershow">
+      <!--for demo wrap-->
+      <div class="tbl-header">
+        <table cellpadding="0" cellspacing="0" border="0">
+          <thead>
+            <tr>
+              <th>MailId</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+      <div class="tbl-content">
+        <table cellpadding="0" cellspacing="0" border="0">
+          <tbody class="adminsubshow">
+
+            <!-- <tr>
+              <td>nikhilladani@gmail.com</td>
+            </tr> -->
+
+          </tbody>
+        </table>
+      </div>
     </section>
+  </section>
 
-    <script src="/assest/js/adminsub.js"></script>
+  <script src="/assest/js/adminsub.js"></script>
 </body>
+
 </html>

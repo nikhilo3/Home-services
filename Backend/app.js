@@ -22,19 +22,14 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cookieParser());
 
-
 app.use(express.static(path.join(__dirname, '../public')));
 app.use('/assest', express.static(path.join(__dirname, '../assest')));
-
 
 
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, '../public/index.html'));
 });
 
-app.get('/admin', function (req, res) {
-    res.sendFile(path.join(__dirname, '../public/adminpanel.html'));
-});
 
 app.get('/checkout', function (req, res) {
     res.sendFile(path.join(__dirname, '../public/checkout.html'));
@@ -64,6 +59,10 @@ app.get('/servicedetail', function (req, res) {
     res.sendFile(path.join(__dirname, '../public/servicedetail.html'));
 });
 
+app.get('/admin', function (req, res) {
+    res.sendFile(path.join(__dirname, '../public/adminpanel.html'));
+});
+
 app.get('/admin/order', function (req, res) {
     res.sendFile(path.join(__dirname, '../public/adminorder.html'));
 });
@@ -71,6 +70,12 @@ app.get('/admin/order', function (req, res) {
 app.get('/admin/sub', function (req, res) {
     res.sendFile(path.join(__dirname, '../public/adminsub.html'));
 });
+
+app.get('/admin/user', function (req, res) {
+    res.sendFile(path.join(__dirname, '../public/adminuser.html'));
+});
+
+
 
 
 

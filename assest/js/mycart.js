@@ -3,6 +3,21 @@ const msgdisplay = document.querySelector('[msgdisplay]');
 const total = document.querySelector('[total]');
 const subtotalElement = document.querySelector("[subtotal]");
 const tax_feesElement = document.querySelector('[tax_fees]');
+const header = document.querySelector('#header');
+
+function displayFlashMessage(message,type) {
+  const element = document.createElement('div');
+  element.classList.add('flash-message');
+  element.classList.add(type);
+  element.textContent = message;
+
+  const headerParent = header.parentNode;
+  headerParent.insertBefore(element, header.nextSibling);
+  // header.append(element);
+  setTimeout(() => {
+    element.remove();
+  }, 1000);
+}
 
 const fetchAndRenderCartItems = async () => {
   try {
@@ -35,7 +50,7 @@ function rendercart(cartItems) {
   cartItems.forEach(item => {
     let newtable = document.createElement('tr');
     newtable.innerHTML =
-    `
+      `
                             
                             <td class="align-middle"><img src="${item.image}" alt="" width="70" class="img-fluid rounded shadow-sm"></td>
                                 
@@ -71,12 +86,14 @@ const removeFromCart = (itemId) => {
   }).then((response) => {
     if (response.ok) {
       console.log('Item removed from cart successfully');
+      displayFlashMessage("remove successfully","success");
       fetchAndRenderCartItems();
     } else {
       console.log('Failed to remove item from cart', response.statusText);
     }
   }).catch((err) => {
     console.log('Error removing item from cart:', err);
+    displayFlashMessage("login first then access cart item","error");
   })
   // const itemIndex = cartItems.findIndex(item => item.id === id);
   // if (itemIndex !== -1) {

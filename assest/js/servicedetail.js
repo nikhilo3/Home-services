@@ -5,6 +5,21 @@ const heading = document.querySelector('#headingmain');
 const rating = document.querySelector('[ratingmain]');
 let subcontain = document.querySelector('[subcontain]');
 
+const header = document.querySelector('#header');
+function displayFlashMessage(message, type) {
+    console.log("displayflashmessage function is called");
+    const element = document.createElement('div');
+    element.classList.add('flash-message');
+    element.classList.add(type);
+    element.textContent = message;
+
+    const headerParent = header.parentNode;
+    headerParent.insertBefore(element, header.nextSibling);
+    // header.append(element);
+    setTimeout(() => {
+        element.remove();
+    }, 1000);
+}
 
 
 (async () => {
@@ -95,6 +110,12 @@ async function addtocart(id, title, price, image) {
     try {
         const token = localStorage.getItem('token');
 
+        if (!token) {
+            // Display error message if user is not logged in
+            displayFlashMessage("Please login to add the service to the cart", "error");
+            return;
+        }
+
         const response = await fetch('http://localhost:3000/cart/addtocart', {
             method: 'POST',
             headers: {
@@ -112,13 +133,16 @@ async function addtocart(id, title, price, image) {
 
         if (response.ok) {
             console.log('Item added to cart successfully');
+            displayFlashMessage("service added successfully", "success");
         }
         else {
-            console.log('failed to add item to cart', response.statusText);
+            const errorMessage = await response.text();
+            console.log('Error adding item to cart:', errorMessage);
+            displayFlashMessage(errorMessage, 'error');
         }
-        
     }
     catch (error) {
         console.log('Error adding item to cart:', error);
     }
+
 }

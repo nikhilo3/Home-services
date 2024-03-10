@@ -20,13 +20,20 @@ router.post('/', async (req, res) => {
 
         console.log('Login successful', token);
         
-        return res.json({
+        // return res.json({
+        //     _id : user._id,
+        //     username : user.username,
+        //     email : user.email,
+        //     password : user.password,
+        //     token : token,
+        // });
+        return res.send({
             _id : user._id,
             username : user.username,
             email : user.email,
             password : user.password,
             token : token,
-        });
+        })
     } catch (err) {
         console.error('Error during login:', err);
         return res.status(500).json({ message: 'Internal server error' });

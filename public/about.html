@@ -78,7 +78,7 @@
                 <li><a href="/contact">Contact Us</a></li>
             </ul>
 
-            <button class="log" id="loginbtn" onclick="openloginform()" style="text-align: center;">Login</button>
+            <button class="log" id="loginbtn" style="text-align: center;">Login</button>
 
             <div class="profilecontainers" profile>
                 <div class="navigation">
@@ -94,7 +94,7 @@
                                     id="cart-item-count" class="badge">0</span></ion-icon>Cart</a></li>
                         <li><a href="#"><ion-icon name="checkmark-done-outline"></ion-icon></ion-icon>My Booking</a>
                         </li>
-                        <li><a href="/" onclick="logout();"><ion-icon name="log-out-outline"></ion-icon>Logout</a></li>
+                        <li><a href="/" id="logoutbtn"><ion-icon name="log-out-outline"></ion-icon>Logout</a></li>
                     </ul>
                 </div>
             </div>
@@ -112,27 +112,27 @@
             <div class="col-lg-7 ps-5">
                 <div class="about-content w-100">
                     <h2 style="line-height: 50px; font-size: 32px; font-weight: 800;">
-                        why NS services?
+                        why TOWNY?
                     </h2>
                     <p>Towny revolutionizes home maintenance and organization with an array of online services. From house cleaning to electronics installation, we enhance your living space. Elevate your house maintenance experience with Towny!</p>
                     <div class="about-detailes d-flex" style="flex-wrap: wrap;">
                         <div class="detailes1 col-lg-5" style="height:200px;">
-                            <img src="/assest/images/ns-logos/ns-logos.jpeg" alt="" width="52px" style="border-radius: 50%; overflow: hidden;">
+                            <!-- <img src="/assest/images/ns-logos/ns-logos.jpeg" alt="" width="52px" style="border-radius: 50%; overflow: hidden;"> -->
                             <h2>who we are</h2>
                             <p>Towny delivers excellence in house cleaning services. Our professional team ensures a spotless home with personalized, eco-friendly practices.</p>
                         </div>
                         <div class="detailes2 col-lg-5" style="height:200px;">
-                            <img src="/assest/images/ns-logos/ns-logos.jpeg" alt="" width="52px" style="border-radius: 50%; overflow: hidden;">
+                            <!-- <img src="/assest/images/ns-logos/ns-logos.jpeg" alt="" width="52px" style="border-radius: 50%; overflow: hidden;"> -->
                             <h2>What do we do</h2>
                             <p>Towny specializes in comprehensive home services, delivering excellence in cleaning, organization, and maintenance.</p>
                         </div>
                         <div class="detailes3 col-lg-5" style="height:200px;">
-                            <img src="/assest/images/ns-logos/ns-logos.jpeg" alt="" width="52px" style="border-radius: 50%; overflow: hidden;">
+                            <!-- <img src="/assest/images/ns-logos/ns-logos.jpeg" alt="" width="52px" style="border-radius: 50%; overflow: hidden;"> -->
                             <h2>Our approach</h2>
                             <p>Welcome to Towny, where our approach is defined by excellence. Specializing in home services.</p>
                         </div>
                         <div class="detailes4 col-lg-5" style="height:200px;">
-                            <img src="/assest/images/ns-logos/ns-logos.jpeg" alt="" width="52px" style="border-radius: 50%; overflow: hidden;">
+                            <!-- <img src="/assest/images/ns-logos/ns-logos.jpeg" alt="" width="52px" style="border-radius: 50%; overflow: hidden;"> -->
                             <h2>Our success story</h2>
                             <p>Embark on the success journey with Towny. Our story is woven with dedication and excellence.</p>
                         </div>
@@ -203,8 +203,13 @@
         </div>
 
     </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script type="module" src="/assest/js/auth.js"></script>
-
+    <script type="module" src="/assest/js/global.js"></script>
 </body>
 
 </html>
