@@ -30,7 +30,7 @@
     <header id="header">
         <nav class="nav">
             <i class="fa-solid fa-bars navOpenBtn" onclick="navresponsive()"></i>
-            <a href="#" class="logo"><img src="../assest/images/ns-logos/ns-logos_white.png" alt="" height="150"
+            <a href="#" class="logo"><img src="/assest/images/ns-logos/ns-logos_white.png" alt="" height="150"
                     width="150"></a>
 
             <ul class="nav-links">
@@ -39,7 +39,6 @@
                 <li><a href="/service">Services</a></li>
                 <li><a href="/about">About Us</a></li>
                 <li><a href="/contact">Contact Us</a></li>
-                <li><a href="/mycart">my Cart</a></li>
             </ul>
 
             <button class="log" id="loginbtn" onclick="openloginform()">Login</button>
@@ -54,7 +53,8 @@
                     </div>
                     <div class="menu-toggle"></div>
                     <ul class="menu">
-                        <li><a href="#"><ion-icon name="cart-outline"></ion-icon></ion-icon>Cart</a></li>
+                        <li><a href="/mycart"><ion-icon name="cart-outline"></ion-icon><span style="color: black;"
+                                    id="cart-item-count" class="badge">0</span></ion-icon>Cart</a></li>
                         <li><a href="#"><ion-icon name="checkmark-done-outline"></ion-icon></ion-icon>My Booking</a>
                         </li>
                         <li><a href="#"><ion-icon name="log-out-outline"></ion-icon>Logout</a></li>
@@ -66,7 +66,7 @@
 
     <div class="contain">
 
-        <div class="herobanner" style="margin-top: 80px;">
+        <div class="herobanner" style="margin-top: 90px;">
             <div class="wrapper">
                 <div class="coverphoto">
                     <img src="" alt="Home Cleaning service" subservicemain>
@@ -86,7 +86,7 @@
                         <div class="proimage">
 
                             <h4>UC Promise</h4>
-                            <img src="./assest/images/hygenic.webp" alt="logo image" width="92" height="92">
+                            <img src="./assest/images/hygenic.webp" alt="logo image" width="72" height="72">
 
                         </div>
                         <div class="extra1">
@@ -188,14 +188,14 @@
 
     
 
-    <footer class="footer-section">
+    <footer class="footer-section" id="footer">
         <div class="container">
             <div class="footer-content pt-5 pb-5">
                 <div class="row">
                     <div class="col-xl-4 col-lg-4 mb-50">
                         <div class="footer-widget">
                             <div class="footer-logo">
-                                <a href="index.html"><img src="../assest/images/ns-logos/ns-logos_white.png"
+                                <a href="index.html"><img src="/assest/images/ns-logos/ns-logos_white.png"
                                         class="img-fluid" alt="logo" width="200" height="200"></a>
                             </div>
                             <div class="footer-text">
@@ -237,15 +237,19 @@
                                 <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
                             </div>
                             <div class="subscribe-form">
-                                <form action="#">
-                                    <input type="text" class="full-width" placeholder="Email Address">
-                                    <button><i class="fab fa-telegram-plane"></i></button>
+                                <form action="http://localhost:3000/subscribemail" method="post" name="subform">
+                                    <input type="text" class="full-width" name="submail" placeholder="Email Address">
+                                    <button type="submit"><i class="fab fa-telegram-plane"></i></button>
                                 </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div id="loginSuccessMessage" style="display: none;">
+            <p>Login successful!</p>
         </div>
 
     </footer>

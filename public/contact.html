@@ -33,10 +33,10 @@
 
             <ul class="nav-links">
                 <i class="fa-solid fa-xmark navCloseBtn"></i>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/service.html">Services</a></li>
-                <li><a href="/about.html">About Us</a></li>
-                <li><a href="/contact.html">Contact Us</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/service">Services</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact Us</a></li>
             </ul>
 
             <button class="log" id="loginbtn" onclick="openloginform()">Login</button>
@@ -51,7 +51,8 @@
                     </div>
                     <div class="menu-toggle"></div>
                     <ul class="menu">
-                        <li><a href="#"><ion-icon name="cart-outline"></ion-icon></ion-icon>Cart</a></li>
+                        <li><a href="/mycart"><ion-icon name="cart-outline"></ion-icon><span style="color: black;"
+                                    id="cart-item-count" class="badge">0</span></ion-icon>Cart</a></li>
                         <li><a href="#"><ion-icon name="checkmark-done-outline"></ion-icon></ion-icon>My Booking</a>
                         </li>
                         <li><a href="#"><ion-icon name="log-out-outline"></ion-icon>Logout</a></li>
@@ -159,7 +160,7 @@
             </div>
         </div>
     </main>
-    <footer class="footer-section">
+    <footer class="footer-section" id="footer">
         <div class="container">
             <div class="footer-content pt-5 pb-5">
                 <div class="row">
@@ -208,15 +209,19 @@
                                 <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
                             </div>
                             <div class="subscribe-form">
-                                <form action="#">
-                                    <input type="text" class="full-width" placeholder="Email Address">
-                                    <button><i class="fab fa-telegram-plane"></i></button>
+                                <form action="http://localhost:3000/subscribemail" method="post" name="subform">
+                                    <input type="text" class="full-width" name="submail" placeholder="Email Address">
+                                    <button type="submit"><i class="fab fa-telegram-plane"></i></button>
                                 </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div id="loginSuccessMessage" style="display: none;">
+            <p>Login successful!</p>
         </div>
 
     </footer>
