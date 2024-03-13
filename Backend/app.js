@@ -5,6 +5,9 @@ const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const path = require('path');
 
+const session = require('express-session');
+const flash = require('connect-flash');
+
 const app = express();
 const port = 3000;
 
@@ -17,6 +20,17 @@ mongoose.connect('mongodb://127.0.0.1:27017/Homeservices').then(() => {
 
 
 //middleware
+
+// Session middleware configuration
+app.use(session({
+    secret: 'my_secret',
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: false } // Set to true for HTTPS
+}));
+// Flash middleware configuration
+app.use(flash());
+
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());

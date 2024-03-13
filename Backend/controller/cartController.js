@@ -27,7 +27,6 @@ router.post('/addtocart', verifyToken, async (req, res) => {
 
             await cartItem.save();
             res.json(cartItem);
-
         } catch (error) {
             throw new Error('error')
         }

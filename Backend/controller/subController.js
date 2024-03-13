@@ -14,9 +14,10 @@ router.post('/', async (req, res) => {
         await submail.save();
 
         console.log('subscribe successfully');
-        res.status(200).send(submail);
+        return res.status(200).json(submail);
     } catch (error) {
         console.log('error while subscribe mail', error);
+        res.status(500).json(error);
     }
 });
 

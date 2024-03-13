@@ -5,6 +5,8 @@ const subtotalElement = document.querySelector("[subtotal]");
 const tax_feesElement = document.querySelector('[tax_fees]');
 const header = document.querySelector('#header');
 
+import { countcart } from "./auth.js";
+
 function displayFlashMessage(message,type) {
   const element = document.createElement('div');
   element.classList.add('flash-message');
@@ -16,7 +18,7 @@ function displayFlashMessage(message,type) {
   // header.append(element);
   setTimeout(() => {
     element.remove();
-  }, 1000);
+  }, 3000);
 }
 
 const fetchAndRenderCartItems = async () => {
@@ -88,6 +90,7 @@ const removeFromCart = (itemId) => {
       console.log('Item removed from cart successfully');
       displayFlashMessage("remove successfully","success");
       fetchAndRenderCartItems();
+      countcart();
     } else {
       console.log('Failed to remove item from cart', response.statusText);
     }

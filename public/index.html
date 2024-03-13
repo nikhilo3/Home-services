@@ -28,17 +28,17 @@
 <body>
     <div class="container login" id="loginbox">
         <div class="form-container sign-up-container">
-            <form action="http://localhost:3000/registration" method="post">
+            <form action="#" method="post" id="regiform" name="regiform">
                 <h1>Create Account</h1>
-                <input type="text" name="username" placeholder="Username" required />
-                <input type="email" name="email" placeholder="Email" required autocomplete="email" />
-                <input type="password" name="password" placeholder="Password" required
+                <input type="text" name="username" id="username" placeholder="Username" required />
+                <input type="email" name="email" id="email" placeholder="Email" required autocomplete="email" />
+                <input type="password" name="password" id="password" placeholder="Password" required
                     autocomplete="current-password" />
                 <button type="submit" id="originalsignup">Sign Up</button>
             </form>
         </div>
         <div class="form-container sign-in-container">
-            <form action="http://localhost:3000/login" method="post">
+            <form action="#" id="loginform" name="loginform">
                 <h1>Sign in</h1>
                 <input type="email" name="email" placeholder="Email" required autocomplete="email" id="emailInput" />
                 <input type="password" name="password" placeholder="Password" required autocomplete="current-password"
@@ -94,7 +94,7 @@
                                     id="cart-item-count" class="badge">0</span></ion-icon>Cart</a></li>
                         <li><a href="#"><ion-icon name="checkmark-done-outline"></ion-icon></ion-icon>My Booking</a>
                         </li>
-                        <li><a href="/" id="logoutbtn"><ion-icon name="log-out-outline"></ion-icon>Logout</a></li>
+                        <li><span id="logoutbtn" style="color: black; cursor: pointer; display: flex; align-items: center; gap: 15px;"><ion-icon name="log-out-outline"></ion-icon>Logout</span></li>
                     </ul>
                 </div>
             </div>
@@ -426,7 +426,7 @@
                 <div class="form">
                     <h4>contact us</h4>
                     <h2 class="form-headline">Have Questions? Get in touch!</h2>
-                    <form id="submit-form" action="/">
+                    <form id="contact_form" action="/">
                         <p class="username">
                             <img width="80" height="80" src="https://img.icons8.com/dotty/80/user.png" alt="user" />
                             <input id="name" class="form-input allpadding" type="text" placeholder="Your Name" required>
@@ -522,9 +522,9 @@
                                 <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
                             </div>
                             <div class="subscribe-form">
-                                <form action="http://localhost:3000/subscribemail" method="post" name="subform">
-                                    <input type="text" class="full-width" name="submail" placeholder="Email Address">
-                                    <button type="submit"><i class="fab fa-telegram-plane"></i></button>
+                                <form action="#" id="subform" name="subform">
+                                    <input type="email" class="full-width" name="submail" placeholder="Email Address" required>
+                                    <button type="submit" id="subbtn"><i class="fab fa-telegram-plane"></i></button>
                                 </form>
                             </div>
                         </div>

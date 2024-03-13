@@ -1,4 +1,5 @@
 //header
+import { displayFlashMessage } from "./auth.js";
 const nav = document.querySelector(".nav"),
   navOpenBtn = document.querySelector(".navOpenBtn"),
   navCloseBtn = document.querySelector(".navCloseBtn");
@@ -53,15 +54,48 @@ num.forEach((element) => {
   }, 2000 / endvalue)
 });
 
-function displayFlashMessage(message) {
-  const element = document.createElement('div');
-  element.classList.add('flash-message');
-  element.textContent = message;
 
-  const headerParent = header.parentNode;
-  headerParent.insertBefore(element, header.nextSibling);
-  // header.append(element);
-  setTimeout(() => {
-    element.remove();
-  }, 3000);
+
+
+
+
+
+const subform = document.getElementById('subform');
+
+subform.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const email = document.querySelector('[name="submail"]').value;
+
+  handlesubscribe(email)
+});
+
+
+async function handlesubscribe(email) {
+  console.log("handle subscribe  called");
+  try {
+    const response = await fetch('http://localhost:3000/subscribemail', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ submail: email })
+    });
+    console.log(response);
+
+    const data = await response.json();
+
+    if (response.ok) {
+      console.log(data);
+      displayFlashMessage('subscribe successfully', 'success');
+    } else {
+      console.log('Login failed');
+      displayFlashMessage('mail already subscribe', 'error');
+    }
+  } catch (error) {
+    console.error('Error during login:', error);
+    displayFlashMessage('not subscribe error on server', 'error');
+  }
 }
+
+

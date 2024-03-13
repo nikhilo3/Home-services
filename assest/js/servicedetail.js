@@ -1,4 +1,5 @@
 import { fetchData } from "./fetchjson.js";
+import { countcart } from "./auth.js";
 
 const herophoto = document.querySelector("[subservicemain]");
 const heading = document.querySelector('#headingmain');
@@ -18,7 +19,7 @@ function displayFlashMessage(message, type) {
     // header.append(element);
     setTimeout(() => {
         element.remove();
-    }, 1000);
+    }, 3000);
 }
 
 
@@ -134,6 +135,7 @@ async function addtocart(id, title, price, image) {
         if (response.ok) {
             console.log('Item added to cart successfully');
             displayFlashMessage("service added successfully", "success");
+            countcart();
         }
         else {
             const errorMessage = await response.text();
