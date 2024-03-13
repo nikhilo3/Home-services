@@ -74,7 +74,7 @@ async function handleLogin(email, password) {
 
             window.location.href = "/";
         } else {
-            throw new Error('Login failed');
+            console.log("error occured");
         }
 
     } catch (error) {
@@ -182,15 +182,14 @@ async function handlRegistration(username, email, password) {
 
         if (response.ok) {
             console.log(data);
-            localStorage.setItem('user', data.username);
-            localStorage.setItem('token', data.token);
+            
             localStorage.setItem('flashMessage', JSON.stringify({ message: 'Registration successful!', type: 'success' }));
             console.log('Redirecting to homepage');
             displayFlashMessage('Registration successfull', 'success');
 
             window.location.href = "/";
         } else {
-            throw new Error('Login failed');
+            displayFlashMessage('user already registerd', 'error');
         }
 
     } catch (error) {

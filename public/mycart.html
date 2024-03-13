@@ -30,17 +30,17 @@
 <body class="mycart">
     <div class="container login" id="loginbox">
         <div class="form-container sign-up-container">
-            <form action="http://localhost:3000/registration" method="post">
+            <form action="#" method="post" id="regiform" name="regiform">
                 <h1>Create Account</h1>
-                <input type="text" name="username" placeholder="Username" required />
-                <input type="email" name="email" placeholder="Email" required autocomplete="email" />
-                <input type="password" name="password" placeholder="Password" required
+                <input type="text" name="username" id="username" placeholder="Username" required />
+                <input type="email" name="email" id="email" placeholder="Email" required autocomplete="email" />
+                <input type="password" name="password" id="password" placeholder="Password" required
                     autocomplete="current-password" />
                 <button type="submit" id="originalsignup">Sign Up</button>
             </form>
         </div>
         <div class="form-container sign-in-container">
-            <form action="http://localhost:3000/login" method="post">
+            <form action="#" id="loginform" name="loginform">
                 <h1>Sign in</h1>
                 <input type="email" name="email" placeholder="Email" required autocomplete="email" id="emailInput" />
                 <input type="password" name="password" placeholder="Password" required autocomplete="current-password"
@@ -70,8 +70,7 @@
     <header id="header">
         <nav class="nav">
             <i class="fa-solid fa-bars navOpenBtn" onclick="navresponsive()"></i>
-            <a href="#" class="logo"><img src="/assest/images/ns-logos/ns-logos_white.png" alt="" height="150"
-                    width="150"></a>
+            <a href="#" class="logo"><img style="-webkit-filter: invert(100%); filter: invert(100%);" class="logo_image" src="//towny.axiomthemes.com/wp-content/uploads/2021/11/logo.png" srcset="//towny.axiomthemes.com/wp-content/uploads/2021/11/logo-2x.png 2x" alt="Towny" width="174" height="40"></a>
 
             <ul class="nav-links">
                 <i class="fa-solid fa-xmark navCloseBtn"></i>
@@ -97,12 +96,14 @@
                                     id="cart-item-count" class="badge">0</span></ion-icon>Cart</a></li>
                         <li><a href="#"><ion-icon name="checkmark-done-outline"></ion-icon></ion-icon>My Booking</a>
                         </li>
-                        <li><a href="/" id="logoutbtn"><ion-icon name="log-out-outline"></ion-icon>Logout</a></li>
+                        <li><span id="logoutbtn" style="color: black; cursor: pointer; display: flex; align-items: center; gap: 15px;"><ion-icon name="log-out-outline"></ion-icon>Logout</span></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+
+
 
     <div class="px-4 px-lg-0" style="margin-top: 20px;">
 
@@ -214,8 +215,7 @@
                     <div class="col-xl-4 col-lg-4 mb-50">
                         <div class="footer-widget">
                             <div class="footer-logo">
-                                <a href="index.html"><img src="/assest/images/ns-logos/ns-logos_white.png"
-                                        class="img-fluid" alt="logo" width="200" height="200"></a>
+                                <a href="index.html"><img style="-webkit-filter: invert(100%); filter: invert(100%);" class="logo_image" src="//towny.axiomthemes.com/wp-content/uploads/2021/11/logo.png" srcset="//towny.axiomthemes.com/wp-content/uploads/2021/11/logo-2x.png 2x" alt="Towny" width="174" height="40"></a>
                             </div>
                             <div class="footer-text">
                                 <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor
