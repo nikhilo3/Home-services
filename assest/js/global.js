@@ -19,7 +19,6 @@ menuToggle.onclick = function () {
 }
 
 
-
 //customerdetail section
 let customerquetion = document.querySelectorAll("[customerquetion]");
 
@@ -53,3 +52,16 @@ num.forEach((element) => {
     }
   }, 2000 / endvalue)
 });
+
+function displayFlashMessage(message) {
+  const element = document.createElement('div');
+  element.classList.add('flash-message');
+  element.textContent = message;
+
+  const headerParent = header.parentNode;
+  headerParent.insertBefore(element, header.nextSibling);
+  // header.append(element);
+  setTimeout(() => {
+    element.remove();
+  }, 3000);
+}

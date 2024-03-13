@@ -16,12 +16,12 @@ const verifyToken = async (req, res, next) => {
         next();
       }
     } catch (error) {
-      throw new Error("not authorization token expired, please login again");
+      // throw new Error("not authorization token expired, please login again");
+      console.log("not authorization token expired, please login again");
     }
   } else {
     throw new Error("there no token attached in header");
   }
-
 };
 
 module.exports = verifyToken;

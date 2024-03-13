@@ -27,9 +27,49 @@
 
 <body class="dpage">
 
+    <div class="container login" id="loginbox">
+        <div class="form-container sign-up-container">
+            <form action="http://localhost:3000/registration" method="post">
+                <h1>Create Account</h1>
+                <input type="text" name="username" placeholder="Username" required />
+                <input type="email" name="email" placeholder="Email" required autocomplete="email" />
+                <input type="password" name="password" placeholder="Password" required
+                    autocomplete="current-password" />
+                <button type="submit" id="originalsignup">Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="http://localhost:3000/login" method="post">
+                <h1>Sign in</h1>
+                <input type="email" name="email" placeholder="Email" required autocomplete="email" id="emailInput" />
+                <input type="password" name="password" placeholder="Password" required autocomplete="current-password"
+                    id="passwordInput" />
+                <a href="#">Forgot your password?</a>
+                <button type="submit" id="originalsignin">Sign In</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Explorer!</h1>
+
+                    <button class="ghost" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
     <header id="header">
         <nav class="nav">
             <i class="fa-solid fa-bars navOpenBtn" onclick="navresponsive()"></i>
+           
             <a href="#" class="logo"><img src="/assest/images/ns-logos/ns-logos_white.png" alt="" height="150"
                     width="150"></a>
 
@@ -41,15 +81,15 @@
                 <li><a href="/contact">Contact Us</a></li>
             </ul>
 
-            <button class="log" id="loginbtn" onclick="openloginform()">Login</button>
+            <button class="log" id="loginbtn" style="text-align: center;">Login</button>
 
-            <div class="profilecontainers">
+            <div class="profilecontainers" profile>
                 <div class="navigation">
                     <div class="user-box">
                         <div class="image-box">
                             <i class="fa-solid fa-user"></i>
                         </div>
-                        <p class="username">Jenifer Lopez</p>
+                        <p class="username" displayusername>Jenifer Lopez</p>
                     </div>
                     <div class="menu-toggle"></div>
                     <ul class="menu">
@@ -57,7 +97,7 @@
                                     id="cart-item-count" class="badge">0</span></ion-icon>Cart</a></li>
                         <li><a href="#"><ion-icon name="checkmark-done-outline"></ion-icon></ion-icon>My Booking</a>
                         </li>
-                        <li><a href="#"><ion-icon name="log-out-outline"></ion-icon>Logout</a></li>
+                        <li><a href="/" id="logoutbtn"><ion-icon name="log-out-outline"></ion-icon>Logout</a></li>
                     </ul>
                 </div>
             </div>
@@ -66,7 +106,7 @@
 
     <div class="contain">
 
-        <div class="herobanner" style="margin-top: 90px;">
+        <div class="herobanner">
             <div class="wrapper">
                 <div class="coverphoto">
                     <img src="" alt="Home Cleaning service" subservicemain>
@@ -113,7 +153,35 @@
                             <span> use Safe Chemicals </span>
                         </div>
                     </div>
-
+                    <!-- ================ -->
+                    <div class="servicelink">
+                        <div class="servicebox">
+                            <a href="#">
+                                <!-- <img src="../assest/images/Electricians/ACInstallation.jpg" alt="" width="100%"> -->
+                            </a>
+                        </div>
+                        <div class="servicebox">
+                            <a href="#">
+                                <!-- <img src="../assest/images/Electricians/ACInstallation.jpg" alt="" width="100%"> -->
+                            </a>
+                        </div>
+                        <div class="servicebox">
+                            <a href="#">
+                                <!-- <img src="../assest/images/Electricians/ACInstallation.jpg" alt="" width="100%"> -->
+                            </a>
+                        </div>
+                        <div class="servicebox">
+                            <a href="#">
+                                <!-- <img src="../assest/images/Electricians/ACInstallation.jpg" alt="" width="100%"> -->
+                            </a>
+                        </div>
+                        <div class="servicebox">
+                            <a href="#">
+                                <!-- <img src="../assest/images/Electricians/ACInstallation.jpg" alt="" width="100%"> -->
+                            </a>
+                        </div>
+                    </div>
+                    <!-- ============== -->
                 </div>
             </div>
         </div>
@@ -199,9 +267,7 @@
                                         class="img-fluid" alt="logo" width="200" height="200"></a>
                             </div>
                             <div class="footer-text">
-                                <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor
-                                    incididuntut consec tetur adipisicing
-                                    elit,Lorem ipsum dolor sit amet.</p>
+                                <p>Elevate your living spaces with our expert house cleaning services. Committed to excellence, we use top-quality equipment and safe chemicals. Contact us for a pristine home environment that reflects our dedication to superior cleanliness.</p>
                             </div>
                             <div class="footer-social-icon">
                                 <span>Follow us</span>
@@ -219,11 +285,10 @@
                                 <h3>Useful Links</h3>
                             </div>
                             <ul>
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Contact Us</a></li>
                                 <li><a href="#">Home</a></li>
                                 <li><a href="#">Services</a></li>
-                                <li><a href="#">Price</a></li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Contact Us</a></li>
                                 <li><a href="#">My Status</a></li>
                             </ul>
                         </div>
@@ -254,8 +319,14 @@
 
     </footer>
 
-
-    <script type="module" src="../assest/js/servicedetail.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script type="module" src="/assest/js/servicedetail.js"></script>
+    <script type="module" src="/assest/js/auth.js"></script>
+    <script type="module" src="/assest/js/global.js"></script>
 </body>
 
 </html>
