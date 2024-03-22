@@ -154,11 +154,12 @@ export function countcart() {
 countcart();
 
 
+const regiform = document.getElementById('regiform');
 document.addEventListener('DOMContentLoaded', () => {
-    const regiform = document.getElementById('regiform');
 
     regiform.addEventListener('submit', (event) => {
         event.preventDefault();
+
         console.log("originalsign in button clicked");
         const username = document.getElementById("username").value;
         const email = document.getElementById("email").value;
@@ -182,15 +183,15 @@ async function handlRegistration(username, email, password) {
 
         if (response.ok) {
             console.log(data);
-            localStorage.setItem('user', data.username);
-            localStorage.setItem('token', data.token);
-            localStorage.setItem('flashMessage', JSON.stringify({ message: 'Registration successful!', type: 'success' }));
+            localStorage.setItem('flashMessage', JSON.stringify({ message: 'Registration successfully please login first then access services', type: 'success' }));
             console.log('Redirecting to homepage');
-            displayFlashMessage('Registration successfull', 'success');
+            flashMessagefunc();
+            regiform.reset();
+            // displayFlashMessage('Registration successfull', 'success');
 
-            window.location.href = "/";
+            // window.location.href = "/";
         } else {
-            throw new Error('Login failed');
+            displayFlashMessage('user already registred', 'error');
         }
 
     } catch (error) {
@@ -199,10 +200,101 @@ async function handlRegistration(username, email, password) {
     }
 }
 
+function flashMessagefunc() {
+    const flashMessageData = localStorage.getItem('flashMessage');
+    if (flashMessageData) {
+        const messageObj = JSON.parse(flashMessageData);
+        displayFlashMessage(messageObj.message, messageObj.type);
+        localStorage.removeItem('flashMessage'); // Remove after displaying
+    }
+}
+flashMessagefunc();
 
-const flashMessageData = localStorage.getItem('flashMessage');
-if (flashMessageData) {
-    const messageObj = JSON.parse(flashMessageData);
-    displayFlashMessage(messageObj.message, messageObj.type);
-    localStorage.removeItem('flashMessage'); // Remove after displaying
+
+//subcribe handle
+
+const subform = document.getElementById('subform');
+
+subform.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const email = document.querySelector('[name="submail"]').value;
+
+    handlesubscribe(email)
+});
+
+async function handlesubscribe(email) {
+    console.log("handle subscribe  called");
+    try {
+        const response = await fetch('http://localhost:3000/subscribemail', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ submail: email })
+        });
+        console.log(response);
+
+        const data = await response.json();
+
+        if (response.ok) {
+            console.log(data);
+            displayFlashMessage('subscribe successfully', 'success');
+            subform.reset();
+        } else {
+            console.log('Login failed');
+            displayFlashMessage('mail already subscribe', 'error');
+        }
+    } catch (error) {
+        console.error('Error during login:', error);
+        displayFlashMessage('not subscribe error on server', 'error');
+    }
+}
+
+
+
+
+
+
+
+// contact us handle
+const contactform = document.getElementById('contact_form');
+
+contactform.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const conname = document.querySelector('[name="conname"]').value;
+    const conmail = document.querySelector('[name="conmail"]').value;
+    const conphone = document.querySelector('[name="conphone"]').value;
+    const condetail = document.querySelector('[name="condetail"]').value;
+
+    handlecontact(conname, conmail, conphone, condetail)
+});
+
+async function handlecontact(conname, conmail, conphone, condetail) {
+    console.log("handle subscribe  called");
+    try {
+        const response = await fetch('http://localhost:3000/contactus', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ conname, conmail, conphone, condetail })
+        });
+        console.log(response);
+
+        const data = await response.json();
+
+        if (response.ok) {
+            console.log(data);
+            displayFlashMessage('thank you for contact us we will contact you soon', 'success');
+            contactform.reset();
+        } else {
+            console.log('Login failed');
+            displayFlashMessage('some error on server contact later', 'error');
+        }
+    } catch (error) {
+        console.error('Error during login:', error);
+        displayFlashMessage('error on server', 'error');
+    }
 }

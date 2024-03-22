@@ -20,10 +20,6 @@ router.post('/', async (req, res) => {
             paytotal: req.body.paytotal
         });
 
-        // Format the appointment date using moment.js
-        // let formattedAppointmentDate = moment(order.appointmentDate).format('YYYY-MM-DD');
-        // console.log(formattedAppointmentDate); // Output: 2024-01-25
-
 
         await order.save();
         res.status(200).send(order);
