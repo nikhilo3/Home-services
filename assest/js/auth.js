@@ -74,7 +74,7 @@ async function handleLogin(email, password) {
 
             window.location.href = "/";
         } else {
-            throw new Error('Login failed');
+            console.log("error occured");
         }
 
     } catch (error) {
