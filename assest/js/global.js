@@ -62,13 +62,13 @@ num.forEach((element) => {
 
 const subform = document.getElementById('subform');
 
-subform.addEventListener('submit', (event) => {
-  event.preventDefault();
+// subform.addEventListener('submit', (event) => {
+//   event.preventDefault();
 
-  const email = document.querySelector('[name="submail"]').value;
+//   const email = document.querySelector('[name="submail"]').value;
 
-  handlesubscribe(email)
-});
+//   handlesubscribe(email)
+// });
 
 
 async function handlesubscribe(email) {
