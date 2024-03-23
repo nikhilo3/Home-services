@@ -74,7 +74,7 @@ async function handleLogin(email, password) {
 
             window.location.href = "/";
         } else {
-            throw new Error('Login failed');
+            console.log("error occured");
         }
 
     } catch (error) {
@@ -213,17 +213,22 @@ flashMessagefunc();
 
 //subcribe handle
 
-const subform = document.getElementById('subform');
+document.addEventListener('DOMContentLoaded', () => {
+    const subform = document.getElementById('subform');
 
-subform.addEventListener('submit', (event) => {
-    event.preventDefault();
+    subform.addEventListener('submit', (event) => {
+        event.preventDefault();
 
-    const email = document.querySelector('[name="submail"]').value;
+        const email = document.querySelector('[name="submail"]').value;
 
-    handlesubscribe(email)
+        handlesubscribe(email)
+    });
 });
 
+
 async function handlesubscribe(email) {
+    const subform = document.getElementById('subform');
+
     console.log("handle subscribe  called");
     try {
         const response = await fetch('http://localhost:3000/subscribemail', {
@@ -258,20 +263,24 @@ async function handlesubscribe(email) {
 
 
 // contact us handle
-const contactform = document.getElementById('contact_form');
+document.addEventListener('DOMContentLoaded', () => {
+    const contactform = document.getElementById('contact_form');
+    contactform.addEventListener('submit', (event) => {
+        event.preventDefault();
 
-contactform.addEventListener('submit', (event) => {
-    event.preventDefault();
+        const conname = document.querySelector('[name="conname"]').value;
+        const conmail = document.querySelector('[name="conmail"]').value;
+        const conphone = document.querySelector('[name="conphone"]').value;
+        const condetail = document.querySelector('[name="condetail"]').value;
 
-    const conname = document.querySelector('[name="conname"]').value;
-    const conmail = document.querySelector('[name="conmail"]').value;
-    const conphone = document.querySelector('[name="conphone"]').value;
-    const condetail = document.querySelector('[name="condetail"]').value;
+        handlecontact(conname, conmail, conphone, condetail)
+    });
+})
 
-    handlecontact(conname, conmail, conphone, condetail)
-});
 
 async function handlecontact(conname, conmail, conphone, condetail) {
+    const contactform = document.getElementById('contact_form');
+
     console.log("handle subscribe  called");
     try {
         const response = await fetch('http://localhost:3000/contactus', {

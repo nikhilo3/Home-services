@@ -27,17 +27,17 @@
 <body class="contactus-page">
     <div class="container login" id="loginbox">
         <div class="form-container sign-up-container">
-            <form action="http://localhost:3000/registration" method="post">
+            <form action="#" method="post" id="regiform" name="regiform">
                 <h1>Create Account</h1>
-                <input type="text" name="username" placeholder="Username" required />
-                <input type="email" name="email" placeholder="Email" required autocomplete="email" />
-                <input type="password" name="password" placeholder="Password" required
+                <input type="text" name="username" id="username" placeholder="Username" required />
+                <input type="email" name="email" id="email" placeholder="Email" required autocomplete="email" />
+                <input type="password" name="password" id="password" placeholder="Password" required
                     autocomplete="current-password" />
                 <button type="submit" id="originalsignup">Sign Up</button>
             </form>
         </div>
         <div class="form-container sign-in-container">
-            <form action="http://localhost:3000/login" method="post">
+            <form action="#" id="loginform" name="loginform">
                 <h1>Sign in</h1>
                 <input type="email" name="email" placeholder="Email" required autocomplete="email" id="emailInput" />
                 <input type="password" name="password" placeholder="Password" required autocomplete="current-password"
@@ -67,8 +67,7 @@
     <header id="header">
         <nav class="nav">
             <i class="fa-solid fa-bars navOpenBtn" onclick="navresponsive()"></i>
-            <a href="#" class="logo"><img src="/assest/images/ns-logos/ns-logos_white.png" alt="" height="150"
-                    width="150"></a>
+            <a href="#" class="logo"><img style="-webkit-filter: invert(100%); filter: invert(100%);" class="logo_image" src="//towny.axiomthemes.com/wp-content/uploads/2021/11/logo.png" srcset="//towny.axiomthemes.com/wp-content/uploads/2021/11/logo-2x.png 2x" alt="Towny" width="174" height="40"></a>
 
             <ul class="nav-links">
                 <i class="fa-solid fa-xmark navCloseBtn"></i>
@@ -94,12 +93,14 @@
                                     id="cart-item-count" class="badge">0</span></ion-icon>Cart</a></li>
                         <li><a href="#"><ion-icon name="checkmark-done-outline"></ion-icon></ion-icon>My Booking</a>
                         </li>
-                        <li><a href="/" id="logoutbtn"><ion-icon name="log-out-outline"></ion-icon>Logout</a></li>
+                        <li><span id="logoutbtn" style="color: black; cursor: pointer; display: flex; align-items: center; gap: 15px;"><ion-icon name="log-out-outline"></ion-icon>Logout</span></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+
+
 
     <main id="main">
         <div class="bannerpicture">
@@ -155,26 +156,26 @@
                 <div class="form">
                     <h4>contact us</h4>
                     <h2 class="form-headline">Have Questions? Get in touch!</h2>
-                    <form id="submit-form" action="/">
+                    <form id="contact_form" name="contact_form" action="#">
                         <p class="username">
                             <img width="80" height="80" src="https://img.icons8.com/dotty/80/user.png" alt="user" />
-                            <input id="name" class="form-input allpadding" type="text" placeholder="Your Name" required>
+                            <input id="name" name="conname" class="form-input allpadding" type="text" placeholder="Your Name" required>
                         </p>
                         <p class="email">
                             <img width="26" height="26" src="https://img.icons8.com/metro/26/secured-letter.png"
                                 alt="secured-letter" />
-                            <input id="email" class="form-input allpadding" type="email" placeholder="Email Address"
+                            <input id="email" name="conmail" class="form-input allpadding" type="email" placeholder="Email Address"
                                 required>
                         </p>
                         <p class="full-width phone">
                             <img width="64" height="64" src="https://img.icons8.com/wired/64/phone.png" alt="phone" />
-                            <input id="company-name" class="form-input allpadding" type="text" placeholder="Phone"
+                            <input id="company-name" name="conphone" class="form-input allpadding" type="text" placeholder="Phone"
                                 required>
                         </p>
                         <p class="full-width detail">
                             <img width="50" height="50" src="https://img.icons8.com/ios/50/hand-with-pen.png"
                                 alt="hand-with-pen" />
-                            <textarea minlength="10" id="message" cols="30" rows="7" class="allpadding"
+                            <textarea minlength="10" name="condetail" id="message" cols="30" rows="7" class="allpadding"
                                 placeholder="How can we help you? Feel free to get in touch!" required></textarea>
                         </p>
                         <p class="full-width">
@@ -206,8 +207,7 @@
                     <div class="col-xl-4 col-lg-4 mb-50">
                         <div class="footer-widget">
                             <div class="footer-logo">
-                                <a href="index.html"><img src="./assest/images/ns-logos/ns-logos_white.png"
-                                        class="img-fluid" alt="logo" width="200" height="200"></a>
+                                <a href="index.html"><img style="-webkit-filter: invert(100%); filter: invert(100%);" class="logo_image" src="//towny.axiomthemes.com/wp-content/uploads/2021/11/logo.png" srcset="//towny.axiomthemes.com/wp-content/uploads/2021/11/logo-2x.png 2x" alt="Towny" width="174" height="40"></a>
                             </div>
                             <div class="footer-text">
                                 <p>Elevate your living spaces with our expert house cleaning services. Committed to excellence, we use top-quality equipment and safe chemicals. Contact us for a pristine home environment that reflects our dedication to superior cleanliness.</p>
