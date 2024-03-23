@@ -183,7 +183,7 @@
                     </div>
                 </div>
 
-                <div class="rightinfo col-xl-6">
+                <div class="rightinfo col-xl-6 d-none d-md-block">
                     <div class="infoinner">
                         <section class="picture">
                             <div class="blank"></div>
@@ -426,26 +426,26 @@
                 <div class="form">
                     <h4>contact us</h4>
                     <h2 class="form-headline">Have Questions? Get in touch!</h2>
-                    <form id="contact_form" action="/">
+                    <form id="contact_form" name="contact_form" action="#">
                         <p class="username">
                             <img width="80" height="80" src="https://img.icons8.com/dotty/80/user.png" alt="user" />
-                            <input id="name" class="form-input allpadding" type="text" placeholder="Your Name" required>
+                            <input id="name" name="conname" class="form-input allpadding" type="text" placeholder="Your Name" required>
                         </p>
                         <p class="email">
                             <img width="26" height="26" src="https://img.icons8.com/metro/26/secured-letter.png"
                                 alt="secured-letter" />
-                            <input id="email" class="form-input allpadding" type="email" placeholder="Email Address"
+                            <input id="conemail" name="conmail" class="form-input allpadding" type="email" placeholder="Email Address"
                                 required>
                         </p>
                         <p class="full-width phone">
                             <img width="64" height="64" src="https://img.icons8.com/wired/64/phone.png" alt="phone" />
-                            <input id="company-name" class="form-input allpadding" type="text" placeholder="Phone"
+                            <input id="conphone" name="conphone" class="form-input allpadding" type="text" placeholder="Phone"
                                 required>
                         </p>
                         <p class="full-width detail">
                             <img width="50" height="50" src="https://img.icons8.com/ios/50/hand-with-pen.png"
                                 alt="hand-with-pen" />
-                            <textarea minlength="10" id="message" cols="30" rows="7" class="allpadding"
+                            <textarea minlength="10" name="condetail" id="message" cols="30" rows="7" class="allpadding"
                                 placeholder="How can we help you? Feel free to get in touch!" required></textarea>
                         </p>
                         <p class="full-width">

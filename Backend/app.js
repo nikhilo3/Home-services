@@ -101,6 +101,7 @@ const regiRouter = require('./controller/regiController');
 const subRouter = require('./controller/subController');
 const loginRouter = require('./controller/loginControll');
 const adminorder = require('./controller/adminController');
+const contactRouter = require('./controller/contactController');
 const { notFound, errorHandler } = require('./middleware/errorHandling');
 
 app.use('/order', orderRouter);
@@ -109,6 +110,7 @@ app.use('/registration', regiRouter);
 app.use('/login', loginRouter);
 app.use('/subscribemail', subRouter);
 app.use('/adminorder',adminorder);
+app.use('/contactus',contactRouter);
 
 
 app.use(notFound);

@@ -772,14 +772,14 @@ a {
   padding-right: 250px;
 }
 
-.carousel-caption h1 {
-  font-size: var(--fs-banner-heading);
-}
+
 
 .carousel-caption p {
   margin-left: 8px;
 }
-
+.carousel-caption button{
+  width: 300px;
+}
 .carousel-caption button:hover {
   background-color: #1f8975;
 }
@@ -823,13 +823,6 @@ a {
   width: 38%;
 } */
 
-.leftinfo .heading {
-  font-size: 3.8rem;
-  font-weight: 900;
-  width: 100%;
-  width: max-content;
-  z-index: 2;
-}
 
 .leftinfo .infoinner {
   display: flex;
@@ -1211,11 +1204,11 @@ a {
   color: black;
 }
 
-@media (min-width: 600px) {
+/* @media (min-width: 600px) {
   .contactcontain .contain {
     padding: 0;
   }
-}
+} */
 
 .contactcontain .form-input:focus,
 textarea:focus {
@@ -1234,7 +1227,7 @@ textarea {
   padding: 1em;
 }
 
-@media (min-width: 700px) {
+/* @media (min-width: 700px) {
   .contactcontain .wrapper {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -1243,7 +1236,7 @@ textarea {
   .contactcontain .wrapper>* {
     padding: 2rem 2rem;
   }
-}
+} */
 
 .contactcontain ul {
   list-style: none;
@@ -1570,8 +1563,10 @@ textarea {
 }
 
 .contactus-page .wrapper2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .contactus-page .office-map iframe {
@@ -1637,6 +1632,10 @@ textarea {
   color: var(--text-light);
   gap: 5px;
 }
+.n-and-e{
+  display: flex;
+  flex-wrap: wrap;
+}
 
 
 /* ---------------------------------- 
@@ -1698,16 +1697,18 @@ textarea {
   position: relative;
   /* padding: 0 6rem; */
   margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.servicepage .grid {
-  display: grid;
-  column-gap: 3.5rem;
-}
+  /* .servicepage .grid {
+    display: grid;
+    column-gap: 3.5rem;
+  } */
 
-.servicepage .grid--3-cols {
+/* .servicepage .grid--3-cols {
   grid-template-columns: repeat(3, 1fr);
-}
+} */
 
 .servicepage .margin-right-md {
   margin-bottom: 4.8rem !important;
@@ -1717,88 +1718,6 @@ textarea {
   font-weight: 500;
 }
 
-.servicepage .meal {
-  /* box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075); */
-  box-shadow: 0 0.8rem 4.8rem rgba(0, 0, 0, 0.075);
-  border-radius: 11px;
-  overflow: hidden;
-  transition: all 0.4s;
-  position: relative;
-  margin: 10px 0;
-  padding: 20px;
-}
-
-.servicepage .meal:hover {
-  transform: translateY(-1.2rem);
-  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
-}
-
-.servicepage .meal-tags {
-  margin-bottom: 1.2rem;
-  display: flex;
-  gap: 0.4rem;
-}
-
-.servicepage .tag {
-  display: inline-block;
-  padding: 3px 4px;
-  text-transform: u ppercase;
-  background-color: #51cf66;
-  color: #333;
-  border-radius: 100px;
-  font-weight: 600;
-}
-
-.servicepage .tag--vegetarian {
-  background-color: #51cf66;
-}
-
-.servicepage .tag--vegan {
-  background-color: #94d82d;
-}
-
-.servicepage .tag--paleo {
-  background-color: #ffd43b;
-}
-
-.servicepage .meal-title {
-  font-size: 2.4rem;
-  color: #333;
-  font-weight: 600;
-  margin-bottom: 2.2rem;
-}
-
-.servicepage .meal-attributes {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.servicepage .meal-attribute {
-  font-size: 1.8rem;
-  display: flex;
-  align-items: center;
-  gap: 1.6rem;
-}
-
-.servicepage .meal-icon {
-  height: 2.4rem;
-  width: 2.4rem;
-  color: #e67e22;
-}
-
-.servicepage .meal-img {
-  width: 100%;
-  height: 224.15px;
-  object-fit: cover;
-}
-
-
-.servicepage a {
-  position: absolute;
-  inset: 0;
-}
 
 
 
@@ -1816,13 +1735,12 @@ textarea {
 .dpage .contain .wrapper {
 
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   grid-template-columns: 1fr 1fr;
 }
 
-.dpage .contain .coverphoto {
-  width: 50%;
-}
+
 
 .dpage .contain .coverphoto img {
   height: 100%;
@@ -1832,7 +1750,6 @@ textarea {
 }
 
 .dpage .herobanner .detail {
-  width: 40%;
   padding-top: 20px;
   margin-left: 20px;
 }
@@ -2185,7 +2102,147 @@ textarea {
 }
 
 
+.servicepage .meal:hover {
+  transform: translateY(-1.2rem);
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
+}
+
+.servicepage .meal-tags {
+  margin-bottom: 1.2rem;
+  display: flex;
+  gap: 0.4rem;
+}
+
+.servicepage .tag {
+  display: inline-block;
+  padding: 3px 4px;
+  text-transform: u ppercase;
+  background-color: #51cf66;
+  color: #333;
+  border-radius: 100px;
+  font-weight: 600;
+}
+
+.servicepage .tag--vegetarian {
+  background-color: #51cf66;
+}
+
+.servicepage .tag--vegan {
+  background-color: #94d82d;
+}
+
+.servicepage .tag--paleo {
+  background-color: #ffd43b;
+}
+
+.servicepage .meal-title {
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 2.2rem;
+}
+
+.servicepage .meal-attributes {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.servicepage .meal-attribute {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.servicepage .meal-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+  color: #e67e22;
+}
+
+.servicepage .meal-img {
+  width: 100%;
+  height: 224.15px;
+  object-fit: cover;
+}
+
+
+.servicepage a {
+  position: absolute;
+  inset: 0;
+}
+
 /* mediaqyry */
+
+@media(min-width:300px) {
+.w-sm-1 {
+  width: 10%;
+}
+
+.w-2 {
+  width: 16.66%;
+}
+
+.w-3 {
+  width: 25%;
+}
+
+.w-4 {
+  width: 33.33%;
+}
+
+.w-5 {
+  width: 41.66%;
+}
+
+.w-6 {
+  width: 50%;
+}
+
+.w-7 {
+  width: 58.33%;
+}
+
+.w-8 {
+  width: 66.66%;
+}
+
+.w-9 {
+  width: 75%;
+}
+
+.w-10 {
+  width: 83.33%;
+}
+
+.w-11 {
+  width: 91.66%;
+}
+
+.w-12 {
+  width: 100%;
+}
+.carousel-caption h1{
+  display: none;
+}
+/* .carousel-caption p{
+  width: 200px;
+}
+.carousel-caption button{
+  font-size: 12px;
+  padding: 5px 10px 5px 10px;
+  width: 200px; 
+}*/
+.leftinfo .heading {
+  font-size: 24px;
+  font-weight: 900;
+  width: 100%;
+  width: max-content;
+  z-index: 2;
+}
+}
 @media(min-width:500px) {
   .w-sm-1 {
       width: 10%;
@@ -2247,8 +2304,26 @@ textarea {
   .carousel-caption button{
     font-size: 12px;
     padding: 5px 10px 5px 10px;
+    width: 200px;
   }
-
+  .servicepage .meal {
+    /* box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075); */
+    width: 100%;
+    box-shadow: 0 0.8rem 4.8rem rgba(0, 0, 0, 0.075);
+    border-radius: 11px;
+    overflow: hidden;
+    transition: all 0.4s;
+    position: relative;
+    margin: 10px 0;
+    padding: 20px;
+  }
+  .leftinfo .heading {
+    font-size: 30px;
+    font-weight: 900;
+    width: 100%;
+    width: max-content;
+    z-index: 2;
+  }
 }
 @media(min-width:768px){
  
@@ -2308,10 +2383,30 @@ textarea {
   } 
   .carousel-caption h1{
     display: block;
+    font-size: 30px;
   }
   .carousel-caption button{
-    font-size: 24px;
+    font-size: 20px;
     padding: 10px 20px 10px 20px;
+    width: 250px;
+  }
+  .servicepage .meal {
+    /* box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075); */
+    width: 50%;
+    box-shadow: 0 0.8rem 4.8rem rgba(0, 0, 0, 0.075);
+    border-radius: 11px;
+    overflow: hidden;
+    transition: all 0.4s;
+    position: relative;
+    margin: 10px 0;
+    padding: 20px;
+  }
+  .leftinfo .heading {
+    font-size: 3.8rem;
+    font-weight: 900;
+    width: 100%;
+    width: max-content;
+    z-index: 2;
   }
 }
 @media(min-width:992px){
@@ -2369,6 +2464,7 @@ textarea {
   } 
   .servicepage .meal {
     /* box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075); */
+    width: 33.33%;
     box-shadow: 0 0.8rem 4.8rem rgba(0, 0, 0, 0.075);
     border-radius: 11px;
     overflow: hidden;
@@ -2377,6 +2473,11 @@ textarea {
     margin: 10px 0;
     padding: 20px;
   }
+  .carousel-caption h1 {
+    font-size: var(--fs-banner-heading);
+
+  }
+  
   
 }
 @media(min-width:1200px){
