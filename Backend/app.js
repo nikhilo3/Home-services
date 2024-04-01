@@ -4,6 +4,8 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const path = require('path');
+// const ejs = require('ejs');
+
 
 const session = require('express-session');
 const flash = require('connect-flash');
@@ -36,6 +38,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cookieParser());
 
+app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, '../public')));
 app.use('/assest', express.static(path.join(__dirname, '../assest')));
 
@@ -88,8 +91,6 @@ app.get('/admin/sub', function (req, res) {
 app.get('/admin/user', function (req, res) {
     res.sendFile(path.join(__dirname, '../public/adminuser.html'));
 });
-
-
 
 
 

@@ -24,9 +24,12 @@
 
     <!-- custom css -->
     <link rel="stylesheet" href="../assest/css/style.css">
+
 </head>
 
 <body class="check_out">
+
+
     <div class="inner-layer">
         <div class="container">
             <div class="row no-margin justify-content-between">
@@ -38,7 +41,7 @@
                             </h2>
                         </div>
                         <div class="form-body">
-                            <form id="orderForm" action="http://localhost:3000/order" method="post">
+                            <form id="orderForm" name="orderForm" action="http://localhost:3000/order" method="post">
                                 <div class="row form-row">
                                     <input name="fullName" type="text" placeholder="Enter Full name"
                                         class="form-control" required>
@@ -56,7 +59,7 @@
                                     <input name="appointmentDate" type="text" placeholder="Appointment Date"
                                         class="form-control" required>
                                 </div>
-                                    
+
                                 <br>
                                 <div class="row form-row ui calendar ui input left icon" id="tim">
                                     <input name="appointmentTime" type="text" placeholder="Appointment time"
@@ -101,18 +104,20 @@
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-6" style="display: contents;">
-                    
+
                     <div class="col-lg-6 bg-white p-5" ordersummary>
-                        <div class="bg-light px-4 py-3 text-uppercase" style="font-size: large; font-weight: bold; line-height: 120%; border:2px solid black;">
+                        <div class="bg-light px-4 py-3 text-uppercase"
+                            style="font-size: large; font-weight: bold; line-height: 120%; border:2px solid black;">
                             <span>
-                                note:<br> 
-                               1. You have to pay after your service is done<br>
-                               2. no cancellation policy
+                                note:<br>
+                                1. You have to pay after your service is done<br>
+                                2. no cancellation policy
                             </span>
                         </div>
-                        <div class="bg-light rounded-pill px-4 py-3 text-uppercase " style="font-size: large; font-weight: bold;">Order summary
+                        <div class="bg-light rounded-pill px-4 py-3 text-uppercase "
+                            style="font-size: large; font-weight: bold;">Order summary
                         </div>
-                        
+
                         <div class="p-4">
                             <ul class="list-unstyled mb-4">
                                 <li class="d-flex justify-content-between py-3 border-bottom"><strong
@@ -122,10 +127,11 @@
 
                                 <li class="d-flex justify-content-between py-3 border-bottom"><strong
                                         class="text-muted">Taxes and Fee
-                                    </strong><strong paytax_fees>₹  0.00</strong></li>
+                                    </strong><strong paytax_fees>₹ 0.00</strong></li>
                                 <li class="d-flex justify-content-between py-3 border-bottom">
                                     <p class="m-0" style="font-weight: bold; font-size: larger; ">Amount Payable</p>
-                                    <h5 class="font-weight-bold m-0" style="font-weight: bold; font-size: larger;" paytotal></h5>
+                                    <h5 class="font-weight-bold m-0" style="font-weight: bold; font-size: larger;"
+                                        paytotal></h5>
                                 </li>
                             </ul>
                         </div>
@@ -163,6 +169,8 @@
             const paytotalValue = paytotal.textContent
             document.getElementById('paytotal').value = paytotalValue;
         });
+
+
     </script>
 </body>
 

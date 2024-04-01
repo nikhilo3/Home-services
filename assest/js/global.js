@@ -54,10 +54,3 @@ num.forEach((element) => {
     }
   }, 2000 / endvalue)
 });
-
-
-
-
-
-
-
