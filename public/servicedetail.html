@@ -30,7 +30,11 @@
     <div class="container login" id="loginbox">
         <div class="form-container sign-up-container">
             <form action="#" method="post" id="regiform" name="regiform">
+            <form action="#" method="post" id="regiform" name="regiform">
                 <h1>Create Account</h1>
+                <input type="text" name="username" id="username" placeholder="Username" required />
+                <input type="email" name="email" id="email" placeholder="Email" required autocomplete="email" />
+                <input type="password" name="password" id="password" placeholder="Password" required
                 <input type="text" name="username" id="username" placeholder="Username" required />
                 <input type="email" name="email" id="email" placeholder="Email" required autocomplete="email" />
                 <input type="password" name="password" id="password" placeholder="Password" required
@@ -39,6 +43,7 @@
             </form>
         </div>
         <div class="form-container sign-in-container">
+            <form action="#" id="loginform" name="loginform">
             <form action="#" id="loginform" name="loginform">
                 <h1>Sign in</h1>
                 <input type="email" name="email" placeholder="Email" required autocomplete="email" id="emailInput" />
@@ -69,6 +74,8 @@
     <header id="header">
         <nav class="nav">
             <i class="fa-solid fa-bars navOpenBtn" onclick="navresponsive()"></i>
+            <a href="#" class="logo"><img style="-webkit-filter: invert(100%); filter: invert(100%);" class="logo_image" src="//towny.axiomthemes.com/wp-content/uploads/2021/11/logo.png" srcset="//towny.axiomthemes.com/wp-content/uploads/2021/11/logo-2x.png 2x" alt="Towny" width="174" height="40"></a>
+            <a href="#" class="logo"><img style="-webkit-filter: invert(100%); filter: invert(100%);" class="logo_image" src="//towny.axiomthemes.com/wp-content/uploads/2021/11/logo.png" srcset="//towny.axiomthemes.com/wp-content/uploads/2021/11/logo-2x.png 2x" alt="Towny" width="174" height="40"></a>
             <a href="#" class="logo"><img style="-webkit-filter: invert(100%); filter: invert(100%);" class="logo_image"
                     src="//towny.axiomthemes.com/wp-content/uploads/2021/11/logo.png"
                     srcset="//towny.axiomthemes.com/wp-content/uploads/2021/11/logo-2x.png 2x" alt="Towny" width="174"
@@ -96,6 +103,10 @@
                     <ul class="menu">
                         <li><a href="/mycart"><ion-icon name="cart-outline"></ion-icon><span style="color: black;"
                                     id="cart-item-count" class="badge">0</span></ion-icon>Cart</a></li>
+                        <li><a href="#"><ion-icon name="checkmark-done-outline"></ion-icon></ion-icon>My Booking</a>
+                        </li>
+                        <li><span id="logoutbtn" style="color: black; cursor: pointer; display: flex; align-items: center; gap: 15px;"><ion-icon name="log-out-outline"></ion-icon>Logout</span></li>
+                        <li><span id="logoutbtn" style="color: black; cursor: pointer; display: flex; align-items: center; gap: 15px;"><ion-icon name="log-out-outline"></ion-icon>Logout</span></li>
                         <li><a href="/mybooking"><ion-icon name="checkmark-done-outline"></ion-icon></ion-icon>My
                                 Booking</a>
                         <li><span id="logoutbtn"
@@ -106,6 +117,8 @@
             </div>
         </nav>
     </header>
+
+
 
 
 
@@ -159,9 +172,11 @@
                         </div>
                     </div>
                     <!-- ================ -->
-                    <div class="servicelink d-flex">
+                    <!-- <div class="servicelink d-flex">
                         <div class="servicebox">
                             <a href="#">
+                                <img src="../assest/images/Electricians/ACInstallation.jpg" alt="">
+                                <p>switch & socket</p>
                                 <img src="../assest/images/Electricians/ACInstallation.jpg" alt="">
                                 <p>switch & socket</p>
                             </a>
@@ -170,10 +185,6 @@
                             <a href="#">
                                 <img src="../assest/images/Electricians/ACInstallation.jpg" alt="">
                                 <p>switch & socket</p>
-                            </a>
-                        </div>
-                        <div class="servicebox">
-                            <a href="#">
                                 <img src="../assest/images/Electricians/ACInstallation.jpg" alt="">
                                 <p>switch & socket</p>
                             </a>
@@ -182,15 +193,27 @@
                             <a href="#">
                                 <img src="../assest/images/Electricians/ACInstallation.jpg" alt="">
                                 <p>switch & socket</p>
+                                <img src="../assest/images/Electricians/ACInstallation.jpg" alt="">
+                                <p>switch & socket</p>
                             </a>
                         </div>
                         <div class="servicebox">
                             <a href="#">
                                 <img src="../assest/images/Electricians/ACInstallation.jpg" alt="">
                                 <p>switch & socket</p>
+                                <img src="../assest/images/Electricians/ACInstallation.jpg" alt="">
+                                <p>switch & socket</p>
                             </a>
                         </div>
-                    </div>
+                        <div class="servicebox">
+                            <a href="#">
+                                <img src="../assest/images/Electricians/ACInstallation.jpg" alt="">
+                                <p>switch & socket</p>
+                                <img src="../assest/images/Electricians/ACInstallation.jpg" alt="">
+                                <p>switch & socket</p>
+                            </a>
+                        </div>
+                    </div> -->
                     <!-- ============== -->
                 </div>
             </div>
@@ -273,11 +296,7 @@
                     <div class="col-xl-4 col-lg-4 mb-50">
                         <div class="footer-widget">
                             <div class="footer-logo">
-                                <a href="index.html"><img style="-webkit-filter: invert(100%); filter: invert(100%);"
-                                        class="logo_image"
-                                        src="//towny.axiomthemes.com/wp-content/uploads/2021/11/logo.png"
-                                        srcset="//towny.axiomthemes.com/wp-content/uploads/2021/11/logo-2x.png 2x"
-                                        alt="Towny" width="174" height="40"></a>
+                                <a href="index.html"><img style="-webkit-filter: invert(100%); filter: invert(100%);" class="logo_image" src="//towny.axiomthemes.com/wp-content/uploads/2021/11/logo.png" srcset="//towny.axiomthemes.com/wp-content/uploads/2021/11/logo-2x.png 2x" alt="Towny" width="174" height="40"></a>
                             </div>
                             <div class="footer-text">
                                 <p>Elevate your living spaces with our expert house cleaning services. Committed to
