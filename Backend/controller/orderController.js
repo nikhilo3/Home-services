@@ -2,7 +2,10 @@ const express = require('express');
 const router = express.Router();
 const Order = require('../models/orderModel');
 const User = require('../models/regiModel');
+// const Order = require('../models/orderModel');
 const verifyToken = require('../middleware/verifyToken');
+
+
 
 
 router.post('/', verifyToken,async (req, res) => {
@@ -40,6 +43,22 @@ router.post('/', verifyToken,async (req, res) => {
     catch (error) {
         console.error('Error adding order to database:', error);
         res.status(500).send({ message: 'Could not add order to database', error });
+    }
+});
+
+
+router.get('/getorder', verifyToken, async (req, res) => {
+    try {
+        const { _id } = req.user;
+        try {
+            const orderItem = await Order.find({ user: _id });
+            res.json(orderItem);
+        } catch (error) {
+            throw new Error('error');
+        }
+    } catch (err) {
+        console.error('Error fetching cart items', err);
+        res.status(500).json({ message: 'internal server error' });
     }
 });
 

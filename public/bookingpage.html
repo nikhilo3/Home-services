@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border-spacing: 0;
+            color: black;
+        }
+
+        .bookingdetail {
+            margin: 50px auto;
+            padding: 15px;
+        }
+
+        .bookingdetail .username td h2 {
+            margin: 10px 0px;
+        }
+
+        .bookingdetail .username td h2 {
+            text-wrap: wrap;
+        }
+
+        .bookingdetail .logo img {
+            width: 200px;
+            height: 50px;
+        }
+
+        .tableprice tr td p {
+            margin: 10px 0;
+        }
+
+        .tablebody {
+            margin: 0 auto;
+            width: 50%;
+            height: 400px;
+            overflow: overlay;
+            margin-top: 100px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .servicedate td:nth-child(1) {
+            padding-right: 80px;
+        }
+    </style>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/assest/images/Screenshot 2023-12-28 122313.png" type="image/x-icon">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="/assest/css/bootsrapfile/bootstrap.min.css">
+    <script src="/assest/css/bootsrapfile/jquery-3.7.1.min.js" defer></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <!-- icon font awesome -->
+    <link rel="stylesheet" href="/assest/css/fontawesome/css/all.min.css">
+
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="/assest/css/style.css">
+</head>
+
+<body>
+    <header id="header">
+        <nav class="nav">
+            <i class="fa-solid fa-bars navOpenBtn" onclick="navresponsive()"></i>
+            <a href="#" class="logo"><img style="-webkit-filter: invert(100%); filter: invert(100%);" class="logo_image"
+                    src="//towny.axiomthemes.com/wp-content/uploads/2021/11/logo.png"
+                    srcset="//towny.axiomthemes.com/wp-content/uploads/2021/11/logo-2x.png 2x" alt="Towny" width="174"
+                    height="40"></a>
+
+            <ul class="nav-links" style="width: calc(100% - 35%);">
+                <i class="fa-solid fa-xmark navCloseBtn"></i>
+                <li><a href="/">Home</a></li>
+                <li><a href="/service">Services</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <section style="width: 100%; margin: 40px auto;">
+
+        <div class="tablehead">
+            <table width="100%" style="text-align: center;">
+                <tr class="username">
+                    <td colspan="2">
+                        <h2 id="showusername"> </h2>
+                        <p>Your reservation request for homer service has been confirmed. Please check your booking.</p>
+                    </td>
+                </tr>
+                <tr class="logo">
+                    <td colspan="2">
+                        <img src="./logo.webp" alt="">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="tablebody" id="tablebody">
+            <!-- <table>
+    <tr class="showservicename">
+        <td colspan="2">
+            <h3>your selected services</h3>
+            <p>home cleaning, bathroom cleaning, badroom cleaning</p>
+        </td>
+    </tr>
+    <tr class="servicedate">
+        <td>
+            <h3>Service booking date</h3>
+            <p>13/02/2024</p>
+        </td>
+        <td>
+            <h3>Service booking time</h3>
+            <p>13:00 PM</p>
+        </td>
+    </tr>
+    <tr class="serrviceadd">
+        <td colspan="2">
+            <h3>Address :</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae ullam consequuntur ab,
+                fugit sunt cupiditate excepturi? Adipisci libero odit est, reprehenderit officiis ipsam,
+                quae nostrum, sed optio quisquam sunt fugit?</p>
+        </td>
+    </tr>
+    <tr class="showprice">
+        <td colspan="2">
+            <table class="tableprice" width="100%">
+                <tr>
+                    <td colspan="3">
+                        <h2>Total Payable :</h2>
+                    </td>
+                </tr>
+                <tr class="price">
+                    <td colspan="2">
+                        <p>Total Payout</p>
+                    </td>
+                    <td>
+                        <p>₹ 1200/-</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <p>Payment Mod</p>
+                    </td>
+                    <td>
+                        <p>Pay @After Service</p>
+                    </td>
+                </tr>
+            </table>
+
+        </td>
+    </tr>
+</table>
+
+<hr style="color: black;
+margin: 55px 0px;"> -->
+        </div>
+    </section>
+
+    <footer class="footer-section" id="footer">
+        <div class="container">
+            <div class="footer-content pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <a href="index.html"><img style="-webkit-filter: invert(100%); filter: invert(100%);"
+                                        class="logo_image"
+                                        src="//towny.axiomthemes.com/wp-content/uploads/2021/11/logo.png"
+                                        srcset="//towny.axiomthemes.com/wp-content/uploads/2021/11/logo-2x.png 2x"
+                                        alt="Towny" width="174" height="40"></a>
+                            </div>
+                            <div class="footer-text">
+                                <p>Elevate your living spaces with our expert house cleaning services. Committed to
+                                    excellence, we use top-quality equipment and safe chemicals. Contact us for a
+                                    pristine home environment that reflects our dedication to superior cleanliness.</p>
+                            </div>
+                            <div class="footer-social-icon">
+                                <span>Follow us</span>
+                                <div class="iconinner">
+                                    <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                                    <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                                    <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Useful Links</h3>
+                            </div>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Contact US</a></li>
+                                <li><a href="#">My Status</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Subscribe</h3>
+                            </div>
+                            <div class="footer-text mb-25">
+                                <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                            </div>
+                            <div class="subscribe-form">
+                                <form action="#" id="subform" name="subform">
+                                    <input type="email" class="full-width" name="submail" placeholder="Email Address"
+                                        required>
+                                    <button type="submit" id="subbtn"><i class="fab fa-telegram-plane"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+</body>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script type="module" src="/assest/js/global.js"></script>
+<!-- <script type="module" src="/assest/js/auth.js"></script> -->
+
+<script>
+
+    const showusername = localStorage.getItem('user');
+    document.getElementById("showusername").innerHTML = `Hi ${showusername}`;
+
+    const fetchAndRenderOrderItems = async () => {
+        try {
+            const token = localStorage.getItem('token');
+
+            const response = await fetch('http://localhost:3000/order/getorder', {
+                method: 'GET',
+                headers: {
+                    'Content-type': 'application/json',
+                    'Authorization': `Bearer ${token}` // replace token with your actual token
+                }
+            });
+            if (response.ok) {
+                const orderItems = await response.json();
+                renderOrder(orderItems);
+            } else {
+                console.log('Failed to fetch cart items', response.statusText);
+            }
+        } catch (err) {
+            console.log('Error fetching cart items:', err);
+        }
+    }
+
+
+
+    function renderOrder(orderItems) {
+
+        const ordertable = document.querySelector("#tablebody");
+        ordertable.innerHTML = '';
+
+        orderItems.forEach(item => {
+            let newtable = document.createElement('table');
+            newtable.innerHTML =
+                `
+                            
+                <tr class="showservicename">
+        <td colspan="2">
+            <h1 style="margin-bottom: 25px;">your services Detail</h1>
+        </td>
+
+    </tr>
+    <br><br>
+    <tr class="servicedate">
+        <td>
+            <h4>booking date</h4>
+            <p>${item.appointmentDate.slice(0, 10)}</p>
+        </td>
+        <br><br>
+        <td>
+            <h4>booking time</h4>
+            <p>${item.appointmentTime}</p>
+        </td>
+    </tr>
+    <tr class="serrviceadd">
+        <td colspan="2">
+            <h4>Address :</h4>
+            <p>${item.address} ,<br>
+                city : ${item.city} ,<br>
+                state : ${item.state} ,<br>
+                postalcode : ${item.postalCode}</p>
+        </td>
+    </tr>
+    <tr class="showprice">
+        <td colspan="2">
+            <table class="tableprice" width="100%">
+                <tr class="price">
+                    <td colspan="2">
+                        <h4>Total Payout : </h4>
+                    </td>
+                    <td>
+                        <p>${item.paytotal}</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <h4>Payment Mod : </h4>
+                    </td>
+                    <td>
+                        <p>Pay @After Service</p>
+                    </td>
+                </tr>
+            </table>
+
+        </td>
+    </tr>
+
+    <hr style="color: black;
+margin: 15px 0px; width:100%">
+    `
+            ordertable.appendChild(newtable);
+        });
+    }
+
+    fetchAndRenderOrderItems();
+
+
+</script>
+
+
+</html>
+
+<!-- <table>
+    <tr class="showservicename">
+        <td colspan="2">
+            <h3>your selected services</h3>
+            <p>home cleaning, bathroom cleaning, badroom cleaning</p>
+        </td>
+    </tr>
+    <tr class="servicedate">
+        <td>
+            <h3>Service booking date</h3>
+            <p>13/02/2024</p>
+        </td>
+        <td>
+            <h3>Service booking time</h3>
+            <p>13:00 PM</p>
+        </td>
+    </tr>
+    <tr class="serrviceadd">
+        <td colspan="2">
+            <h3>Address :</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae ullam consequuntur ab,
+                fugit sunt cupiditate excepturi? Adipisci libero odit est, reprehenderit officiis ipsam,
+                quae nostrum, sed optio quisquam sunt fugit?</p>
+        </td>
+    </tr>
+    <tr class="showprice">
+        <td colspan="2">
+            <table class="tableprice" width="100%">
+                <tr>
+                    <td colspan="3">
+                        <h2>Total Payable :</h2>
+                    </td>
+                </tr>
+                <tr class="price">
+                    <td colspan="2">
+                        <p>Total Payout</p>
+                    </td>
+                    <td>
+                        <p>₹ 1200/-</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <p>Payment Mod</p>
+                    </td>
+                    <td>
+                        <p>Pay @After Service</p>
+                    </td>
+                </tr>
+            </table>
+
+        </td>
+    </tr>
+</table>
+
+<hr style="color: black;
+margin: 55px 0px;"> -->

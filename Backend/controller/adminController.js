@@ -2,6 +2,7 @@ const express = require('express');
 const Order = require('../models/orderModel');
 const Subscribe = require('../models/subModel');
 const User = require('../models/regiModel');
+const Contact = require('../models/contactModel');
 
 const router = express.Router();
 
@@ -35,5 +36,16 @@ router.get('/user', async (req, res) => {
         res.status(500).json({ message: 'internal server error' });
     }
 });
+
+router.get('/contact', async (req, res) => {
+    try {
+        const contact = await Contact.find();
+        res.json(contact);
+    } catch (err) {
+        console.log("cannot get contact detail", err);
+        res.status(500).json({ message: 'internal server error' });
+    }
+});
+
 
 module.exports = router;

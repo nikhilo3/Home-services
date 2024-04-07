@@ -47,6 +47,9 @@ app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, '../public/index.html'));
 });
 
+app.get('/mybooking', function (req, res) {
+    res.sendFile(path.join(__dirname, '../public/bookingpage.html'));
+});
 
 app.get('/checkout', function (req, res) {
     res.sendFile(path.join(__dirname, '../public/checkout.html'));
@@ -92,6 +95,10 @@ app.get('/admin/user', function (req, res) {
     res.sendFile(path.join(__dirname, '../public/adminuser.html'));
 });
 
+app.get('/admin/contact', function (req, res) {
+    res.sendFile(path.join(__dirname, '../public/admincontact.html'));
+});
+
 
 
 
@@ -104,15 +111,39 @@ const loginRouter = require('./controller/loginControll');
 const adminorder = require('./controller/adminController');
 const contactRouter = require('./controller/contactController');
 const { notFound, errorHandler } = require('./middleware/errorHandling');
+const countController = require('./controller/countController');
 
 app.use('/order', orderRouter);
 app.use('/cart', cartRouter);
 app.use('/registration', regiRouter);
 app.use('/login', loginRouter);
 app.use('/subscribemail', subRouter);
-app.use('/adminorder',adminorder);
-app.use('/contactus',contactRouter);
+app.use('/adminorder', adminorder);
+app.use('/contactus', contactRouter);
 
+app.get('/countdata', async (req,res) => { 
+    try {
+        const userCount = await countController.getUserCount();
+        const orderCount = await countController.getOrderCount();
+        const paymentCount = await countController.getPaymentCount();
+
+        console.log("user count",userCount);
+        console.log("Order Count: ", orderCount);
+        console.log("payment Count: ", paymentCount);
+
+
+        const data = {
+            userCount,
+            orderCount,
+            paymentCount
+        }
+
+        res.json(data);
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('error fetching data');
+    }
+})
 
 app.use(notFound);
 app.use(errorHandler);
