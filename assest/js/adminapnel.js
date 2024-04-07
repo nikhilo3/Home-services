@@ -21,3 +21,32 @@ sidebarToggle.addEventListener("click", () => {
         localStorage.setItem("status", "open");
     }
 });
+
+const fetchcount = async () => {
+    try {
+        const response = await fetch('http://localhost:3000/countdata', {
+            method: 'GET',
+            headers: {
+                'Content-type': 'application/json',
+            }
+        });
+        if (response.ok) {
+            const counts = await response.json();
+
+            console.log("user",counts.userCount);
+            console.log("order",counts.orderCount);
+            console.log("payment",counts.paymentCount);
+            
+            document.getElementById('countuser').textContent = `${counts.userCount}`;
+            document.getElementById('countorder').textContent = `${counts.orderCount}`;
+            document.getElementById('countpayment').textContent = `₹${counts.paymentCount}`;
+
+        } else {
+            console.log('failed to fetch count', response.statusText);
+        }
+    } catch (err) {
+        console.log('Error fetching:', err);
+    }
+}
+
+fetchcount();

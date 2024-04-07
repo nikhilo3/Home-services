@@ -7,7 +7,7 @@ const header = document.querySelector('#header');
 
 import { countcart } from "./auth.js";
 
-function displayFlashMessage(message,type) {
+function displayFlashMessage(message, type) {
   const element = document.createElement('div');
   element.classList.add('flash-message');
   element.classList.add(type);
@@ -88,7 +88,7 @@ const removeFromCart = (itemId) => {
   }).then((response) => {
     if (response.ok) {
       console.log('Item removed from cart successfully');
-      displayFlashMessage("remove successfully","success");
+      displayFlashMessage("remove successfully", "success");
       fetchAndRenderCartItems();
       countcart();
     } else {
@@ -96,7 +96,7 @@ const removeFromCart = (itemId) => {
     }
   }).catch((err) => {
     console.log('Error removing item from cart:', err);
-    displayFlashMessage("login first then access cart item","error");
+    displayFlashMessage("login first then access cart item", "error");
   })
   // const itemIndex = cartItems.findIndex(item => item.id === id);
   // if (itemIndex !== -1) {
@@ -104,6 +104,17 @@ const removeFromCart = (itemId) => {
   //   localStorage.setItem('cartItems', JSON.stringify(cartitems));
   // }
 };
+
+// function isLoggedIn() {
+//   const user = localStorage.getItem('user');
+//   return user !== null;
+// }
+
+// if(isLoggedIn()) {
+//   btncheckout.disabled = true;
+// }else{
+//   btncheckout.disabled = false;
+// }
 
 
 function noitemmsg(cartItems) {
@@ -161,3 +172,9 @@ btncheckout.addEventListener('click', () => {
 
 
 fetchAndRenderCartItems();
+
+
+
+const emptycart = () => {
+  
+}

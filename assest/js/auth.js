@@ -75,11 +75,11 @@ async function handleLogin(email, password) {
             window.location.href = "/";
         } else {
             console.log("error occured");
+            displayFlashMessage('invalid credential', 'error');
         }
 
     } catch (error) {
         console.error('Error during login:', error);
-        // Handle login failure
     }
 }
 

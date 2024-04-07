@@ -81,4 +81,17 @@ router.delete('/removefromcart/:id', async (req, res) => {
     }
 })
 
+
+router.delete('/removeall', verifyToken, async (req, res) => {
+    try {
+        const { _id } = req.user;
+        await Cart.deleteMany({ user: _id });
+        // res.status(200).json({ message: 'Cart items removed successfully' });
+        res.status(200).send("Cart cleared");
+    } catch (err) {
+        console.error('Error removing all cart items:', err);
+        res.status(500).json({ message: 'Internal server error' });
+    }
+});
+
 module.exports = router;

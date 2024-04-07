@@ -3,24 +3,33 @@ const User = require('../models/regiModel');
 
 const verifyToken = async (req, res, next) => {
   let token;
-  if (req.headers.authorization.startsWith('Bearer')) {
+  console.log(req.headers.authorization);
+
+  // Check for token in Authorization header (optional, for future use)
+  if (req.headers.authorization && req.headers.authorization.startsWith('Bearer')) {
     token = req.headers.authorization.split(" ")[1];
     console.log('Authorization:', token); // add this line
+  }
+
+  // If not in header, check cookies (optional)
+  if (!token && req.cookies) {
+    token = req.cookies.auth_token;
+    console.log("Cookie:", token); // add this line
+  }
+
+  if (token) {
     try {
-      if(token){
-        const decoded = jwt.verify(token,'mysecret');
-        console.log(decoded);
-        const user = await User.findById(decoded.userId);
-        console.log(user);
-        req.user = user;
-        next();
-      }
+      const decoded = jwt.verify(token, 'mysecret');
+      console.log(decoded);
+      const user = await User.findById(decoded.userId);
+      console.log(user);
+      req.user = user;
+      next();
     } catch (error) {
-      // throw new Error("not authorization token expired, please login again");
       console.log("not authorization token expired, please login again");
     }
   } else {
-    throw new Error("there no token attached in header");
+    res.status(401).send( {message :"No token provided"} );
   }
 };
 
