@@ -47,5 +47,15 @@ router.get('/contact', async (req, res) => {
     }
 });
 
+router.get('/recentuser', async (req, res) => {
+    try {
+        const user = await User.find().limit(7);
+        res.json(user);
+    } catch (err) {
+        console.log("cannot get user detail", err);
+        res.status(500).json({ message: 'internal server error' });
+    }
+});
+
 
 module.exports = router;

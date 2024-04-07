@@ -105,16 +105,6 @@ const removeFromCart = (itemId) => {
   // }
 };
 
-// function isLoggedIn() {
-//   const user = localStorage.getItem('user');
-//   return user !== null;
-// }
-
-// if(isLoggedIn()) {
-//   btncheckout.disabled = true;
-// }else{
-//   btncheckout.disabled = false;
-// }
 
 
 function noitemmsg(cartItems) {
@@ -175,6 +165,6 @@ fetchAndRenderCartItems();
 
 
 
-const emptycart = () => {
+// const emptycart = () => {
   
-}
+// }
