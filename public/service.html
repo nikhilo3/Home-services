@@ -96,8 +96,8 @@
                     <ul class="menu">
                         <li><a href="/mycart"><ion-icon name="cart-outline"></ion-icon><span style="color: black;"
                                     id="cart-item-count" class="badge">0</span></ion-icon>Cart</a></li>
-                        <li><a href="/mybooking"><ion-icon name="checkmark-done-outline"></ion-icon></ion-icon>My
-                                Booking</a> </li>
+                        <li><a href="/mybooking"><ion-icon name="checkmark-done-outline"></ion-icon></ion-icon>My Booking</a>
+                        </li>
                         <li><span id="logoutbtn"
                                 style="color: black; cursor: pointer; display: flex; align-items: center; gap: 15px;"><ion-icon
                                     name="log-out-outline"></ion-icon>Logout</span></li>
@@ -192,19 +192,16 @@
                                 <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
                             </div>
                             <div class="subscribe-form">
-                                <form action="http://localhost:3000/subscribemail" method="post" name="subform">
-                                    <input type="text" class="full-width" name="submail" placeholder="Email Address">
-                                    <button type="submit"><i class="fab fa-telegram-plane"></i></button>
+                                <form action="#" id="subform" name="subform">
+                                    <input type="email" class="full-width" name="submail" placeholder="Email Address"
+                                        required>
+                                    <button type="submit" id="subbtn"><i class="fab fa-telegram-plane"></i></button>
                                 </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div id="loginSuccessMessage" style="display: none;">
-            <p>Login successful!</p>
         </div>
 
     </footer>
@@ -223,7 +220,7 @@
                 data.forEach((data) => {
                     let newservice = document.createElement('div');
                     newservice.className = "meal";
-                    newservice.innerHTML = `[PIYRA-*=-076ew]
+                    newservice.innerHTML = `
       <img
       src="${data.herophoto}"
       class="meal-img"
@@ -235,9 +232,12 @@
    <p class="meal-title">${data.heading}</p>
    
    <div class="detail" style="color: black;">
-     <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui a provident alias perferendis accusantium nisi expedita recusandae maiores modi sapiente nulla porro, consequuntur culpa.</span>
+     <span>${data.detail}</span>
    </div>
-   <button>view detail</button>
+   <button style="
+    color: blue;
+    margin-top:20px;
+">view detail</button>
  </div>
  <a href="/servicedetail?id=${data.id}" homeservicesclick></a>
       `

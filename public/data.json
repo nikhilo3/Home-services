@@ -4,6 +4,7 @@
         "heading": "Home cleaning",
         "rating": "4.80 (5.2 M bookings)",
         "herophoto": "./assest/images/home_cleaning_cover.jpeg",
+        "detail":"Revitalize your home with our comprehensive cleaning service. From sofa and kitchen to living room, we ensure a sparkling, refreshed space.",
         "all_service": [
             {
                 "name": "Living room Cleanning",
@@ -97,6 +98,7 @@
         "heading": "Electricians",
         "rating": "4.84 (3.5 M bookings)",
         "herophoto": "./assest/images/Electricians_cover.jpg",
+        "detail":"Empower your home with our expert electricians. From installations to repairs, trust us for safe, efficient electrical solutions tailored to your needs.",
         "all_service": [
             {
                 "name": "Appliance",
@@ -245,6 +247,7 @@
         "heading": "Carpenter",
         "rating": "4.84 (3.5 M bookings)",
         "herophoto": "./assest/images/HeroImages/HeroCarpenter.webp",
+        "detail":"Transform your space with our skilled carpentry service. From custom furniture to intricate woodwork, we bring craftsmanship and precision to your home.",
         "all_service": [
             {
                 "name": "Furniture Making",
@@ -323,6 +326,7 @@
         "heading": "Gardening",
         "rating": "4.84 (3.5 M bookings)",
         "herophoto": "./assest/images/HeroImages/Herogardening.jpg",
+        "detail":"Elevate your outdoor space with our expert gardening service. From lawn care to planting, we'll transform your garden into a thriving oasis.",
         "all_service": [
             {
                 "name": "Grass Cutting",
@@ -356,6 +360,7 @@
         "heading": "Painter",
         "rating": "4.84 (3.5 M bookings)",
         "herophoto": "./assest/images/HeroImages/HeroPainting.webp",
+        "detail":"Transform your space with our expert painting service. From walls to ceilings, we provide professional painting solutions for a refreshed and vibrant home.",
         "all_service": [
             {
                 "name": "House Painting",
@@ -434,6 +439,7 @@
         "heading": "Plumber",
         "rating": "4.84 (3.5 M bookings)",
         "herophoto": "./assest/images/HeroImages/HeroPlumber.jpg",
+        "detail":"Resolve plumbing issues swiftly with our expert service. From leaks to clogs, we ensure efficient solutions for a smoothly functioning home.",
         "all_service": [
             {
                 "name": "Toilet Repair",
@@ -492,6 +498,7 @@
         "heading": "Pest Controller",
         "rating": "4.84 (5 k Ratimgs)",
         "herophoto": "./assest/images/HeroImages/HeroPestControl.webp",
+        "detail":"Banish pests with our expert control service. From rodents to insects, we eliminate unwanted guests, ensuring a pest-free environment for your home.",
         "all_service": [
             {
                 "name": "Full House Pest Controller",

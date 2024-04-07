@@ -33,11 +33,8 @@
                 <h1>Create Account</h1>
                 <input type="text" name="username" id="username" placeholder="Username" required />
                 <input type="email" name="email" id="email" placeholder="Email" required autocomplete="email" />
-                <input type="password" name="password" id="password" placeholder="Password" required />
-                <!-- <input type="text" name="username" id="username" placeholder="Username" required />
-                <input type="email" name="email" id="email" placeholder="Email" required autocomplete="email" />
                 <input type="password" name="password" id="password" placeholder="Password" required
-                    autocomplete="current-password" /> -->
+                    autocomplete="current-password" />
                 <button type="submit" id="originalsignup">Sign Up</button>
             </form>
         </div>
@@ -72,7 +69,6 @@
     <header id="header">
         <nav class="nav">
             <i class="fa-solid fa-bars navOpenBtn" onclick="navresponsive()"></i>
-            
             <a href="#" class="logo"><img style="-webkit-filter: invert(100%); filter: invert(100%);" class="logo_image"
                     src="//towny.axiomthemes.com/wp-content/uploads/2021/11/logo.png"
                     srcset="//towny.axiomthemes.com/wp-content/uploads/2021/11/logo-2x.png 2x" alt="Towny" width="174"
@@ -100,9 +96,8 @@
                     <ul class="menu">
                         <li><a href="/mycart"><ion-icon name="cart-outline"></ion-icon><span style="color: black;"
                                     id="cart-item-count" class="badge">0</span></ion-icon>Cart</a></li>
-                        
-                        <li><a href="/mybooking"><ion-icon name="checkmark-done-outline"></ion-icon></ion-icon>My
-                                Booking</a>
+                        <li><a href="/mybooking"><ion-icon name="checkmark-done-outline"></ion-icon></ion-icon>My Booking</a>
+                        </li>
                         <li><span id="logoutbtn"
                                 style="color: black; cursor: pointer; display: flex; align-items: center; gap: 15px;"><ion-icon
                                     name="log-out-outline"></ion-icon>Logout</span></li>
@@ -334,19 +329,16 @@
                                 <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
                             </div>
                             <div class="subscribe-form">
-                                <form action="http://localhost:3000/subscribemail" method="post" name="subform">
-                                    <input type="text" class="full-width" name="submail" placeholder="Email Address">
-                                    <button type="submit"><i class="fab fa-telegram-plane"></i></button>
+                                <form action="#" id="subform" name="subform">
+                                    <input type="email" class="full-width" name="submail" placeholder="Email Address"
+                                        required>
+                                    <button type="submit" id="subbtn"><i class="fab fa-telegram-plane"></i></button>
                                 </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div id="loginSuccessMessage" style="display: none;">
-            <p>Login successful!</p>
         </div>
 
     </footer>
