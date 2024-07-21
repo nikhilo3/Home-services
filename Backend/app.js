@@ -46,6 +46,7 @@ app.use('/assest', express.static(path.join(__dirname, '../assest')));
 app.get('/', function (req, res) {
     // res.sendFile(path.join(__dirname, '../public/index.html'));
     res.json({success:true})
+    
 });
 
 app.get('/mybooking', function (req, res) {
