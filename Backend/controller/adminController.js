@@ -49,7 +49,7 @@ router.get('/contact', async (req, res) => {
 
 router.get('/recentuser', async (req, res) => {
     try {
-        const user = await User.find().limit(7);
+        const user = await User.find().sort({ "_id": -1 }).limit(10);
         res.json(user);
     } catch (err) {
         console.log("cannot get user detail", err);

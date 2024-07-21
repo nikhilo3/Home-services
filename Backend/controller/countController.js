@@ -15,8 +15,6 @@ const getOrderCount = async () => {
 
 const getPaymentCount = async () => {
     const orders = await Order.find().exec();
-
-
     // Convert paytotal to numbers in the first step
     const modifiedOrders = orders.map(order => ({
         paytotal: parseFloat(order.paytotal.replace('₹', '')),
@@ -33,8 +31,7 @@ const getPaymentCount = async () => {
     });
 
     console.log("total revenue = ",totalrevenue);
-    return totalrevenue
+    return totalrevenue;
 }
-
 
 module.exports = { getUserCount, getOrderCount, getPaymentCount };
