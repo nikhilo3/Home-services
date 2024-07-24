@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: my-node-app
+    name: Home-services
     env: node
     buildCommand: "npm install"
     startCommand: "node Backend/index.js"
