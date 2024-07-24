@@ -1,6 +1,6 @@
 const BASEURL = "home-services-seven.vercel.app";
 
-
+console.log("auth.js file");
 
 const signUpButton = document.getElementById("signUp");
 const signInButton = document.getElementById("signIn");
@@ -91,6 +91,7 @@ async function handleLogin(email, password) {
 
 
 function openloginform() {
+
     // Display login box and blur main content
     loginbox.style.cssText = `
     display:block;

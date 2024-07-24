@@ -1,6 +1,9 @@
 //header
 // import { displayFlashMessage } from "./auth.js";
 
+console.log("global.js file");
+
+
 const nav = document.querySelector(".nav"),
   navOpenBtn = document.querySelector(".navOpenBtn"),
   navCloseBtn = document.querySelector(".navCloseBtn");
