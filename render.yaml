@@ -1,9 +1,0 @@
-services:
-  - type: web
-    name: Home-services
-    env: node
-    buildCommand: "npm install"
-    startCommand: "node Backend/index.js"
-    plan: free
-    branches: ["main"]
-    root: "/"
