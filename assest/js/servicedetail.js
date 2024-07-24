@@ -1,3 +1,5 @@
+const BASEURL = "home-services-seven.vercel.app";
+
 import { fetchData } from "./fetchjson.js";
 import { countcart } from "./auth.js";
 
@@ -117,7 +119,7 @@ async function addtocart(id, title, price, image) {
             return;
         }
 
-        const response = await fetch('http://localhost:3000/cart/addtocart', {
+        const response = await fetch(`${BASEURL}/cart/addtocart`, {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json',

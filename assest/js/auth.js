@@ -1,3 +1,6 @@
+const BASEURL = "home-services-seven.vercel.app";
+
+
 
 const signUpButton = document.getElementById("signUp");
 const signInButton = document.getElementById("signIn");
@@ -53,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function handleLogin(email, password) {
     try {
-        const response = await fetch('http://localhost:3000/login', {
+        const response = await fetch(`${BASEURL}/login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -140,7 +143,7 @@ export function countcart() {
     if (isLoggedIn()) {
         const token = localStorage.getItem('token');
 
-        fetch('/cart/getcartitems', {
+        fetch(`${BASEURL}/cart/getcartitems`, {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
@@ -170,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function handlRegistration(username, email, password) {
     try {
-        const response = await fetch('http://localhost:3000/registration', {
+        const response = await fetch(`${BASEURL}/registration`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -231,7 +234,7 @@ async function handlesubscribe(email) {
 
     console.log("handle subscribe  called");
     try {
-        const response = await fetch('http://localhost:3000/subscribemail', {
+        const response = await fetch(`${BASEURL}/subscribemail`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -283,7 +286,7 @@ async function handlecontact(conname, conmail, conphone, condetail) {
 
     console.log("handle subscribe  called");
     try {
-        const response = await fetch('http://localhost:3000/contactus', {
+        const response = await fetch(`${BASEURL}/contactus`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

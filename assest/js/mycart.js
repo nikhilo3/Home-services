@@ -1,3 +1,6 @@
+const BASEURL = "home-services-seven.vercel.app";
+
+
 const btncheckout = document.querySelector('[btncheckout]');
 const msgdisplay = document.querySelector('[msgdisplay]');
 const total = document.querySelector('[total]');
@@ -25,7 +28,7 @@ const fetchAndRenderCartItems = async () => {
   try {
     const token = localStorage.getItem('token');
 
-    const response = await fetch('http://localhost:3000/cart/getcartitems', {
+    const response = await fetch(`${BASEURL}/cart/getcartitems`, {
       method: 'GET',
       headers: {
         'Content-type': 'application/json',
@@ -83,7 +86,7 @@ function rendercart(cartItems) {
 
 
 const removeFromCart = (itemId) => {
-  fetch(`http://localhost:3000/cart/removefromcart/${itemId}`, {
+  fetch(`${BASEURL}/cart/removefromcart/${itemId}`, {
     method: 'DELETE'
   }).then((response) => {
     if (response.ok) {

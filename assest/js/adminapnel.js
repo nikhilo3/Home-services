@@ -1,3 +1,5 @@
+const BASEURL = "home-services-seven.vercel.app";
+
 const body = document.querySelector("body"),
       modeToggle = body.querySelector(".mode-toggle");
       sidebar = body.querySelector("nav");
@@ -24,7 +26,7 @@ sidebarToggle.addEventListener("click", () => {
 
 const fetchcount = async () => {
     try {
-        const response = await fetch('http://localhost:3000/countdata', {
+        const response = await fetch(`${BASEURL}/countdata`, {
             method: 'GET',
             headers: {
                 'Content-type': 'application/json',
@@ -55,7 +57,7 @@ fetchcount();
 
 const fetchrecentuser = async () => {
     try {
-        const response = await fetch('http://localhost:3000/adminorder/recentuser', {
+        const response = await fetch(`${BASEURL}/adminorder/recentuser`, {
             method: 'GET',
             headers: {
                 'Content-type': 'application/json',

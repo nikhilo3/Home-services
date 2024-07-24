@@ -1,3 +1,5 @@
+const BASEURL = "home-services-seven.vercel.app";
+
 $(document).ready(function () {
   $('.popup-btn').click(function (e) {
     $('.popup-wrap').fadeIn(500);
@@ -7,12 +9,12 @@ $(document).ready(function () {
   });
 });
 const removeFromCart = () => {
-  fetch(`http://localhost:3000/cart/removeall`, {
+  fetch(`${BASEURL}/cart/removeall`, {
     method: 'DELETE'
   }).then((response) => {
     if (response.ok) {
       console.log('Item removed from cart successfully');
-      window.location.href = 'http://localhost:3000';
+      window.location.href = `${BASEURL}`;
     } else {
       console.log('Failed to remove item from cart', response.statusText);
     }

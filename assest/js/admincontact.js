@@ -1,6 +1,8 @@
+const BASEURL = "home-services-seven.vercel.app";
+
 const fetchdetail = async () => {
     try {
-        const response = await fetch('http://localhost:3000/adminorder/contact', {
+        const response = await fetch(`${BASEURL}/adminorder/contact`, {
             method: 'GET',
             headers: {
                 'Content-type': 'application/json',

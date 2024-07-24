@@ -252,6 +252,7 @@ margin: 55px 0px;"> -->
 
 <script>
 
+const BASEURL = "home-services-seven.vercel.app";
     const showusername = localStorage.getItem('user');
     document.getElementById("showusername").innerHTML = `Hi ${showusername}`;
 
@@ -259,7 +260,7 @@ margin: 55px 0px;"> -->
         try {
             const token = localStorage.getItem('token');
 
-            const response = await fetch('http://localhost:3000/order/getorder', {
+            const response = await fetch(`${BASEURL}/order/getorder`, {
                 method: 'GET',
                 headers: {
                     'Content-type': 'application/json',
